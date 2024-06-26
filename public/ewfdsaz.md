@@ -1,0 +1,76 @@
+ <header class="py-[14px]">
+    <div class="max-w-[1384px] mx-auto px-5 flex justify-between items-center">
+      <div class="flex items-center gap-7">
+        <div class="flex items-center gap-28 w-full">
+          <a href="index.html"><img class="max-w-10 w-full" src="./img/header/header__logo.svg" alt="logo"></a>
+          <div class="py-1 px-4 lg:flex hidden items-center max-w-[320px] w-full bg-[#F0F6FA] rounded-full ">
+            <input
+              class="placeholder:text-[#7B92A4] max-w-[340px] w-full text-[#7B92A4] font-medium text-base  bg-transparent outline-none border-none placeholder:text-base placeholder:font-medium"
+              placeholder="Qanday yordam bera olamiz ?" type="text">
+            <button class="cursor-pointer transition-all active:opacity-70">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M21.01 19.5381C21.918 18.2608 22.3129 16.689 22.1167 15.1342C21.9204 13.5794 21.1472 12.1551 19.9503 11.1435C18.7534 10.1319 17.2201 9.60689 15.6543 9.67247C14.0886 9.73805 12.6046 10.3894 11.4965 11.4976C10.3883 12.6057 9.73694 14.0897 9.67136 15.6555C9.60578 17.2212 10.1308 18.7545 11.1424 19.9514C12.154 21.1483 13.5783 21.9215 15.1331 22.1178C16.6879 22.3141 18.2597 21.9191 19.537 21.0111C19.5429 21.0169 19.5489 21.0226 19.555 21.0281L23.61 25.0831C23.7057 25.1845 23.8207 25.2656 23.9483 25.3217C24.0758 25.3778 24.2134 25.4077 24.3527 25.4097C24.4921 25.4117 24.6304 25.3858 24.7595 25.3333C24.8887 25.2809 25.006 25.2032 25.1045 25.1046C25.2031 25.0061 25.2808 24.8888 25.3332 24.7596C25.3856 24.6305 25.4116 24.4922 25.4096 24.3528C25.4076 24.2135 25.3777 24.0759 25.3216 23.9484C25.2655 23.8208 25.1843 23.7058 25.083 23.6101L21.028 19.5551C21.0224 19.5494 21.0157 19.5437 21.01 19.5381ZM15.916 20.2131C16.4857 20.2218 17.0515 20.1171 17.5804 19.9051C18.1093 19.6931 18.5907 19.378 18.9967 18.9781C19.4027 18.5783 19.7251 18.1017 19.9452 17.5761C20.1652 17.0505 20.2785 16.4864 20.2785 15.9166C20.2785 15.3468 20.1652 14.7827 19.9452 14.2571C19.7251 13.7315 19.4027 13.2549 18.9967 12.8551C18.5907 12.4553 18.1093 12.1402 17.5804 11.9281C17.0515 11.7161 16.4857 11.6114 15.916 11.6201C14.7878 11.6373 13.7117 12.0976 12.92 12.9014C12.1283 13.7053 11.6845 14.7883 11.6845 15.9166C11.6845 17.0449 12.1283 18.1279 12.92 18.9318C13.7117 19.7357 14.7878 20.1959 15.916 20.2131Z"
+                  fill="#7B92A4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul class="lg:flex items-center hidden gap-5">
+          <li><a class="text-[#7B92A4] font-medium text-base hover:opacity-70 transition-all" href="#">Ustaxonalar</a></li>
+          <li><a class="text-[#7B92A4] font-medium text-base hover:opacity-70 transition-all" href="#">Xizmat ko’rsatish</a></li>
+          <li><a class="text-[#7B92A4] font-medium text-base hover:opacity-70 transition-all" href="#">Men ustaman</a></li>
+        </ul>
+      </div>
+      <div class="md:flex hidden items-center gap-6">
+        <a class="text-[#242729] inline-flex items-center gap-3 font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
+          href="#">
+          Andijon
+          <span>
+            <svg class="flex" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_26_5)">
+                <path
+                  d="M6.5 0.522949C5.06672 0.524526 3.69259 1.09456 2.67905 2.10799C1.66552 3.12142 1.09535 4.4955 1.09363 5.92878C1.09363 7.32087 2.17154 9.49945 4.29759 12.4039C4.55069 12.7506 4.88208 13.0327 5.26479 13.2271C5.6475 13.4216 6.07072 13.523 6.5 13.523C6.92929 13.523 7.35251 13.4216 7.73522 13.2271C8.11793 13.0327 8.44932 12.7506 8.70242 12.4039C10.8285 9.49945 11.9064 7.32087 11.9064 5.92878C11.9047 4.4955 11.3345 3.12142 10.321 2.10799C9.30742 1.09456 7.93329 0.524526 6.5 0.522949ZM6.5 8.08353C6.07148 8.08353 5.65257 7.95646 5.29627 7.71838C4.93996 7.48031 4.66225 7.14192 4.49826 6.74601C4.33427 6.35011 4.29137 5.91446 4.37497 5.49417C4.45857 5.07388 4.66492 4.68782 4.96794 4.3848C5.27095 4.08179 5.65702 3.87543 6.07731 3.79183C6.4976 3.70823 6.93324 3.75114 7.32915 3.91513C7.72506 4.07912 8.06344 4.35682 8.30152 4.71313C8.5396 5.06944 8.66667 5.48834 8.66667 5.91687C8.66667 6.4915 8.4384 7.0426 8.03207 7.44893C7.62574 7.85526 7.07464 8.08353 6.5 8.08353Z"
+                  fill="#374957" />
+              </g>
+              <defs>
+                <clipPath id="clip0_26_5">
+                  <rect width="13" height="13" fill="white" transform="translate(0 0.5)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+        </a>
+        <a class="text-[#242729] font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
+          href="#">Kirish</a>
+      </div>
+
+      <button id="hamburger__btn" class="block lg:hidden max-w-9 active:opacity-80">
+        <img src="./img/header/hamburger.svg" alt="hamburger">
+      </button>
+    </div>
+
+    <div id="res__nav" class="slow__default z-20 fixed py-[22px] px-5 top-0 right-[-100%] w-[70%] bg-[#B0D9FF] h-full">
+      <div>
+        <button id="res__nav___close__btn" class="block mb-5 max-w-9 ">
+          <img src="./img/header/close.svg" alt="" class="w-full h-full object-cover">
+        </button>
+        <ul class="flex flex-col mb-5 justify-end gap-[15px]">
+          <li class="xl:pr-3"><a href="#" class="font-medium text-base text-[#242729]   slow__default">Ustaxonalar</a>
+          </li>
+          <li class="xl:pl-[14px]"><a href="#" class="font-medium text-base text-[#242729] slow__default">Xizmat
+              ko’rsatish</a></li>
+          <li><a href="#" class="font-medium text-base text-[#242729] slow__default">Men ustaman</a></li>
+        </ul>
+        <div class="flex flex-col  gap-3">
+          <a href="#"
+            class="flex items-center gap-[11px] px-4  w-full max-w-[101px] bg-[#F0F6FA] rounded-full font-medium text-[13px] leading-9 text-[#242729] ">
+            Andijon
+            <img src="./img/header/header__location.svg" alt="" class="w-3 h-w-3 object-cover">
+          </a>
+          <a href="#"
+            class="max-w-[101px] block px-[13px] bg-[#F0F6FA] rounded-full font-medium text-[13px] leading-10  text-[#242729]">Kirish</a>
+        </div>
+      </div>
+    </div>
+  </header>

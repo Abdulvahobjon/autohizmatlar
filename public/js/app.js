@@ -16,14 +16,20 @@ let res__nav__backdrop = document.querySelector("#res__nav__backdrop")
 res__nav___close__btn.addEventListener("click" , function(){
     res__nav.classList.add("right-[-100%]")
     res__nav.classList.remove("right-0")
+    res__nav__backdrop.classList.add("hidden")
+    res__nav__backdrop.classList.remove("block")
 })
 res__nav__backdrop.addEventListener("click" , function(){
     res__nav.classList.add("right-[-100%]")
     res__nav.classList.remove("right-0")
+    res__nav__backdrop.classList.add("hidden")
+    res__nav__backdrop.classList.remove("block")
 })
 hamburger__btn.addEventListener("click" , function(){
     res__nav.classList.remove("right-[-100%]")
     res__nav.classList.add("right-0")
+    res__nav__backdrop.classList.add("block")
+    res__nav__backdrop.classList.remove("hidden")
 })
 
 let problem_b_card = document.querySelectorAll("#problem_b_card")
@@ -60,5 +66,12 @@ let res__big__menu = document.querySelector("#res__big__menu")
 res__big__menu.addEventListener("click" , function(){
     res__big__menu.classList.toggle("h-[270px]")
     res__big__menu.classList.toggle("h-[20px]")
+})
+overlay.addEventListener("click", function() {
+    res__nav.classList.add("right-[-100%]")
+    res__nav.classList.remove("right-0")
+    overlay.classList.add("hidden")
+    body.classList.remove("h-screen")
+    body.classList.remove("overflow-hidden")
 })
 

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
 #header__inp::placeholder {
     font-size: 15px;
     font-weight: 500;
@@ -77,4 +82,9 @@
         grid-column-gap: px;
         grid-row-gap: 20px;
     }
+}
+
+#search-input {
+    display: none;
+    margin-top: 10px;
 }

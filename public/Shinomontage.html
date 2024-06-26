@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Car service</title>
+</head>
+
+<body class="font-[Onest]">
+    <!-- header start -->
+    <header class="py-[14px]">
+        <div class="max-w-[1384px] mx-auto px-5 flex items-center">
+            <a href="#" class="slow__default md:mr-[61px] mr-1 lg:mr-[112px] max-w-[40px]"><img src="./img/header/header__logo.svg" alt=""
+                    class="slow__default w-full object-cover"></a>
+            <div id="header__search__box" class="slow__default max-w-[36px] md:max-w-[320px] ml-auto w-full px-2 md:pl-4 py-[10px] md:pr-2 overflow-hidden rounded-[28px] bg-[#F0F6FA]  flex items-center justify-between">
+                <input id="header__inp" type="text" class="md:block hidden leading-[19px] bg-transparent outline-none font-medium text-[15px] text-[#7B92A4]" placeholder="Qanday yordam bera olamiz ?">
+                <button id="header__search__btn">
+                    <img src="./img/header/header__search.svg" alt="" class="">
+                </button>
+            </div>
+            <ul class="hidden lg:flex items-center gap-[15px]">
+                <li class="xl:pr-3"><a href="#" class="font-m font-medium text-[15px] text-[#7B92A4]  hover:text-[#B0D9FF] slow__default">Ustaxonalar</a></li>
+                <li class="xl:pl-[14px]"><a href="#" class="font-m font-medium text-[15px] text-[#7B92A4]  hover:text-[#B0D9FF] slow__default">Xizmat ko’rsatish</a></li>
+                <li><a href="#" class="font-m font-medium text-[15px] text-[#7B92A4] hover:text-[#B0D9FF] slow__default">Men ustaman</a></li>
+            </ul>
+            <div class="ml-auto hidden md:flex items-center gap-6">
+                <a href="#" class="flex items-center gap-[11px] pl-[17px] pr-[12px] w-full max-w-[101px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-9 text-[#242729] ">
+                    Andijon
+                    <img src="./img/header/header__location.svg" alt="" class="w-[13px] h-[13px] object-cover">
+                </a>
+                <button class="max-w-[60px] px-[13px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-10  text-[#242729]">Kirish</button>
+            </div>
+            <button id="hamburger__btn" class="block md:hidden max-w-9 ml-1">
+                <img src="./img/header/hamburger.svg" alt="" class="">
+            </button>
+        </div>
+        <div id="res__nav" class="slow__default z-20 fixed py-[22px] px-5 top-0 right-[-100%] w-[70%] bg-[#B0D9FF] h-full">
+            <div class="">
+                <button id="res__nav___close__btn" class="block mb-5 max-w-9 ml-auto">
+                    <img src="./img/header/close.svg" alt="" class="w-full h-full object-cover">
+                </button>
+                <ul class="flex flex-col mb-5 justify-end gap-[15px]">
+                    <li class="xl:pr-3"><a href="#" class="font-m font-medium text-[15px] text-[#242729]   slow__default">Ustaxonalar</a></li>
+                    <li class="xl:pl-[14px]"><a href="#" class="font-m font-medium text-[15px] text-[#242729] slow__default">Xizmat ko’rsatish</a></li>
+                    <li><a href="#" class="font-m font-medium text-[15px] text-[#242729] slow__default">Men ustaman</a></li>
+                </ul>
+                <div class="flex flex-col  gap-3">
+                    <a href="" class="flex items-center gap-[11px] pl-[17px] pr-[12px] w-full max-w-[101px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-9 text-[#242729] ">
+                        Andijon
+                        <img src="./img/header/header__location.svg" alt="" class="w-[13px] h-[13px] object-cover">
+                    </a>
+                    <button class="max-w-[101px] block px-[13px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-10  text-[#242729]">Kirish</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    
+
+    <!-- footer start -->
+    <footer class="pt-[73px] pb-[42px] bg-[#242729]">
+        <div class="max-w-[1384px] mx-auto px-5">
+            <div class="flex md:flex-row flex-col md:items-center gap-5 md:gap-[70px] mb-7 md:mb-[49px]">
+                <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+                    <li><a href="#" class="font-medium text-[15px] text-[#FFFFFFB2] leading-5">Xizmat ko’rsatish turkumlari</a></li>
+                    <li><a href="#" class="font-medium text-[15px] text-[#FFFFFFB2] leading-5">Boshqa xizmatlar</a></li>
+                </ul>
+                <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+                    <li><a href="#" class="font-medium text-[15px] text-[#FFFFFFB2] leading-5">Xizmat ko’rsatuvchiga aylanish</a></li>
+                    <li><a href="#" class="font-medium text-[15px] text-[#FFFFFFB2] leading-5">Yordam</a></li>
+                </ul>
+                <ul class="flex flex-col items-start  gap-5 md:max-w-[168px]">
+                    <li><a href="#" class="font-medium text-[15px] text-[#FFFFFFB2] leading-5 block md:mb-[25px]">Shaxsiy kabinet</a></li>
+                    <li><a href="#" class="font-medium text-[15px] text-[#FFFFFFB2] leading-5">Portal haqida</a></li>
+                </ul>
+            </div>
+            <div class="ml-auto flex md:hidden items-center gap-5 mb-5 md:gap-9">
+                <a href="#" target="_blank" class="w-6 flex h-6">
+                    <img src="./img/footer/Vector.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
+                </a>
+                <a href="#" target="_blank" class="w-6 flex h-6">
+                    <img src="./img/footer/Shape.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
+                </a>
+            </div>
+            <div class="flex md:flex-row flex-col md:items-center gap-5">
+                <p class="font-medium text-[15px] text-[#FFFFFFB2] mr-14">avtoxizmatlar.uz - Abdurahmon Rashidov 2024 yil.</p>
+                <a href="#" class="font-medium text-[15px] text-[#FFFFFFB2]">Savol va takliflar yuzasidan: abdurakhmonrashidov@yandex.ru</a>
+                <div class="hidden md:flex md:gap-0 gap-3 items-center">
+                    <div class="ml-auto flex items-center gap-3 md:gap-9">
+                        <a href="#" target="_blank" class="w-6 flex h-6">
+                            <img src="./img/footer/Vector.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
+                        </a>
+                        <a href="#" target="_blank" class="w-6 flex h-6">
+                            <img src="./img/footer/Shape.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
