@@ -2,8 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 
 
 .transition-all {
     transition: all 0.3s ease-in-out;
+=======
+#header__inp::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19.12px;
+}
+
+.slow__default {
+    transition: all .3s;
+}
+
+#register__card_1 {
+    background-image: url(../public/img/register/left.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+#register__card_2 {
+    background-image: url(../public/img/register/right.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media(max-width:875px) {
+    #probleb__b_box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 12px;
+        grid-row-gap: 22px;
+    }
+
+    #probleb__t_box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 12px;
+        grid-row-gap: 12px;
+    }
+}
+
+@media(max-width:640px) {
+    #register__card {
+        background-image: none;
+    }
+}
+
+@media(max-width:500px) {
+    #probleb__b_box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 22px;
+    }
+    #probleb__t_box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 12px;
+        grid-row-gap: 12px;
+    }
+}
+
+@media(max-width:388px) {
+    #info__card__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: px;
+        grid-row-gap: 20px;
+    }
+>>>>>>> eacb07bf204bc7d82fd5fd4c6cf89bce32a71992
 }
