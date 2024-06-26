@@ -9,11 +9,11 @@
 </head>
 
 <body>
-  <header class="py-5" >
+  <header class="py-5">
     <div class="max-w-[1364px] mx-auto px-5 flex justify-between">
-      <div class="flex items-center gap-28" >
+      <div class="flex items-center gap-28">
         <a href="index.html"><img class="max-w-10 w-full" src="./img/header/logo.png" alt="logo"></a>
-        <div class="py-2.5 px-4 inline-flex items-center relative w-[320px]  bg-[#F0F6FA] rounded-full">
+        <div class="py-2.5 px-4 md:inline-flex hidden items-center relative w-[320px]  bg-[#F0F6FA] rounded-full">
           <input id="search"
             class="placeholder:text-[#7B92A4] max-w-[260px] w-full text-[#7B92A4] font-medium text-base  bg-transparent  outline-none border-none placeholder:text-base placeholder:font-medium"
             placeholder="Qanday yordam bera olamiz ?" type="text">
@@ -26,7 +26,7 @@
           </label>
         </div>
       </div>
-      <div class="flex items-center">
+      <div class="lg:flex hidden items-center">
         <ul class="inline-flex items-center gap-8 w-full">
           <li><a class="text-[#7B92A4] font-medium text-base hover:opacity-70 transition-all" href="#">Ustaxonalar</a>
           </li>
@@ -36,7 +36,7 @@
           </li>
         </ul>
       </div>
-      <div class="flex items-center gap-6">
+      <div class="lg:flex hidden items-center gap-6">
         <a class="text-[#242729] inline-flex items-center gap-3 font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
           href="#">
           Andijon
@@ -58,8 +58,34 @@
         <a class="text-[#242729] font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
           href="#">Kirish</a>
       </div>
+      <div class="flex items-center gap-5">
+        <div class="flex items-center" >
+          <input class="outline-none max-w-[200px] bg-red-400" placeholder="search..." type="text">
+          <button id="searchBtn"
+            class="px-4 hover:shadow-lg active:shadow-none active:scale-95 hover:scale-105 bg-[#F0F6FA] rounded-full flex items-center transition-all">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M21.01 19.5381C21.918 18.2608 22.3129 16.689 22.1167 15.1342C21.9204 13.5794 21.1472 12.1551 19.9503 11.1435C18.7534 10.1319 17.2201 9.60689 15.6543 9.67247C14.0886 9.73805 12.6046 10.3894 11.4965 11.4976C10.3883 12.6057 9.73694 14.0897 9.67136 15.6555C9.60578 17.2212 10.1308 18.7545 11.1424 19.9514C12.154 21.1483 13.5783 21.9215 15.1331 22.1178C16.6879 22.3141 18.2597 21.9191 19.537 21.0111C19.5429 21.0169 19.5489 21.0226 19.555 21.0281L23.61 25.0831C23.7057 25.1845 23.8207 25.2656 23.9483 25.3217C24.0758 25.3778 24.2134 25.4077 24.3527 25.4097C24.4921 25.4117 24.6304 25.3858 24.7595 25.3333C24.8887 25.2809 25.006 25.2032 25.1045 25.1046C25.2031 25.0061 25.2808 24.8888 25.3332 24.7596C25.3856 24.6305 25.4116 24.4922 25.4096 24.3528C25.4076 24.2135 25.3777 24.0759 25.3216 23.9484C25.2655 23.8208 25.1843 23.7058 25.083 23.6101L21.028 19.5551C21.0224 19.5494 21.0157 19.5437 21.01 19.5381ZM15.916 20.2131C16.4857 20.2218 17.0515 20.1171 17.5804 19.9051C18.1093 19.6931 18.5907 19.378 18.9967 18.9781C19.4027 18.5783 19.7251 18.1017 19.9452 17.5761C20.1652 17.0505 20.2785 16.4864 20.2785 15.9166C20.2785 15.3468 20.1652 14.7827 19.9452 14.2571C19.7251 13.7315 19.4027 13.2549 18.9967 12.8551C18.5907 12.4553 18.1093 12.1402 17.5804 11.9281C17.0515 11.7161 16.4857 11.6114 15.916 11.6201C14.7878 11.6373 13.7117 12.0976 12.92 12.9014C12.1283 13.7053 11.6845 14.7883 11.6845 15.9166C11.6845 17.0449 12.1283 18.1279 12.92 18.9318C13.7117 19.7357 14.7878 20.1959 15.916 20.2131Z"
+                fill="#7B92A4" />
+            </svg>
+          </button>
+        </div>
+        <button id="menuBtn" class="lg:hidden p-2 transition-all text-[#7B92A4] cursor-pointer active:opacity-70">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="py-5 lg:hidden flex">
+
     </div>
   </header>
+
+
+
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
