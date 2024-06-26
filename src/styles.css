@@ -7,6 +7,7 @@
 .transition-all {
     transition: all 0.3s ease-in-out;
 }
+
 #header__inp::placeholder {
     font-size: 15px;
     font-weight: 500;
@@ -60,6 +61,7 @@
         grid-template-rows: repeat(6, 1fr);
         grid-row-gap: 22px;
     }
+
     #probleb__t_box {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -81,4 +83,12 @@
 #search-input {
     display: none;
     margin-top: 10px;
+}
+
+.text_active {
+    color: #242729 !important;
+}
+
+.shadow_container {
+    box-shadow: 0 5px 15px -8px rgba(13, 35, 67, 0.4), 0 0 0 1px rgba(13, 35, 67, 0.07);
 }
