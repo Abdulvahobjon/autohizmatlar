@@ -24,6 +24,12 @@
     background-position: center center;
 }
 
+#res__nav__backdrop {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.083);
+}
 @media(max-width:875px) {
     #probleb__b_box {
         display: grid;
