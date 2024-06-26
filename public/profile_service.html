@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/header/header__logo.svg" sizes="32x32" />
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile</title>
+    <style>
+        /* Checkbox container'ga style berish */
+        .custom-checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Default checkbox'ni yashirish */
+        .custom-checkbox input {
+            display: none;
+        }
+
+        /* Checkmark'ga style berish */
+        .custom-checkbox .checkmark {
+            position: relative;
+            height: 16px;
+            width: 16px;
+            background-color: white;
+            border: 2px solid #abbdc9;
+            border-radius: 4px;
+        }
+
+        /* Hover effekti */
+        .custom-checkbox:hover input~.checkmark {
+            background-color: #ffffff;
+        }
+
+        /* Checked holat */
+        .custom-checkbox input:checked~.checkmark {
+            background-color: #ff6332;
+            border: 2px solid #ff6332;
+        }
+
+        /* Checkmark'ni qo'shish */
+        .custom-checkbox .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Checked holatda checkmark'ni ko'rsatish */
+        .custom-checkbox input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Checkmark'ni yaratish */
+        .custom-checkbox .checkmark:after {
+            left: 1.8px;
+            top: 1.5px;
+            width: 9px;
+            height: 8px;
+            background-image: url(../public/img/profile/profile__check.svg);
+            background-size: cover;
+        }
+        input{
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19.12px;
+            color: #abbdc9;
+        }
+        input::placeholder{
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19.12px;
+            color: #abbdc9;
+        }
+        #time__btn_1{
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        #time__btn_2{
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(180deg);
+        }
+        #time__btn_3{
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+          #time__btn_4{
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="py-[14px] relative">
+        <div class="max-w-[1384px] mx-auto px-5 flex justify-between items-center">
+            <div class="flex items-center gap-28 w-full max-w-[520px]">
+                <a href="index.html"><img src="./img/header/header__logo.svg" alt="logo" /></a>
+                <div id="header__search__box"
+                    class="md:flex hidden items-center justify-between max-w-[320px] w-full rounded-full bg-[#F0F6FA] px-4 py-2">
+                    <input id="header__inp" placeholder="Qanday yordam bera olamiz ?"
+                        class="bg-transparent outline-none border-none max-w-[250px] w-full placeholder:text-[#7B92A4] placeholder:text-base placeholder:font-medium text-[#7B92A4] text-base font-medium"
+                        type="text" />
+                    <button id="header__search__btn">
+                        <img src="./img/header/header__search.svg" alt="" />
+                    </button>
+                </div>
+            </div>
+            <ul class="lg:flex hidden items-center gap-6 mr-auto">
+                <li>
+                    <a class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all"
+                        href="#">Ustaxonalar</a>
+                </li>
+                <li>
+                    <a id="header__big__menu__open"
+                        class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="#">Xizmat
+                        ko’rsatish</a>
+                </li>
+                <li>
+                    <a class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="#">Men
+                        ustaman</a>
+                </li>
+            </ul>
+            <div class="lg:flex hidden items-center gap-6">
+                <a class="text-[#242729] inline-flex items-center gap-3 font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
+                    href="#">
+                    Andijon
+                    <img src="./img/header/header__location.svg" alt="location" />
+                </a>
+                <div class="w-[42px] h-[42px] rounded-full bg-white">
+                    <img src="./img/header/profile.png" alt="" class="" />
+                </div>
+            </div>
+
+            <div class="flex items-center rounded-full bg-[#F0F6FA]">
+                <input class="max-w-[150px] pb-2 flex items-center pl-3 bg-transparent outline-none border-none"
+                    type="text" id="search-input" placeholder="Search..." />
+                <button class="md:hidden w-12 h-10 bg-[#F0F6FA] rounded-full flex items-center justify-center"
+                    id="header__search__btn-mobile">
+                    <img src="./img/header/header__search.svg" alt="" />
+                </button>
+            </div>
+            <button id="hamburger__btn" class="block lg:hidden max-w-9 active:opacity-80">
+                <img src="./img/header/hamburger.svg" alt="hamburger" />
+            </button>
+            <script>
+                document
+                    .getElementById("header__search__btn-mobile")
+                    .addEventListener("click", function () {
+                        var searchInput = document.getElementById("search-input");
+                        if (
+                            searchInput.style.display === "none" ||
+                            searchInput.style.display === ""
+                        ) {
+                            searchInput.style.display = "block";
+                        } else {
+                            searchInput.style.display = "none";
+                        }
+                    });
+            </script>
+        </div>
+        <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20"></div>
+        <div class="slow__default fixed z-30 w-full h-full top-0 right-[-100%]">
+            <div id="res__nav"
+                class="ml-auto py-[22px] px-5 slow__default fixed z-30 top-0 right-[-100%] w-[70%] bg-[#B0D9FF] h-full">
+                <div class="">
+                    <button id="res__nav___close__btn" class="block mb-5 max-w-9 ml-auto">
+                        <img src="./img/header/close.svg" alt="" class="w-full h-full object-cover" />
+                    </button>
+                    <ul class="flex flex-col mb-5 justify-end gap-[15px]">
+                        <li class="xl:pr-3">
+                            <a href="#"
+                                class="font-m font-medium text-[15px] text-[#242729] slow__default">Ustaxonalar</a>
+                        </li>
+                        <li id="res__big__menu" class="xl:pl-[14px] overflow-hidden slow__default h-[20px] block">
+                            <a href="#" class="font-m font-medium text-[15px] text-[#242729] slow__default">
+                                <span class="block mb-3">Xizmat ko’rsatish</span>
+                                <ul class="flex items-start pl-4 flex-col">
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">урьер на одну
+                                            доставку</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">ужен курьер на
+                                            машине</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">борка
+                                            квартиры</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">делать маникюр
+                                            с покрытием шеллак</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">аращивание
+                                            ресниц</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">аращивание
+                                            ногтей</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729] mb-3 block">очинить
+                                            стиральную машину</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="font-medium text-xs text-[#242729]">тремонтировать
+                                            телефон</a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-m font-medium text-[15px] text-[#242729] slow__default">Men
+                                ustaman</a>
+                        </li>
+                    </ul>
+                    <div class="flex flex-col gap-3">
+                        <a href=""
+                            class="flex items-center gap-[11px] pl-[17px] pr-[12px] w-full max-w-[101px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-9 text-[#242729]">
+                            Andijon
+                            <img src="./img/header/header__location.svg" alt=""
+                                class="w-[13px] h-[13px] object-cover" />
+                        </a>
+                        <button
+                            class="max-w-[101px] block px-[13px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-10 text-[#242729]">
+                            Kirish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header__big__menu"
+            class="fixed md:block bg-[#24272990] pt-2 hidden slow__default bottom-[-100%] transition-all duration-300 left-0 z-30 w-full h-full">
+            <div class="relative h-full w-full">
+                <div id="header__big__menu__backdrop" class="z-20 w-full h-full absolute top-0 left-0"></div>
+                <div class="max-w-[1050px] z-30 relative w-full mx-auto py-[30px] rounded-[28px] px-8 bg-[#FFF]">
+                    <ul class="flex gap-7 flex-col">
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">урьер на одну доставку</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">ужен курьер на машине</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">борка квартиры</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">делать маникюр с покрытием
+                                шеллак</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">аращивание ресниц</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">аращивание ногтей</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">очинить стиральную машину</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-medium text-[15px] text-[#242729]">тремонтировать телефон</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- Pasvord start -->
+    <section class="pt-[50px] pb-[165px]">
+        <div class="max-w-[1287px] px-5 mx-auto">
+            <div class="max-w-[180px w-full]"></div>
+            <div class="max-w-[684px] w-full mx-auto">
+                <h1 class="font-medium text-[32px] text-[#242729] text-center">Profil sozlamalari</h1>
+                <h2 class="font-normal text-[15px] text-[#7B92A4] text-center py-[5px] mb-3">Profil e’lonlar oynasida</h2>
+                <div class="">
+                    <h3 class="font-medium text-2xl text-[#242729] mb-2">Shaxsiy ma’lumotlar</h3>
+                    <p class="font-normal text-[15px] text-[#242729] max-w-[552px] mb-5">Xizmat ko’rsatish turini va xizmatlaringiz haqida ma’lumotlarni to’ldiring, bu orqali mijozlar sizni tezroq va osonroq topa olishadi.</p>
+                    <div class="flex flex-col gap-[10px]">
+                        <div class="grid grid-cols-1">
+                            <label for="file-upload" class="font-medium text-[13px] leading-7 text-[#242729] block">Profil rasmi</label>
+                            <label for="file-upload"
+                                class="px-4 h-[45px] block py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl w-full">
+                                <!-- Upload File -->
+                            </label>
+                            <input id="file-upload" type="file"
+                                class="hidden h-[45px] absolute left-0 top-0 w-full opacity-0 cursor-pointer" />
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <label for="xizmat" class="font-medium text-[13px] leading-7 text-[#242729] block">Xizmat ko’rsatuvchi shirkat nomi</label>
+                            <input type="text" name="" id="xizmat" placeholder="Avtosoz"
+                                class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <label for="manzil" class="font-medium text-[13px] leading-7 text-[#242729] block">Manzil</label>
+                            <input type="text" name="" id="manzil" placeholder="Boburshox ko’chasi 23a uy"
+                                class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <label for="moljal" class="font-medium text-[13px] leading-7 text-[#242729] block">Mo’ljal</label>
+                            <input type="text" name="" id="moljal" placeholder="Davlat arxivi yoni"
+                                class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <label for="tel_a" class="font-medium text-[13px] leading-7 text-[#242729] block">Telefon asosiy</label>
+                            <input type="text" name="" id="tel_a" placeholder="+998"
+                                class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <label for="tel" class="font-medium text-[13px] leading-7 text-[#242729] block">Telefon 2</label>
+                            <input type="text" name="" id="tel" placeholder="+998"
+                                class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
+                        </div>
+                        <div class="grid grid-cols-1 mb-[10px]">
+                            <label for="haqida" class="font-medium text-[13px] leading-7 text-[#242729] block">Xizmat ko’rsatuvchi tashkilot haqida yozing</label>
+                            <input type="text" name="" id="haqida" 
+                                class="px-4 h-[117px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
+                        </div>
+                    </div>
+                    <h5 class="mb-[10px] font-medium text-[13px] text-[#242729] leading-7">Xizmat ko’rsatish turlarini tanlang</h5>
+                    <div class="max-w-[552px] mb-[10px] border-b border-[#D9E4EB] pb-[10px] flex gap-[10px] flex-wrap">
+                        <p class="profile__xizmat__text  bg-[#D8D8D8] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Moy almashtirish
+                            <svg class="profile__xizmat__close" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Motor sozlash
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Xodovoy
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Razval
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Elektrik
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Ximchistka
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Shumoizolyatsiya
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Signalizatsiya
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Kraska
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Moyka
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Shinomantaj
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Radiator sozlash
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Kuzov sozlash
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Eshik sozlash
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Boshqa
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Yoqilg’i sozlash
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Propan sozlash
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Metan o’rnatish
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Texnik ko’rik
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Ehtiyot qismlari
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Diagnostika
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Tyuning
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Detailing
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                            Kompyuter diagnostika
+                            <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.7499 3.75001C11.6327 3.63284 11.4737 3.56702 11.308 3.56702C11.1423 3.56702 10.9833 3.63284 10.8661 3.75001L7.99989 6.61626L5.13364 3.75001C5.01643 3.63284 4.85749 3.56702 4.69176 3.56702C4.52603 3.56702 4.36709 3.63284 4.24989 3.75001C4.13272 3.86721 4.06689 4.02616 4.06689 4.19188C4.06689 4.35761 4.13272 4.51655 4.24989 4.63376L7.11614 7.50001L4.24989 10.3663C4.13272 10.4835 4.06689 10.6424 4.06689 10.8081C4.06689 10.9739 4.13272 11.1328 4.24989 11.25C4.36709 11.3672 4.52603 11.433 4.69176 11.433C4.85749 11.433 5.01643 11.3672 5.13364 11.25L7.99989 8.38376L10.8661 11.25C10.9833 11.3672 11.1423 11.433 11.308 11.433C11.4737 11.433 11.6327 11.3672 11.7499 11.25C11.8671 11.1328 11.9329 10.9739 11.9329 10.8081C11.9329 10.6424 11.8671 10.4835 11.7499 10.3663L8.88364 7.50001L11.7499 4.63376C11.8671 4.51655 11.9329 4.35761 11.9329 4.19188C11.9329 4.02616 11.8671 3.86721 11.7499 3.75001Z"
+                                    fill="#374957" />
+                            </svg>
+                        </p>
+                    </div>
+                    <div class="pt-[21px]">
+                        <h6 class="font-medium text-[15px] mb-4 text-[#242729]">Ish vaqtlari</h6>
+                        <div class="flex items-center gap-[10px] mb-4">
+                            <div class="py-3 px-4 bg-[#F0F6FA] flex items-center gap-12">
+                                9:00
+                                <div class="flex flex-col items-center gap-[2px] rounded-xl">
+                                    <button id="time__btn_1" class="w-[6px] h-[6px] bg-[#172033]"></button>
+                                    <button id="time__btn_2" class="w-[6px] h-[6px] bg-[#172033]"></button>
+                                </div>
+                            </div>
+                            <div class="py-3 px-4 bg-[#F0F6FA] flex items-center gap-12 rounded-xl">
+                                23:00
+                                <div class="flex flex-col items-center gap-[2px]">
+                                    <button id="time__btn_3" class="w-[6px] h-[6px] bg-[#172033]"></button>
+                                    <button id="time__btn_4" class="w-[6px] h-[6px] bg-[#172033]"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            24 soat
+                        </label>
+                        <h6 class="font-medium text-[15px] mb-[10px] text-[#242729]">Ish kunlarini tanlang</h6>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Dushanba
+                        </label>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Seshanba
+                        </label>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Chorshanba
+                        </label>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Payshanba
+                        </label>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Juma
+                        </label>
+                        <label class="custom-checkbox mb-[10px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Shanba
+                        </label>
+                        <label class="custom-checkbox mb-[38px]">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                           Yakshanba
+                        </label>
+                    </div>
+                    <button class="max-w-[86px] block rounded-[100px] bg-[#172033] ml-[365px] font-medium text-[15px] leading-[44px] text-[#FFFFFF] px-4">Saqlash</button>
+                </div>
+            </div>
+            <div class="max-w-[396px]">
+                <div class=""></div>
+            </div>
+        </div>
+    </section>
+    <!-- password end -->
+    <!-- footer start -->
+    <footer class="pt-[73px] pb-[42px] bg-[#242729]">
+        <div class="max-w-[1384px] mx-auto px-5">
+            <div class="flex md:flex-row flex-col md:items-center gap-5 md:gap-[70px] mb-7 md:mb-[49px]">
+                <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+                    <li>
+                        <a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Xizmat ko’rsatish
+                            turkumlari</a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Boshqa xizmatlar</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+                    <li>
+                        <a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Xizmat ko’rsatuvchiga
+                            aylanish</a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Yordam</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+                    <li>
+                        <a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5 block md:mb-[25px]">Shaxsiy
+                            kabinet</a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Portal haqida</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-auto flex md:hidden items-center gap-5 mb-5 md:gap-9">
+                <a href="#" target="_blank" class="w-6 flex h-6">
+                    <img src="./img/footer/Vector.svg" alt=""
+                        class="w-full h-full object-cover hover:opacity-50 slow__default" />
+                </a>
+                <a href="#" target="_blank" class="w-6 flex h-6">
+                    <img src="./img/footer/Shape.svg" alt=""
+                        class="w-full h-full object-cover hover:opacity-50 slow__default" />
+                </a>
+            </div>
+            <div class="flex md:flex-row flex-col md:items-center gap-5">
+                <p class="font-medium text-base text-[#FFFFFFB2] mr-14">
+                    avtoxizmatlar.uz - Abdurahmon Rashidov 2024 yil.
+                </p>
+                <a href="#" class="font-medium text-base text-[#FFFFFFB2]">Savol va takliflar yuzasidan:
+                    abdurakhmonrashidov@yandex.ru</a>
+                <div class="hidden md:flex md:gap-0 gap-3 items-center">
+                    <div class="ml-auto flex items-center gap-3 md:gap-9">
+                        <a href="#" target="_blank" class="w-6 flex h-6">
+                            <img src="./img/footer/Vector.svg" alt=""
+                                class="w-full h-full object-cover hover:opacity-50 slow__default" />
+                        </a>
+                        <a href="#" target="_blank" class="w-6 flex h-6">
+                            <img src="./img/footer/Shape.svg" alt=""
+                                class="w-full h-full object-cover hover:opacity-50 slow__default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

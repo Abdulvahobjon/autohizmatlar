@@ -67,11 +67,34 @@ res__big__menu.addEventListener("click" , function(){
     res__big__menu.classList.toggle("h-[270px]")
     res__big__menu.classList.toggle("h-[20px]")
 })
-overlay.addEventListener("click", function() {
-    res__nav.classList.add("right-[-100%]")
-    res__nav.classList.remove("right-0")
-    overlay.classList.add("hidden")
-    body.classList.remove("h-screen")
-    body.classList.remove("overflow-hidden")
-})
 
+let pas1 = document.querySelector("#pas1")
+let pas2 = document.querySelector("#pas2")
+let reset__pas__form = document.querySelector("#reset__pas__form")
+let res__pas__btn = document.querySelector("#res__pas__btn")
+let validation__res__nav = document.querySelector("#validation__res__nav")
+let validation__res__nav_1 = document.querySelector("#validation__res__nav_1")
+
+
+res__pas__btn.addEventListener("click" , function(e){
+    e.preventDefault()
+    if(pas1.value === ""){
+        validation__res__nav_1.classList.toggle("hidden")
+        validation__res__nav_1.classList.toggle("block")
+
+        setTimeout(() => {
+            validation__res__nav_1.classList.toggle("hidden")
+            validation__res__nav_1.classList.toggle("block")
+        }, 3000);
+    }
+
+
+    if(pas1.value === pas2.value){
+        validation__res__nav.classList.add("hidden")
+        validation__res__nav.classList.remove("block")
+    }
+    else{
+        validation__res__nav.classList.add("block")
+        validation__res__nav.classList.remove("hidden")
+    }
+})
