@@ -6,7 +6,7 @@ header__search__btn.addEventListener("click", function () {
   header__search__box.classList.toggle("md:max-w-[320px]");
   header__search__box.classList.toggle("max-w-[320px]");
   header__search__box.classList.toggle("gap-2");
-  header__inp.classList.toggle("hidden");
+//   header__inp.classList.toggle("hidden");
 });
 
 let body = document.body;
