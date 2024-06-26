@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 
 
 .transition-all {
     transition: all 0.3s ease-in-out;
-=======
+}
+
 #header__inp::placeholder {
     font-size: 15px;
     font-weight: 500;
@@ -30,6 +30,15 @@
     background-position: center center;
 }
 
+#res__nav__backdrop {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.083);
+}
+#header__big__menu{
+    transition: all .3s;
+}
 @media(max-width:875px) {
     #probleb__b_box {
         display: grid;
@@ -61,6 +70,7 @@
         grid-template-rows: repeat(6, 1fr);
         grid-row-gap: 22px;
     }
+
     #probleb__t_box {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -77,5 +87,17 @@
         grid-column-gap: px;
         grid-row-gap: 20px;
     }
->>>>>>> eacb07bf204bc7d82fd5fd4c6cf89bce32a71992
+}
+
+#search-input {
+    display: none;
+    margin-top: 10px;
+}
+
+.text_active {
+    color: #242729 !important;
+}
+
+.shadow_container {
+    box-shadow: 0 5px 15px -8px rgba(13, 35, 67, 0.4), 0 0 0 1px rgba(13, 35, 67, 0.07);
 }
