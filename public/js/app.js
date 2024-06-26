@@ -9,28 +9,36 @@ header__search__btn.addEventListener("click" , function(){
     header__inp.classList.toggle("hidden")
 })
 
-let res__nav___close__btn = document.querySelector("#res__nav___close__btn")
-let res__nav = document.querySelector("#res__nav")
-let hamburger__btn = document.querySelector("#hamburger__btn")
-let res__nav__backdrop = document.querySelector("#res__nav__backdrop")
-res__nav___close__btn.addEventListener("click" , function(){
-    res__nav.classList.add("right-[-100%]")
-    res__nav.classList.remove("right-0")
-    res__nav__backdrop.classList.add("hidden")
-    res__nav__backdrop.classList.remove("block")
-})
-res__nav__backdrop.addEventListener("click" , function(){
-    res__nav.classList.add("right-[-100%]")
-    res__nav.classList.remove("right-0")
-    res__nav__backdrop.classList.add("hidden")
-    res__nav__backdrop.classList.remove("block")
-})
-hamburger__btn.addEventListener("click" , function(){
-    res__nav.classList.remove("right-[-100%]")
-    res__nav.classList.add("right-0")
-    res__nav__backdrop.classList.add("block")
-    res__nav__backdrop.classList.remove("hidden")
-})
+let body = document.body; 
+
+let res__nav___close__btn = document.querySelector("#res__nav___close__btn");
+let res__nav = document.querySelector("#res__nav");
+let hamburger__btn = document.querySelector("#hamburger__btn");
+let res__nav__backdrop = document.querySelector("#res__nav__backdrop");
+
+res__nav___close__btn.addEventListener("click", function() {
+    res__nav.classList.add("right-[-100%]");
+    res__nav.classList.remove("right-0");
+    res__nav__backdrop.classList.add("hidden");
+    res__nav__backdrop.classList.remove("block");
+    body.classList.remove("h-screen", "overflow-hidden");
+});
+
+res__nav__backdrop.addEventListener("click", function() {
+    res__nav.classList.add("right-[-100%]");
+    res__nav.classList.remove("right-0");
+    res__nav__backdrop.classList.add("hidden");
+    res__nav__backdrop.classList.remove("block");
+    body.classList.remove("h-screen", "overflow-hidden");
+});
+
+hamburger__btn.addEventListener("click", function() {
+    res__nav.classList.remove("right-[-100%]");
+    res__nav.classList.add("right-0");
+    res__nav__backdrop.classList.add("block");
+    res__nav__backdrop.classList.remove("hidden");
+    body.classList.add("h-screen", "overflow-hidden"); 
+});
 
 let problem_b_card = document.querySelectorAll("#problem_b_card")
 problem_b_card.forEach(function(item, index){

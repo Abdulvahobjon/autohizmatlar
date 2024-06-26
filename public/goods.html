@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -311,7 +315,157 @@
         <h2 class="font-medium text-2xl leading-[34px] mb-6 text-[#1B1D1F]">
           Ko’p sotilayotgan tovarlar
         </h2>
-        <div class="grid grid-cols-4 gap-5 mb-14">
+        <div class="swiper mySwiper !mb2.5 md:!hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                style="
+                  background-image: url(./img/goodsPage/topSales/fuel.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+                class="bg-[#5946D7] p-7 rounded-lg"
+              >
+                <h3
+                  class="text-white font-medium text-2xl leading-7 mb-[263px]"
+                >
+                  Автомасла №1 от официальных дилеров
+                </h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="pt-7 pb-6 px-5 bg-white rounded-3xl">
+                <div class="max-w-[240px] mx-2.5 h-[222px] flex mb-11">
+                  <img
+                    class="w-full object-cover"
+                    src="./img/goodsPage/topSales/break.png"
+                    alt="break for malibu"
+                  />
+                </div>
+                <h4
+                  class="lg:text-base lg:leading-[22px] leading-[18px] text-[14px]"
+                >
+                  Malibu rul SUPER 3000 X1 5W-40
+                </h4>
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-7 items-start">
+                    <span
+                      class="font-medium md:text-[25px] lg:text-[30px] md:leading-[25px] lg:leading-[30px] text-[#1d1b1f]"
+                      >235$</span
+                    >
+                    <del class="text-base text-[#7A7680] leading-5">250$</del>
+                  </div>
+                  <button
+                    class="w-10 h-10 bg-[#FF0000] text-white border-2 border-transparent hover:border-[#ff0000] hover:text-[#FF0000] duration-300 hover:bg-transparent p-2 rounded-md flex items-center justify-center"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.874 7L5.224 4H3.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="pt-7 pb-6 px-5 bg-white rounded-3xl">
+                <div class="max-w-[240px] mx-2.5 h-[222px] flex mb-11">
+                  <img
+                    class="w-full object-cover"
+                    src="./img/goodsPage/topSales/break.png"
+                    alt="break for malibu"
+                  />
+                </div>
+                <h4
+                  class="lg:text-base lg:leading-[22px] leading-[18px] text-[14px]"
+                >
+                  Malibu rul SUPER 3000 X1 5W-40
+                </h4>
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-7 items-start">
+                    <span
+                      class="font-medium md:text-[25px] lg:text-[30px] md:leading-[25px] lg:leading-[30px] text-[#1d1b1f]"
+                      >235$</span
+                    >
+                    <del class="text-base text-[#7A7680] leading-5">250$</del>
+                  </div>
+                  <button
+                    class="w-10 h-10 bg-[#FF0000] text-white border-2 border-transparent hover:border-[#ff0000] hover:text-[#FF0000] duration-300 hover:bg-transparent p-2 rounded-md flex items-center justify-center"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.874 7L5.224 4H3.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:grid hidden lg:grid-cols-4 md:grid-cols-2 gap-5 mb-14">
           <div
             style="
               background-image: url(img/goodsPage/topSales/background.png);
@@ -334,14 +488,16 @@
                 alt="break for malibu"
               />
             </div>
-            <h4 class="lg:text-base lg:leading-[22px] leading-[18px] text-[14px]">
+            <h4
+              class="lg:text-base lg:leading-[22px] leading-[18px] text-[14px]"
+            >
               Malibu rul SUPER 3000 X1 5W-40
             </h4>
             <div class="flex items-center justify-between">
               <div class="flex gap-7 items-start">
                 <span
-                  class="font-medium text-[30px] leading-[30px] text-[#1d1b1f]"
-                  >250$</span
+                  class="font-medium md:text-[25px] lg:text-[30px] md:leading-[25px] lg:leading-[30px] text-[#1d1b1f]"
+                  >235$</span
                 >
                 <del class="text-base text-[#7A7680] leading-5">250$</del>
               </div>
@@ -403,7 +559,7 @@
             <div class="flex items-center justify-between">
               <div class="flex gap-7 items-start">
                 <span
-                  class="font-medium text-[30px] leading-[30px] text-[#1d1b1f]"
+                  class="font-medium md:text-[25px] lg:text-[30px] md:leading-[25px] lg:leading-[30px] text-[#1d1b1f]"
                   >235$</span
                 >
                 <del class="text-base text-[#7A7680] leading-5">250$</del>
@@ -466,7 +622,7 @@
             <div class="flex items-center justify-between">
               <div class="flex gap-7 items-start">
                 <span
-                  class="font-medium text-[30px] leading-[30px] text-[#1d1b1f]"
+                  class="font-medium md:text-[25px] lg:text-[30px] md:leading-[25px] lg:leading-[30px] text-[#1d1b1f]"
                   >235$</span
                 >
                 <del class="text-base text-[#7A7680] leading-5">250$</del>
@@ -514,7 +670,7 @@
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-5">
+        <div class="md:grid hidden grid-cols-3 gap-5">
           <div
             style="
               background-image: url(./img/goodsPage/topSales/cardBg.png);
@@ -668,5 +824,13 @@
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 30,
+      });
+    </script>
   </body>
 </html>
