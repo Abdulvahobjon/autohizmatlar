@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 
 
 .transition-all {
     transition: all 0.3s ease-in-out;
-=======
+}
 #header__inp::placeholder {
     font-size: 15px;
     font-weight: 500;
@@ -77,5 +76,4 @@
         grid-column-gap: px;
         grid-row-gap: 20px;
     }
->>>>>>> eacb07bf204bc7d82fd5fd4c6cf89bce32a71992
 }
