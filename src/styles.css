@@ -97,3 +97,11 @@
     display: none;
     margin-top: 10px;
 }
+
+.text_active {
+    color: #242729 !important;
+}
+
+.shadow_container {
+    box-shadow: 0 5px 15px -8px rgba(13, 35, 67, 0.4), 0 0 0 1px rgba(13, 35, 67, 0.07);
+}
