@@ -12,3 +12,157 @@ body {
 #category__container > div:hover .categories__title{
     color: #5946D7;
 }
+
+button, a{
+  transition: all .3s;
+}
+
+button:hover, a:hover{
+  opacity: 0.6;
+}
+
+.swiper {
+  width: 100%;
+  /* height: 300px; */
+}
+
+
+.swiper_mobile {
+  width: 100%;
+  /* height: 300px; */
+}
+
+.swiper-button-prev::after{
+  display: none;
+}
+
+.swiper-button-next::after{
+  display: none;
+}
+
+
+
+
+.swiper-pagination{
+  position: absolute !important;
+  text-align: center !important;
+  display: flex !important;
+  gap: 10px !important;
+  left: 60px !important;
+  bottom: 30px!important;
+}
+
+
+.swiper-pagination-bullet{
+  opacity: 100 !important;
+  height: 4px !important;
+  background-color: #e7e7e762 !important;
+  border-radius: 30px !important;
+  width: 60px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #D9D9D9 !important;
+  width: 60px !important;
+}
+
+@media  (min-width: 768px) {
+  .swiper-button-prev-new::before{
+      content: url("images/swiper/next_icon.png");
+      box-shadow: 10px !important;
+      width: 40px;
+      height: 40px;
+      position: absolute !important;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+  }
+
+  .swiper-button-prev-new::before:hover{
+      content: url("images/swiper/next_icon.png");
+      box-shadow: 10px !important;
+      width: 40px;
+      height: 40px;
+      position: absolute !important;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      opacity: .7;
+      box-shadow: 20px;
+  }
+
+  .swiper-button-next-new::before{
+      content: url("images/swiper/prev_icon.png");
+      box-shadow: 10px !important;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      top: 0;
+      right: 0;
+      position: absolute !important;
+      z-index: 9999;
+  }
+}
+
+
+@media  (max-width: 768px) {
+
+.swiper-button-prev-new-2::after{
+  content: url("images/swiper/next_icon.png");
+  box-shadow: 10px !important;
+  width: 40px;
+  height: 40px;
+  position: absolute !important;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.swiper-button-next-new-2::after{
+  content: url("images/swiper/prev_icon.png");
+  box-shadow: 10px !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute !important;
+  z-index: 9999;
+}
+
+
+  .swiper-pagination-new-2{
+      position: absolute !important;
+      text-align: center !important;
+      bottom: 20px!important;
+      display: flex !important;
+      justify-content: center !important;;
+      gap: 10px !important;
+  }
+  
+  .swiper-pagination-bullet{
+      opacity: 100 !important;
+      height: 4px !important;
+      background-color: #5946d775 !important;
+      border-radius: 30px !important;
+      width: 60px !important;
+  }
+  
+  .swiper-pagination-bullet-active{
+      background-color: #5946D7 !important;
+      width: 60px !important;
+  }
+}
