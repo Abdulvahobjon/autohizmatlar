@@ -1545,6 +1545,10 @@ video {
   transition-duration: 300ms;
 }
 
+body{
+    overflow-x: hidden;
+    font: Onest;
+}
 
 
 .transition-all {
