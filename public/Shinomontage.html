@@ -22,7 +22,7 @@
               class="md:flex hidden items-center justify-between max-w-[320px] w-full rounded-full bg-[#F0F6FA] px-4 py-2">
               <input id="header__inp" placeholder="Qanday yordam bera olamiz ?"
                 class="bg-transparent outline-none border-none max-w-[250px] w-full placeholder:text-[#7B92A4] placeholder:text-base placeholder:font-medium text-[#7B92A4] text-base font-medium "
-                type="text">
+                type="text" name="search">
               <button id="header__search__btn"><img src="./img/header/header__search.svg" alt=""></button>
             </div>
           </div>
@@ -51,7 +51,7 @@
               <img src="./img/header/header__search.svg" alt="">
             </button>
           </div>
-          <button id="hamburger__btn" class="block lg:hidden max-w-9 active:opacity-80">
+          <button id="hamburger__btn" class="block ml-2 lg:hidden max-w-9 active:opacity-80">
             <img src="./img/header/hamburger.svg" alt="hamburger">
           </button>
           <script>
@@ -65,7 +65,7 @@
             });
           </script>
         </div>
-        <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20">
+        <div id="res__nav__backdrop" class="w-full md:hidden h-full hidden fixed top-0 left-0 z-20">
         </div>
         <div  class="slow__default fixed z-30 w-full h-full top-0 right-[-100%]">
             <div id="res__nav" class=" ml-auto py-[22px] px-5 slow__default fixed z-30  top-0 right-[-100%]  w-[70%] bg-[#B0D9FF] h-full">
@@ -75,7 +75,7 @@
                 </button>
                 <ul class="flex flex-col mb-5 justify-end gap-[15px]">
                   <li class="xl:pr-3">
-                    <a href="#" class="font-m font-medium text-[15px] text-[#242729] slow__default">Ustaxonalar</a>
+                    <a href="./Shinomontage.html" class="font-m font-medium text-[15px] text-[#242729] slow__default">Ustaxonalar</a>
                   </li>
                   <li id="res__big__menu" class="xl:pl-[14px] overflow-hidden slow__default h-[20px]  block">
                     <a href="#" class="font-m  font-medium text-[15px] text-[#242729] slow__default">
@@ -93,7 +93,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="font-m font-medium text-[15px] text-[#242729] slow__default">Men ustaman</a>
+                    <a href="./login.html" class="font-m font-medium text-[15px] text-[#242729] slow__default">Men ustaman</a>
                   </li>
                 </ul>
                 <div class="flex flex-col gap-3">
@@ -102,10 +102,10 @@
                     Andijon
                     <img src="./img/header/header__location.svg" alt="" class="w-[13px] h-[13px] object-cover" />
                   </a>
-                  <button
+                  <a href="./login.html"
                     class="max-w-[101px] block px-[13px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-10 text-[#242729]">
                     Kirish
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -209,26 +209,26 @@
                             <ul class="flex flex-col gap-2">
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-home-location.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">2 ta joyda</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">2 ta joyda</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-ss-clock.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">00:00-00:00</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">00:00-00:00</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-credit-card.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Karta</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Karta</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-money.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Naqd pul</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Naqd pul</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-2">
-                                <h2 class="text-[#0044BB] font-medium text-xl md:text-2xl">Avtosoz</h2>
-                                <p class="flex items-center gap-2 text-black font-medium md:text-[20px] text-sm">
+                                <h2 class="text-[#0044BB] font-medium text-2xl md:text-2xl">Avtosoz</h2>
+                                <p class="flex items-center gap-2 text-black font-medium md:text-[13px] text-sm">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -248,29 +248,29 @@
                                     0 reyting
                                 </p>
                             </div>
-                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[20px] text-sm mb-6 block"
+                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[15px] text-sm mb-6 block"
                                 href="https://www.google.com/maps">Andijon shahar, 222 yo’lida, proyezd</a>
                             <ul class="flex flex-col gap-2 mb-5">
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Moy almashtirish <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[86px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Motor sozlamalari <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[41px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Yana 12 ta xizmatlar</li>
                             </ul>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/tell.svg" alt=""></span>Telefon</a>
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/location.svg" alt=""></span>Andijon
                                     shahar, Boburshox, 23a uy</a>
                             </div>
@@ -284,26 +284,26 @@
                             <ul class="flex flex-col gap-2">
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-home-location.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">2 ta joyda</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">2 ta joyda</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-ss-clock.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">00:00-00:00</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">00:00-00:00</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-credit-card.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Karta</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Karta</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-money.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Naqd pul</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Naqd pul</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-2">
-                                <h2 class="text-[#0044BB] font-medium text-xl md:text-2xl">Avtosoz</h2>
-                                <p class="flex items-center gap-2 text-black font-medium md:text-[20px] text-sm">
+                                <h2 class="text-[#0044BB] font-medium text-2xl md:text-2xl">Avtosoz</h2>
+                                <p class="flex items-center gap-2 text-black font-medium md:text-[13px] text-sm">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -323,29 +323,29 @@
                                     0 reyting
                                 </p>
                             </div>
-                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[20px] text-sm mb-6 block"
+                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[15px] text-sm mb-6 block"
                                 href="https://www.google.com/maps">Andijon shahar, 222 yo’lida, proyezd</a>
                             <ul class="flex flex-col gap-2 mb-5">
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Moy almashtirish <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[86px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Motor sozlamalari <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[41px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Yana 12 ta xizmatlar</li>
                             </ul>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/tell.svg" alt=""></span>Telefon</a>
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/location.svg" alt=""></span>Andijon
                                     shahar, Boburshox, 23a uy</a>
                             </div>
@@ -358,26 +358,26 @@
                             <ul class="flex flex-col gap-2">
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-home-location.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">2 ta joyda</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">2 ta joyda</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-ss-clock.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">00:00-00:00</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">00:00-00:00</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-credit-card.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Karta</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Karta</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-money.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Naqd pul</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Naqd pul</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-2">
-                                <h2 class="text-[#0044BB] font-medium text-xl md:text-2xl">Avtosoz</h2>
-                                <p class="flex items-center gap-2 text-black font-medium md:text-[20px] text-sm">
+                                <h2 class="text-[#0044BB] font-medium text-2xl md:text-2xl">Avtosoz</h2>
+                                <p class="flex items-center gap-2 text-black font-medium md:text-[13px] text-sm">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -397,29 +397,29 @@
                                     0 reyting
                                 </p>
                             </div>
-                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[20px] text-sm mb-6 block"
+                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[15px] text-sm mb-6 block"
                                 href="https://www.google.com/maps">Andijon shahar, 222 yo’lida, proyezd</a>
                             <ul class="flex flex-col gap-2 mb-5">
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Moy almashtirish <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[86px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Motor sozlamalari <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[41px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Yana 12 ta xizmatlar</li>
                             </ul>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/tell.svg" alt=""></span>Telefon</a>
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/location.svg" alt=""></span>Andijon
                                     shahar, Boburshox, 23a uy</a>
                             </div>
@@ -432,26 +432,26 @@
                             <ul class="flex flex-col gap-2">
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-home-location.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">2 ta joyda</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">2 ta joyda</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-ss-clock.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">00:00-00:00</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">00:00-00:00</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-credit-card.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Karta</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Karta</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-money.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Naqd pul</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Naqd pul</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-2">
-                                <h2 class="text-[#0044BB] font-medium text-xl md:text-2xl">Avtosoz</h2>
-                                <p class="flex items-center gap-2 text-black font-medium md:text-[20px] text-sm">
+                                <h2 class="text-[#0044BB] font-medium text-2xl md:text-2xl">Avtosoz</h2>
+                                <p class="flex items-center gap-2 text-black font-medium md:text-[13px] text-sm">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -471,29 +471,29 @@
                                     0 reyting
                                 </p>
                             </div>
-                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[20px] text-sm mb-6 block"
+                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[15px] text-sm mb-6 block"
                                 href="https://www.google.com/maps">Andijon shahar, 222 yo’lida, proyezd</a>
                             <ul class="flex flex-col gap-2 mb-5">
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Moy almashtirish <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[86px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Motor sozlamalari <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[41px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Yana 12 ta xizmatlar</li>
                             </ul>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/tell.svg" alt=""></span>Telefon</a>
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/location.svg" alt=""></span>Andijon
                                     shahar, Boburshox, 23a uy</a>
                             </div>
@@ -506,26 +506,26 @@
                             <ul class="flex flex-col gap-2">
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-home-location.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">2 ta joyda</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">2 ta joyda</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-ss-clock.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">00:00-00:00</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">00:00-00:00</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-credit-card.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Karta</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Karta</a>
                                 </li>
                                 <li class="flex items-center gap-1">
                                     <img src="./img/shinomontage/fi-sr-money.svg" alt="">
-                                    <a class="text-[#7B92A4] font-medium md:text-[20px] text-sm" href="#">Naqd pul</a>
+                                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Naqd pul</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="flex-grow">
                             <div class="flex items-center justify-between mb-2">
-                                <h2 class="text-[#0044BB] font-medium text-xl md:text-2xl">Avtosoz</h2>
-                                <p class="flex items-center gap-2 text-black font-medium md:text-[20px] text-sm">
+                                <h2 class="text-[#0044BB] font-medium text-2xl md:text-2xl">Avtosoz</h2>
+                                <p class="flex items-center gap-2 text-black font-medium md:text-[13px] text-sm">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -545,29 +545,29 @@
                                     0 reyting
                                 </p>
                             </div>
-                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[20px] text-sm mb-6 block"
+                            <a target="_blank" class="text-[#DD0000] font-medium md:text-[15px] text-sm mb-6 block"
                                 href="https://www.google.com/maps">Andijon shahar, 222 yo’lida, proyezd</a>
                             <ul class="flex flex-col gap-2 mb-5">
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Moy almashtirish <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[86px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Motor sozlamalari <span
                                         class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
                                         <p class="w-[41px] bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
                                     </span></li>
                                 <li
-                                    class="text-[#0044BB] font-medium md:text-[20px] text-sm flex items-center justify-between">
+                                    class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
                                     Yana 12 ta xizmatlar</li>
                             </ul>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/tell.svg" alt=""></span>Telefon</a>
-                                <a class="text-[#242729] font-medium md:text-[20px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                                <a class="text-[#242729] font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
                                     href="#"><span><img src="./img/shinomontage/location.svg" alt=""></span>Andijon
                                     shahar, Boburshox, 23a uy</a>
                             </div>
@@ -577,7 +577,7 @@
                 </div>
             </div>
 
-            <div class="p-6 lg:block hidden">
+            <div class="p-6 xl:block hidden">
                 <img class="mb-2.5 max-w-[126px] w-full" src="./img/shinomontage/div.PromotionPromo-ImageWrap.png"
                     alt="PromotionPromo">
                 <h3 class="text-[#242729] font-medium text-[20px] leading-6 mb-3">Mijozlar sonini oshiring</h3>
@@ -634,12 +634,14 @@
               <img src="./img/footer/Shape.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
             </a>
           </div>
-          <div class="flex md:flex-row flex-col md:items-center gap-5">
+          <div class="flex md:flex-row border-[#FFFFFF4D] pb-[10px] md:border-b  flex-col md:items-center justify-between md:gap-0 gap-5">
+          <div class="flex md:flex-row flex-col md:gap-0 gap-2 md:items-center">
             <p class="font-medium text-base text-[#FFFFFFB2] mr-14">avtoxizmatlar.uz - Abdurahmon Rashidov 2024 yil.</p>
             <a href="#" class="font-medium text-base text-[#FFFFFFB2]">Savol va takliflar yuzasidan:
               abdurakhmonrashidov@yandex.ru</a>
+          </div>
             <div class="hidden md:flex md:gap-0 gap-3 items-center">
-              <div class="ml-auto flex items-center gap-3 md:gap-9">
+              <div class="max-w-[83px] flex justify-self-end  items-center gap-3 md:gap-9">
                 <a href="#" target="_blank" class="w-6 flex h-6">
                   <img src="./img/footer/Vector.svg" alt=""
                     class="w-full h-full object-cover hover:opacity-50 slow__default">

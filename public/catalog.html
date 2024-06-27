@@ -108,7 +108,7 @@
             transform: rotate(180deg);
         }
 
-        #boder_b_t {
+        .boder_b_t {
             border-top: 1px solid #E3E3E8;
             border-bottom: 1px solid #E3E3E8;
         }
@@ -131,8 +131,16 @@
                 grid-column-gap: 0px;
                 grid-row-gap: 20px;
             }
-            #catslog__left{
+
+            #catslog__left {
                 display: none;
+            }
+
+            body {
+                transition: all .3s;
+            }
+            #catalog__left__box{
+                transition: all .3s;
             }
         }
     </style>
@@ -150,7 +158,7 @@
                     </a>
 
                     <div class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]">
-                        <input type="text" placeholder="Tovar nomini kiriting"
+                        <input type="text" placeholder="Tovar nomini kiriting" name="search"
                             class="w-full py-[11px] pl-[20px] focus:outline-none border-none border-transparent bg-transparent" />
                         <button class="font active:opacity-50">
                             <img src="./img/navbar/search_icon.png" alt="search icon" />
@@ -234,17 +242,26 @@
                 Rullar katalogi
             </h1>
             <div class="flex items-start md:flex-row flex-col ">
-                <button id="filter__catalog" class=" border border-[#DEDEE2] flex md:hidden items-center w-full gap-[14px] py-[7.44px] justify-center mb-12 font-medium text-lg text-[#000000]">
+                <button id="filter__catalog"
+                    class=" border border-[#DEDEE2] flex md:hidden items-center w-full gap-[14px] py-[7.44px] justify-center mb-12 font-medium text-lg text-[#000000]">
                     <img src="./img/catalog/filter.svg" alt="" class="">
                     Filterlash
                 </button>
-                <div id="catalog__res" class="hidden max-w-[300px] mx-auto pt-[28px] pb-[33px] bg-[white]  flex-col gap-[15px] px-5">
+                <div id="catalog__res"
+                    class="hidden max-w-[300px] mx-auto pt-[28px] pb-[33px] bg-[white]  flex-col gap-[15px] px-5">
                     <input type="text" placeholder="Qidiruv"
                         class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded  font-normal text-base text-[#7A7680]" />
                     <div class="py-[15px] border-b border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F] ">Kategoriya</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="flex flex-col gap-[10px] mb-[15px]">
                             <label class="custom-checkbox">
@@ -278,7 +295,14 @@
                     <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="flex flex-col gap-[10px] mb-[15px]">
                             <label class="custom-checkbox">
@@ -312,7 +336,14 @@
                     <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Summani tanlang</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="grid grid-cols-2">
                             <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
@@ -324,7 +355,14 @@
                     <div id="boder_b_t" class="">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Avtomobil rusumi</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="flex flex-col gap-[10px] mb-[15px]">
                             <label class="custom-checkbox">
@@ -359,13 +397,21 @@
                     <button class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]">Filterni
                         bekor qilish</button>
                 </div>
-                <div id="catslog__left" class="max-w-[300px] pt-[42px] pb-[33px] bg-[white] flex flex-col gap-[15px] px-5">
+                <div id="catslog__left"
+                    class="max-w-[300px] pt-[42px] pb-[33px] bg-[white] flex flex-col gap-[15px] px-5">
                     <input type="text" placeholder="Qidiruv"
                         class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded  font-normal text-base text-[#7A7680]" />
-                    <div class="py-[15px] border-b border-[#E3E3E8]">
+                    <div id="catalog__left__box" class="h-[58px] overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F] ">Kategoriya</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="flex flex-col gap-[10px] mb-[15px]">
                             <label class="custom-checkbox">
@@ -396,10 +442,17 @@
                         </div>
                         <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
                     </div>
-                    <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
+                    <div id="catalog__left__box" class="h-[58px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="flex flex-col gap-[10px] mb-[15px]">
                             <label class="custom-checkbox">
@@ -430,10 +483,17 @@
                         </div>
                         <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
                     </div>
-                    <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
+                    <div id="catalog__left__box" class="h-[58px] max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Summani tanlang</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="grid grid-cols-2">
                             <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
@@ -442,10 +502,17 @@
                                 placeholder="1200$ gacha" />
                         </div>
                     </div>
-                    <div id="boder_b_t" class="">
+                    <div  id="catalog__left__box" class="h-[58px] max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Avtomobil rusumi</h2>
-                            <button class=""></button>
+                            <button class="">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
                         </div>
                         <div class="flex flex-col gap-[10px] mb-[15px]">
                             <label class="custom-checkbox">
@@ -480,7 +547,8 @@
                     <button class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]">Filterni
                         bekor qilish</button>
                 </div>
-                <div id="catalog__right" class="bg-[#F8F8FA] catalog__right_active   w-full grid grid-cols-2 lg:grid-cols-3 gap-5">
+                <div id="catalog__right"
+                    class="bg-[#F8F8FA] catalog__right_active   w-full grid grid-cols-2 lg:grid-cols-3 gap-5">
                     <div
                         class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
                         <div class="mx-auto xl:px-5">

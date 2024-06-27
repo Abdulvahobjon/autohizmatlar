@@ -60,8 +60,8 @@ let header = document.querySelector("#header");
 let hero = document.querySelector(".hero");
 
 header__big__menu__open.addEventListener("click", function () {
-    header__big__menu.classList.add("top-20");
-    header__big__menu.classList.remove("bottom-[-100%]");
+    header__big__menu.classList.toggle("top-20");
+    header__big__menu.classList.toggle("bottom-[-100%]");
     // header.classList.add("fixed")
     // header.classList.add("top-0")
     // header.classList.add("left-0")
