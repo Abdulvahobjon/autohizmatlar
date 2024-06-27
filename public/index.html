@@ -18,6 +18,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Home</title>
+  <style>
+
+    .problem__btn__1__active{
+      transition: all .3s;
+      transform: scale(1.2);
+      border-bottom: 1px solid #000000;
+      padding-bottom: 1.5px;
+    }
+    .problem__btn__1{
+      transition: all .3s;
+      padding-bottom: 1.5px;
+    }
+    .problem__btn__2{
+      transition: all .3s;
+      padding-bottom: 1.5px;
+    }
+    .problem__un__active{
+      display: none;
+    }
+    @media(max-width:585px){
+      #register__card_2{
+        height: 150px;
+      }
+      .problem__nav{
+        gap: 30px;
+      }
+    }
+    @media(max-width:490px){
+      .problem__nav__flex__box{
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
 
 <script>
@@ -80,7 +114,7 @@
     </div>
     
     <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20"></div>
-    <div  class="slow__default fixed z-30 w-full h-full top-0 right-[-100%]">
+    <div  class="slow__default md:hidden fixed z-30 w-full h-full top-0 right-[-100%]">
       <div id="res__nav" class=" ml-auto py-[22px] px-5 slow__default fixed z-30  top-0 right-[-100%]  w-[70%] bg-[#B0D9FF] h-full">
         <div class="">
           <button id="res__nav___close__btn" class="block mb-5 max-w-9 ml-auto">
@@ -210,14 +244,13 @@
       <h4 class="font-medium text-3xl md:text-[38px] leading-[42px] max-w-[582px] mb-6 md:mb-[31px] wow animate__animated animate__fadeInDown">Portaldan
         foydalanish uchun ro’yhatdan o’ting.</h4>
       <div id="register__card_1" class="flex lg:flex-row flex-col lg:items-center gap-4">
-        <a href="./login.html" class="max-w-[616px] wow animate__animated animate__fadeInLeft w-full h-[200px] md:h-[240px] md:pb-[186px] pt-6 pl-6 rounded-[20px] relative z-10">
+        <a href="./login.html" id="register__card_2" class="max-w-[616px] wow animate__animated animate__fadeInLeft w-full h-[240px] md:pb-[186px] pt-6 pl-6 rounded-[20px] relative z-10">
           <h5 class="font-medium text-sm md:text-[26px] text-[#242729] leading-[30px]">Men haydovchiman</h5>
-          <img src="./img/register/left.png" alt="" class="absolute w-full h-[150px] md:h-full top-0 left-0 z-[-1]">
+          <img src="./img/register/left.png" alt="Men haydovchiman" class="absolute w-full h-full top-0 left-0 z-[-1]">
         </a>
-        <a href="./login.html" id="register__card_2"
-          class="max-w-[616px] wow animate__animated animate__fadeInRight w-full h-[200px] md:h-[240px] md:pb-[186px] pt-6 relative z-10 pl-6 rounded-[20px]">
+        <a href="./login.html" id="register__card_2" class="max-w-[616px] wow animate__animated animate__fadeInRight w-full h-[240px] md:pb-[186px] pt-6 relative z-10 pl-6 rounded-[20px]">
           <h5 class="font-medium text-sm md:text-[26px] text-[#242729] leading-[30px]">Men xizmat ko’rsatuvchiman</h5>
-          <img src="./img/register/right.png" alt="" class="absolute w-full h-[150px] md:h-full top-0 left-0 z-[-1]">
+          <img src="./img/register/right.png" alt="Men xizmat ko’rsatuvchiman" class="absolute w-full h-full top-0 left-0 z-[-1]">
         </a>
       </div>
     </div>
@@ -228,72 +261,244 @@
     <div class="max-w-[1384px] bg-[#F0F6FA]  mx-auto px-5 md:px-12 pt-[30px] pb-[26px] rounded-[36px] ">
       <h5 class="font-medium text-[26px] text-[#242729] mb-[26px]">Muammoni turini tanlang</h5>
       <div id="probleb__t_box" class="flex items-center gap-3 md:py-5 mb-[18px]">
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/1.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div  class="problem__btn__1 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/1.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Moy almashtirish</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/2.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div class="problem__btn__2 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/2.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Amartizatsiya</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/3.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div  class="problem__btn__1 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/3.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Kuzov</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/4.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div class="problem__btn__2 problem__btn  lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/4.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Elektronika</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/5.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div class="problem__btn__1 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/5.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Boshqa</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/6.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div class="problem__btn__2 problem__btn  lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/6.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Yonilg’i</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/7.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div  class="problem__btn__1 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/7.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Motor</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/8.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div class="problem__btn__2 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/8.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Detailing</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/9.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div  class="problem__btn__1 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/9.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Bo’yash</p>
         </div>
-        <div class="lg:max-w-[129px] w-full ">
-          <img id="problem__center__img" src="./img/problem/10.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
+        <div class="problem__btn__2 problem__btn lg:max-w-[129px] w-full ">
+          <img id="problem__center__img" src="./img/problem/10.png" alt="Mashina extiyot qismlari" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Ximchistka</p>
         </div>
       </div>
       <div id="probleb__b_box" class="grid grid-cols-3 gap-x-4 gap-y-[22px]">
         <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Moy almashtirish</h6>
-          <img src="./img/problem/b-1.png" alt="" class="absolute right-0 bottom-0">
+          <img src="./img/problem/b-1.png" alt="Mashina ehtiyot Qismlari" class="absolute right-0 bottom-0">
         </div>
         <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Amartizatsiya</h6>
-          <img src="./img/problem/b-2.png" alt="" class="absolute right-0 bottom-0">
+          <img src="./img/problem/b-2.png" alt="Mashina ehtiyot Qismlari" class="absolute right-0 bottom-0">
         </div>
         <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Kuzov</h6>
-          <img src="./img/problem/b-3.png" alt="" class="absolute right-0 bottom-0">
+          <img src="./img/problem/b-3.png" alt="Mashina ehtiyot Qismlari" class="absolute right-0 bottom-0">
         </div>
         <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Bo’yash</h6>
-          <img src="./img/problem/b-4.png" alt="" class="absolute right-8 bottom-0">
+          <img src="./img/problem/b-4.png" alt="Mashina ehtiyot Qismlari" class="absolute right-8 bottom-0">
         </div>
         <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Motor</h6>
-          <img src="./img/problem/b-5.png" alt="" class="absolute right-0 bottom-0">
+          <img src="./img/problem/b-5.png" alt="Mashina ehtiyot Qismlari" class="absolute right-0 bottom-0">
         </div>
         <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Detailing</h6>
-          <img src="./img/problem/b-6.png" alt="" class="absolute right-0 bottom-0">
+          <img src="./img/problem/b-6.png" alt="Mashina ehtiyot Qismlari" class="absolute right-0 bottom-0">
         </div>
+      </div>
+      <div  class="problem_nav_1 problem__nav problem__un__active  items-start gap-[50px]">
+      <div class="flex problem__nav__flex__box items-start md:gap-[50px] gap-[15px] sm:gap-[30px]">
+        <div class="flex flex-col gap-[15px]">
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Amartizatsiya
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Amartizatsiya
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Amartizatsiya
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Amartizatsiya
+          </div>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Amartizatsiya
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Amartizatsiya
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Signalizatsiya o’rnatish
+          </div>
+        </div>
+      </div>
+      </div>
+      <div  class="problem_nav_2 problem__nav problem__un__active  items-start gap-[50px]">
+      <div class="flex problem__nav__flex__box items-start md:gap-[50px] gap-[15px] sm:gap-[30px]">
+        <div class="flex flex-col gap-[15px]">
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Elektronika
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Elektronika
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Elektronika
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Elektronika
+          </div>
+        </div>
+        <div class="flex flex-col gap-[15px]">
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Elektronika
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+              Elektronika
+          </div>
+          <div class="flex items-center gap-[5px] font-medium text-[15px] text-[#000000]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.7501 9.525L11.1641 4.939C10.8827 4.65774 10.5011 4.49978 10.1033 4.49988C9.70543 4.49997 9.3239 4.65811 9.04264 4.9395C8.76138 5.2209 8.60342 5.6025 8.60352 6.00036C8.60361 6.39822 8.76175 6.77974 9.04314 7.061L13.6291 11.646C13.6757 11.6925 13.7126 11.7476 13.7378 11.8084C13.7631 11.8691 13.776 11.9342 13.776 12C13.776 12.0658 13.7631 12.1309 13.7378 12.1916C13.7126 12.2524 13.6757 12.3076 13.6291 12.354L9.04314 16.939C8.76175 17.2203 8.60361 17.6018 8.60352 17.9997C8.60342 18.3975 8.76138 18.7791 9.04264 19.0605C9.3239 19.3419 9.70543 19.5 10.1033 19.5001C10.5011 19.5002 10.8827 19.3423 11.1641 19.061L15.7501 14.475C16.4054 13.818 16.7733 12.9279 16.7733 12C16.7733 11.0721 16.4054 10.182 15.7501 9.525Z" fill="#374957"/>
+              </svg>
+            Moy almashtirish
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -334,11 +539,11 @@
         <div class="hidden md:flex md:gap-0 gap-3 items-center">
           <div class="max-w-[83px] flex justify-self-end  items-center gap-3 md:gap-9">
             <a href="#" target="_blank" class="w-6 flex h-6">
-              <img src="./img/footer/Vector.svg" alt=""
+              <img src="./img/footer/Vector.svg" alt="Instagram logo"
                 class="w-full h-full object-cover hover:opacity-50 slow__default">
             </a>
             <a href="#" target="_blank" class="w-6 flex h-6">
-              <img src="./img/footer/Shape.svg" alt=""
+              <img src="./img/footer/Shape.svg" alt="Telegram logo"
                 class="w-full h-full object-cover hover:opacity-50 slow__default">
             </a>
           </div>
