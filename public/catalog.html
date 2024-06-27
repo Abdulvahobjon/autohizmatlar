@@ -6,150 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Document</title>
+    <!-- amination -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- amination -->
+    <title>Catalaog</title>
+    <script>
+        new WOW().init();
+        var rellax = new Rellax('.rellax');
+    </script>
+
     <style>
-        /* Checkbox container'ga style berish */
-        .custom-checkbox {
-            display: inline-block;
-            position: relative;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-
-            user-select: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Default checkbox'ni yashirish */
-        .custom-checkbox input {
-            display: none;
-        }
-
-        /* Checkmark'ga style berish */
-        .custom-checkbox .checkmark {
-            position: relative;
-            height: 20px;
-            width: 20px;
-            background-color: white;
-            border: 1px solid #DEDEE2;
-            border-radius: 4px;
-            padding: 2px;
-        }
-
-        /* Hover effekti */
-        .custom-checkbox:hover input~.checkmark {
-            background-color: #ffffff;
-        }
-
-        /* Checked holat */
-        .custom-checkbox input:checked~.checkmark {
-            background-color: #6B59CC;
-            border: 1px solid #6B59CC;
-        }
-
-        /* Checkmark'ni qo'shish */
-        .custom-checkbox .checkmark:after {
-            content: "";
-            position: relative;
-            display: none;
-        }
-
-        /* Checked holatda checkmark'ni ko'rsatish */
-        .custom-checkbox input:checked~.checkmark:after {
-            display: block;
-        }
-
-        /* Checkmark'ni yaratish */
-        .custom-checkbox .checkmark:after {
-            width: 9px;
-            height: 8px;
-            background-image: url(./img/gooda__chek.svg);
-            background-size: cover;
-            width: 16px;
-            height: 16px;
-        }
-
-        .catalog__inp {
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 19.12px;
-            color: #abbdc9;
-            outline: none;
-            border: 1px solid #DEDEE2;
-        }
-
-        .catalog__inp::placeholder {
-            font-family: Montserrat;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-            color: #7a7680;
-
-        }
-
-        #time__btn_1 {
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        }
-
-        #time__btn_2 {
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            transform: rotate(180deg);
-        }
-
-        #time__btn_3 {
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        }
-
-        #time__btn_4 {
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            transform: rotate(180deg);
-        }
-
-        .boder_b_t {
-            border-top: 1px solid #E3E3E8;
-            border-bottom: 1px solid #E3E3E8;
-        }
-
-        .border-radius {
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-        }
-
-        .border-radius1 {
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        @media(max-width:850px) {
-            .catalog__right_active {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(5, 1fr);
-                grid-column-gap: 0px;
-                grid-row-gap: 20px;
-            }
-
-            #catslog__left {
-                display: none;
-            }
-
-            body {
-                transition: all .3s;
-            }
-            #catalog__left__box{
-                transition: all .3s;
-            }
-        }
     </style>
 </head>
 
 <body>
     <!-- header start -->
     <header>
-        <nav class="shadow-md mb-[30px]">
+        <nav class="shadow-md mb-1">
             <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
                 <div class="flex justify-between items-center gap-4">
                     <a href="/">
@@ -236,12 +110,12 @@
     </header>
     <!-- header end -->
     <!-- katalog start -->
-    <section class="pt-[30px] pb-[155px] md:pb-[283px] bg-[#F8F8FA]">
+    <section class="pb-[155px] md:pb-[283px] bg-[#F8F8FA] pt-[30px] ">
         <div class="max-w-[1300px] px-5 mx-auto">
             <h1 class="font-semibold text-2xl text-[#1B1D1F] mb-2">
                 Rullar katalogi
             </h1>
-            <div class="flex items-start md:flex-row flex-col ">
+            <div class="flex items-start gap-[20px] md:flex-row flex-col ">
                 <button id="filter__catalog"
                     class=" border border-[#DEDEE2] flex md:hidden items-center w-full gap-[14px] py-[7.44px] justify-center mb-12 font-medium text-lg text-[#000000]">
                     <img src="./img/catalog/filter.svg" alt="filter">
@@ -398,10 +272,11 @@
                         bekor qilish</button>
                 </div>
                 <div id="catslog__left"
-                    class="max-w-[300px] pt-[42px] pb-[33px] bg-[white] flex flex-col gap-[15px] px-5">
+                    class="max-w-[300px] pt-[42px] pb-[33px] bg-[white] flex flex-col gap-[15px] px-5 mx-auto  wow animate__animated animate__slideInLeft">
                     <input type="text" placeholder="Qidiruv"
                         class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded  font-normal text-base text-[#7A7680]" />
-                    <div id="catalog__left__box" class="h-[58px] overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
+                    <div id="catalog__left__box"
+                        class="h-[58px] overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F] ">Kategoriya</h2>
                             <button>
@@ -442,7 +317,8 @@
                         </div>
                         <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
                     </div>
-                    <div id="catalog__left__box" class="h-[58px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
+                    <div id="catalog__left__box"
+                        class="h-[58px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
                             <button>
@@ -483,7 +359,8 @@
                         </div>
                         <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
                     </div>
-                    <div id="catalog__left__box" class="h-[58px] max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
+                    <div id="catalog__left__box"
+                        class="h-[58px] max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Summani tanlang</h2>
                             <button>
@@ -502,7 +379,8 @@
                                 placeholder="1200$ gacha" />
                         </div>
                     </div>
-                    <div  id="catalog__left__box" class="h-[58px] max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
+                    <div id="catalog__left__box"
+                        class="h-[58px] max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b  border-[#E3E3E8]">
                         <div class="mb-[15px] flex items-center justify-between">
                             <h2 class="font-medium text-lg text-[#1B1D1F]">Avtomobil rusumi</h2>
                             <button>
@@ -548,7 +426,8 @@
                         bekor qilish</button>
                 </div>
                 <div id="catalog__right"
-                    class="bg-[#F8F8FA] catalog__right_active   w-full grid grid-cols-2 lg:grid-cols-3 gap-5">
+                
+                    class="bg-[#F8F8FA] catalog__right_active   w-full grid  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5  wow animate__animated animate__slideInRight">
                     <div
                         class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
                         <div class="mx-auto xl:px-5">
