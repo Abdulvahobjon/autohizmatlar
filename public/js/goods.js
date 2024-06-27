@@ -14,14 +14,16 @@ goods__close.addEventListener("click", () => {
 });
 
 const catalog = document.getElementById("catalog");
-const catalogDiv = document.getElementById("catalogDiv");
+const catalogDiv = document.getElementById("catalogDiv")
 
 catalog.addEventListener("click", () => {
     if(document.body.style.overflow != "hidden"){
         document.body.style.overflow = 'hidden'
+
     }else{
         document.body.style.overflow = 'auto'
     }
+    catalog.classList.toggle('bg-black')
     catalogDiv.classList.toggle('md:top-[180px]')
     catalogDiv.classList.toggle('top-[150px]')
     catalogDiv.classList.toggle('top-[100%]')
