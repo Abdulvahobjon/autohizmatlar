@@ -49,35 +49,46 @@ a:hover {
   }
 }
 
+
+.navigationBtnL, .navigationBtnL-1  {
+  position: absolute;
+  top: 250px;
+  left: 25px;
+  background-image: url("../img/swiper/next_icon.png");
+  width: 30px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  background-position-x: -8px;
+  border: none;
+  outline: none;
+  z-index: 0;
+}
+.navigationBtnR, .navigationBtnR-1 {
+  position: absolute;
+  top: 250px;
+  right: 25px;
+  background-image: url("../img/swiper/prev_icon.png");
+  width: 30px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  background-position-x: 4px;
+  border: none;
+  outline: none;
+  z-index: 0;
+}
+
+@media (max-width: 1115px) {
+  .navigationBtnL, .navigationBtnL-1, .navigationBtnR, .navigationBtnR-1  {
+    z-index: 1;
+  }
+}
+
 @media (min-width: 768px) {
-  .navigationBtnL, .navigationBtnL-1  {
-    position: absolute;
-    top: 250px;
-    left: 25px;
-    background-image: url("../img/swiper/next_icon.png");
-    width: 30px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    background-position-x: -8px;
-    border: none;
-    outline: none;
-  }
-  .navigationBtnR, .navigationBtnR-1 {
-    position: absolute;
-    top: 250px;
-    right: 25px;
-    background-image: url("../img/swiper/prev_icon.png");
-    width: 30px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    background-position-x: 4px;
-    border: none;
-    outline: none;
-  }
+ 
 
   .swiper-pagination-new-1 {
     position: absolute !important;
