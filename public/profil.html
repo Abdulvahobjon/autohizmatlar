@@ -2,114 +2,683 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Car service</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Car service</title>
+  <style>
+    .profil__galereya__eye__img{
+      display: none;
+    }
+    .profil__galereya__img:hover .profil__galereya__eye__img{
+      display: block;
+    }
+
+    .profil__galereya__modal_active{
+      transform: scale(0);
+    }
+    .profil__galereya__modal{
+      transition: all .3s;
+    }
+  </style>
 </head>
 
 <body class="font-[Onest]">
-      <!-- header start -->
-      <header class="py-[14px] relative">
-        <div class="max-w-[1384px] mx-auto px-5 flex justify-between items-center">
-          <div class="flex items-center gap-28 w-full max-w-[520px]">
-            <a href="index.html"><img src="./img/header/header__logo.svg" alt="logo"></a>
-            <div id="header__search__box"
-              class="md:flex hidden items-center justify-between max-w-[320px] w-full rounded-full bg-[#F0F6FA] px-4 py-2">
-              <input id="header__inp" placeholder="Qanday yordam bera olamiz ?"
-                class="bg-transparent outline-none border-none max-w-[250px] w-full placeholder:text-[#7B92A4] placeholder:text-base placeholder:font-medium text-[#7B92A4] text-base font-medium "
-                type="text" name="search">
-              <button id="header__search__btn"><img src="./img/header/header__search.svg" alt=""></button>
-            </div>
-          </div>
-          <ul class="lg:flex hidden items-center gap-6 mr-auto">
-            <li><a class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="./Shinomontage.html">Ustaxonalar</a>
+  <!-- header start -->
+  <header class="py-[14px] relative">
+    <div class="max-w-[1384px] mx-auto px-5 flex justify-between items-center">
+      <div class="flex items-center gap-28 w-full max-w-[520px]">
+        <a href="index.html"><img src="./img/header/header__logo.svg" alt="logo"></a>
+        <div id="header__search__box"
+          class="md:flex hidden items-center justify-between max-w-[320px] w-full rounded-full bg-[#F0F6FA] px-4 py-2">
+          <input id="header__inp" placeholder="Qanday yordam bera olamiz ?"
+            class="bg-transparent outline-none border-none max-w-[250px] w-full placeholder:text-[#7B92A4] placeholder:text-base placeholder:font-medium text-[#7B92A4] text-base font-medium "
+            type="text" name="search">
+          <button id="header__search__btn"><img src="./img/header/header__search.svg" alt=""></button>
+        </div>
+      </div>
+      <ul class="lg:flex hidden items-center gap-6 mr-auto">
+        <li><a class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all"
+            href="./Shinomontage.html">Ustaxonalar</a>
+        </li>
+        <li><a id="header__big__menu__open"
+            class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="#">Xizmat
+            ko’rsatish</a></li>
+        <li><a class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="./login.html">Men
+            ustaman</a>
+        </li>
+      </ul>
+      <div class="lg:flex hidden items-center gap-6">
+        <a class="text-[#242729] inline-flex items-center gap-3 font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
+          href="#">
+          Andijon <img src="./img/header/header__location.svg" alt="location">
+        </a>
+        <a class="text-[#242729] font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
+          href="./login.html">Kirish</a>
+      </div>
+
+
+      <div class="flex items-center rounded-full bg-[#F0F6FA]">
+        <input class="max-w-[150px] pb-2 md:hidden flex items-center pl-3 bg-transparent outline-none border-none"
+          type="text" id="search-input" placeholder="Search...">
+        <button class="md:hidden w-12 h-10 bg-[#F0F6FA] rounded-full flex items-center justify-center"
+          id="header__search__btn-mobile">
+          <img src="./img/header/header__search.svg" alt="">
+        </button>
+      </div>
+      <button id="hamburger__btn" class="block ml-2 lg:hidden max-w-9 active:opacity-80">
+        <img src="./img/header/hamburger.svg" alt="hamburger">
+      </button>
+      <script>
+        document.getElementById('header__search__btn-mobile').addEventListener('click', function () {
+          var searchInput = document.getElementById('search-input');
+          if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+            searchInput.style.display = 'block';
+          } else {
+            searchInput.style.display = 'none';
+          }
+        });
+      </script>
+    </div>
+    <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20">
+    </div>
+    <div class="slow__default fixed z-30 w-full h-full top-0 right-[-100%]">
+      <div id="res__nav"
+        class=" ml-auto py-[22px] px-5 slow__default fixed z-30  top-0 right-[-100%]  w-[70%] bg-[#B0D9FF] h-full">
+        <div class="">
+          <button id="res__nav___close__btn" class="block mb-5 max-w-9 ml-auto">
+            <img src="./img/header/close.svg" alt="" class="w-full h-full object-cover" />
+          </button>
+          <ul class="flex flex-col mb-5 justify-end gap-[15px]">
+            <li class="xl:pr-3">
+              <a href="./Shinomontage.html"
+                class="font-m font-medium text-[15px] text-[#242729] slow__default">Ustaxonalar</a>
             </li>
-            <li><a id="header__big__menu__open" class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="#">Xizmat
-                ko’rsatish</a></li>
-            <li><a class="text-[#7B92A4] font-medium text-base hover:text-[#B0D9FF] transition-all" href="./login.html">Men ustaman</a>
+            <li id="res__big__menu" class="xl:pl-[14px] overflow-hidden slow__default h-[20px]  block">
+              <a href="#" class="font-m  font-medium text-[15px] text-[#242729] slow__default">
+                <span class="block mb-3">Xizmat ko’rsatish</span>
+                <ul class="flex items-start pl-4 flex-col">
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">урьер на одну доставку</a></li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">ужен курьер на машине</a></li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">борка квартиры</a></li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">делать маникюр с покрытием
+                      шеллак</a></li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">аращивание ресниц</a></li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">аращивание ногтей</a></li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">очинить стиральную машину</a>
+                  </li>
+                  <li><a href="#" class="font-medium text-xs text-[#242729]">тремонтировать телефон</a></li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="./login.html" class="font-m font-medium text-[15px] text-[#242729] slow__default">Men ustaman</a>
             </li>
           </ul>
-          <div class="lg:flex hidden items-center gap-6">
-            <a class="text-[#242729] inline-flex items-center gap-3 font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
-              href="#">
-              Andijon <img src="./img/header/header__location.svg" alt="location">
+          <div class="flex flex-col gap-3">
+            <a href=""
+              class="flex items-center gap-[11px] pl-[17px] pr-[12px] w-full max-w-[101px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-9 text-[#242729]">
+              Andijon
+              <img src="./img/header/header__location.svg" alt="" class="w-[13px] h-[13px] object-cover" />
             </a>
-            <a class="text-[#242729] font-medium text-sm leading-9 px-4 rounded-full bg-[#F0F6FA] hover:shadow-lg transition-all active:shadow-none active:scale-95 hover:scale-105"
-              href="./login.html">Kirish</a>
+            <a href="./login.html"
+              class="max-w-[101px] block px-[13px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-10 text-[#242729]">
+              Kirish
+            </a>
           </div>
-    
-    
-          <div class="flex items-center rounded-full bg-[#F0F6FA]" >
-            <input class="max-w-[150px] pb-2 md:hidden flex items-center pl-3 bg-transparent outline-none border-none" type="text" id="search-input" placeholder="Search...">
-            <button class="md:hidden w-12 h-10 bg-[#F0F6FA] rounded-full flex items-center justify-center"
-              id="header__search__btn-mobile">
-              <img src="./img/header/header__search.svg" alt="">
-            </button>
-          </div>
-          <button id="hamburger__btn" class="block ml-2 lg:hidden max-w-9 active:opacity-80">
-            <img src="./img/header/hamburger.svg" alt="hamburger">
-          </button>
+        </div>
+      </div>
+    </div>
+    <div id="header__big__menu"
+      class="fixed md:block bg-[#24272990] pt-2 hidden slow__default bottom-[-100%]  transition-all duration-300 left-0   z-30  w-full h-full">
+      <div class="relative h-full w-full ">
+        <div id="header__big__menu__backdrop" class="z-20 w-full h-full absolute top-0 left-0"></div>
+        <div class="max-w-[1050px] z-30 relative  w-full mx-auto py-[30px] rounded-[28px] px-8 bg-[#FFF]">
+          <ul class="flex gap-7 flex-col">
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">урьер на одну доставку</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">ужен курьер на машине</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">борка квартиры</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">делать маникюр с покрытием шеллак</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">аращивание ресниц</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">аращивание ногтей</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">очинить стиральную машину</a></li>
+            <li><a href="#" class="font-medium text-[15px] text-[#242729]">тремонтировать телефон</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <section class="pt-12 pb-[106px]">
+    <div class="max-w-[1384px] mx-auto px-5 ">
+      <div class="xl:flex justify-between">
+        <aside class="xl:inline-block hidden">
+          <ul class="flex flex-col gap-5">
+            <li class="cursor-pointer"><button class="text_btns text_active text-[#7B92A4] font-medium text-base"
+                href="#">Xizmat
+                turlari</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Razval</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Xadavoy</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base" href="#">Motor
+                sozlash</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base" href="#">Moy
+                almashtirish</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Shumka</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Elektronika</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base" href="#">Kuzov
+                sozlash</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Razval</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Xadavoy</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base" href="#">Motor
+                sozlash</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base" href="#">Moy
+                almashtirish</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Shumka</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base"
+                href="#">Elektronika</button></li>
+            <li class="cursor-pointer"><button class="text_btns text-[#7B92A4] font-medium text-base" href="#">Kuzov
+                sozlash</button></li>
+          </ul>
           <script>
-            document.getElementById('header__search__btn-mobile').addEventListener('click', function () {
-              var searchInput = document.getElementById('search-input');
-              if (searchInput.style.display === 'none' || searchInput.style.display === '') {
-                searchInput.style.display = 'block';
-              } else {
-                searchInput.style.display = 'none';
-              }
+            let text_btns = document.querySelectorAll('.text_btns');
+
+            text_btns.forEach(function (item) {
+              item.addEventListener('click', function () {
+                text_btns.forEach(function (btn) {
+                  btn.classList.remove('text_active');
+                });
+                item.classList.add('text_active');
+              });
             });
           </script>
-        </div>
-        <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20">
-        </div>
-        <div  class="slow__default fixed z-30 w-full h-full top-0 right-[-100%]">
-          <div id="res__nav" class=" ml-auto py-[22px] px-5 slow__default fixed z-30  top-0 right-[-100%]  w-[70%] bg-[#B0D9FF] h-full">
-            <div class="">
-              <button id="res__nav___close__btn" class="block mb-5 max-w-9 ml-auto">
-                <img src="./img/header/close.svg" alt="" class="w-full h-full object-cover" />
-              </button>
-              <ul class="flex flex-col mb-5 justify-end gap-[15px]">
-                <li class="xl:pr-3">
-                  <a href="./Shinomontage.html" class="font-m font-medium text-[15px] text-[#242729] slow__default">Ustaxonalar</a>
-                </li>
-                <li id="res__big__menu" class="xl:pl-[14px] overflow-hidden slow__default h-[20px]  block">
-                  <a href="#" class="font-m  font-medium text-[15px] text-[#242729] slow__default">
-                    <span class="block mb-3">Xizmat ko’rsatish</span>
-                    <ul class="flex items-start pl-4 flex-col">
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">урьер на одну доставку</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">ужен курьер на машине</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">борка квартиры</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">делать маникюр с покрытием шеллак</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">аращивание ресниц</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">аращивание ногтей</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729] mb-3 block">очинить стиральную машину</a></li>
-                      <li><a href="#" class="font-medium text-xs text-[#242729]">тремонтировать телефон</a></li>
-                    </ul>
-                  </a>
-                </li>
-                <li>
-                  <a href="./login.html" class="font-m font-medium text-[15px] text-[#242729] slow__default">Men ustaman</a>
-                </li>
-              </ul>
-              <div class="flex flex-col gap-3">
-                <a href=""
-                  class="flex items-center gap-[11px] pl-[17px] pr-[12px] w-full max-w-[101px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-9 text-[#242729]">
-                  Andijon
-                  <img src="./img/header/header__location.svg" alt="" class="w-[13px] h-[13px] object-cover" />
-                </a>
-                <a href="./login.html"
-                  class="max-w-[101px] block px-[13px] bg-[#F0F6FA] rounded-[100px] font-medium text-[13px] leading-10 text-[#242729]">
-                  Kirish
-                </a>
+        </aside>
+
+        <select
+          class="xl:hidden block outline-none bg-[#0045bb] border-[5px] border-[#0045bbaf] pl-2 text-[#fff] mb-5  py-1 max-sm:w-full rounded-full">
+          <option>Xizmat turlari</option>
+          <option>Razval</option>
+          <option>Xadavoy</option>
+          <option>Motor sozlash</option>
+          <option>Moy almashtirish </option>
+          <option>Shumka</option>
+          <option>Elektronika</option>
+          <option>Kuzov sozlash</option>
+          <option>Razval</option>
+          <option>Xadavoy</option>
+          <option>Motor sozlash</option>
+          <option>Moy almashtirish </option>
+          <option>Shumka</option>
+          <option>Elektronika</option>
+          <option>Kuzov sozlash</option>
+        </select>
+
+        <div class="max-w-[771px] mx-auto w-full">
+          <h1 class="text-[#242729] font-medium text-3xl text-center">Profil </h1>
+          <p class="text-[#7B92A4] font-medium text-base mb-4 text-center">Profil e’lonlar oynasida</p>
+          <div class="flex flex-col gap-3">
+
+            <div class="shadow_container p-6 flex flex-col md:flex-row gap-6 max-w-[772px] w-full rounded-xl">
+              <div class=" md:inline-block max-sm:flex-col flex justify-between">
+                <img class="rounded-sm mb-3 max-sm:mb-5 mmd:max-w-[150px]  max-w-[120px]" src="./img/face_mini.png"
+                  alt="profile">
+
+                <ul class="flex flex-col gap-2">
+                  <li class="flex items-center gap-1">
+                    <img src="./img/shinomontage/fi-sr-home-location.svg" alt="">
+                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">2 ta
+                      joyda</a>
+                  </li>
+                  <li class="flex items-center gap-1">
+                    <img src="./img/shinomontage/fi-ss-clock.svg" alt="">
+                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">00:00-00:00</a>
+                  </li>
+                  <li class="flex items-center gap-1">
+                    <img src="./img/shinomontage/fi-sr-credit-card.svg" alt="">
+                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Karta</a>
+                  </li>
+                  <li class="flex items-center gap-1">
+                    <img src="./img/shinomontage/fi-sr-money.svg" alt="">
+                    <a class="text-[#7B92A4] font-medium md:text-[13px] text-sm" href="#">Naqd
+                      pul</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                  <h2 class="text-[#0044BB] font-medium text-2xl md:text-2xl">Avtosoz</h2>
+                  <p class="flex items-center gap-2 text-black font-medium md:text-[13px] text-sm">
+                    <span>
+                      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_35_834)">
+                          <path
+                            d="M1.10566 10.8336L4.07233 13.0002L2.94566 16.4894C2.76359 17.0306 2.76128 17.6161 2.93908 18.1587C3.11689 18.7012 3.46528 19.1718 3.93233 19.5002C4.39137 19.8392 4.94765 20.0208 5.51829 20.018C6.08892 20.0151 6.64336 19.828 7.09899 19.4844L9.99983 17.3494L12.9015 19.4819C13.3597 19.819 13.913 20.002 14.4818 20.0048C15.0506 20.0076 15.6057 19.8299 16.0671 19.4973C16.5286 19.1648 16.8727 18.6945 17.0501 18.154C17.2274 17.6135 17.2288 17.0307 17.054 16.4894L15.9273 13.0002L18.894 10.8336C19.3516 10.499 19.6918 10.0284 19.8659 9.48891C20.0401 8.94944 20.0393 8.36873 19.8637 7.82974C19.6881 7.29074 19.3467 6.82102 18.8882 6.48767C18.4297 6.15432 17.8775 5.97439 17.3107 5.97358H13.6665L12.5607 2.52691C12.3868 1.98438 12.045 1.51109 11.5848 1.1753C11.1246 0.839511 10.5695 0.658569 9.99983 0.658569C9.4301 0.658569 8.8751 0.839511 8.41485 1.1753C7.9546 1.51109 7.61289 1.98438 7.43899 2.52691L6.33316 5.97358H2.69233C2.12544 5.97439 1.57332 6.15432 1.11481 6.48767C0.656298 6.82102 0.314859 7.29074 0.13926 7.82974C-0.0363399 8.36873 -0.0371171 8.94944 0.137039 9.48891C0.311195 10.0284 0.651376 10.499 1.10899 10.8336H1.10566Z"
+                            fill="#24FF00" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_35_834">
+                            <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    0 reyting
+                  </p>
+                </div>
+                <a target="_blank" class="text-[#DD0000] font-medium md:text-[15px] text-sm mb-6 block"
+                  href="https://www.google.com/maps">
+                  Andijon shahar, 222 yo’lida, proyezd</a>
+                <ul class="flex flex-col gap-2 mb-5">
+                  <li class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
+                    Moy almashtirish
+                    <span class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
+                      <p class="w-[86px] max-sm:w-0 bg-[#D9E4EB] h-[1px]"></p>
+                      kelishilgan holda
+                    </span>
+                  </li>
+                  <li class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
+                    Motor sozlamalari <span
+                      class="text-[#242729] font-medium text-xs md:text-sm flex items-center gap-2">
+                      <p class="w-[41px]  max-sm:w-0 bg-[#D9E4EB] h-[1px]"></p>kelishilgan holda
+                    </span></li>
+                  <li class="text-[#0044BB] font-medium md:text-[15px] text-sm flex items-center justify-between">
+                    Yana 12 ta xizmatlar</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-10">
+                  <a class="text-[#242729] max-sm:w-full font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                    href="#"><span><img src="./img/shinomontage/tell.svg" alt=""></span>Telefon</a>
+                  <a class="text-[#242729] max-sm:w-full font-medium md:text-[15px] text-sm leading-8 inline-flex items-center gap-2 bg-[#F0F6FA] rounded-full px-3 py-2"
+                    href="#"><span><img width="15" height="15" class="max-w-[15px]"
+                        src="./img/shinomontage/location.svg" alt=""></span>Andijon
+                    shahar, Boburshox, 23a uy</a>
+                </div>
               </div>
             </div>
+
+            <div class="shadow_container cursor-pointer p-6 max-w-[772px] w-full rounded-xl overflow-hidden ">
+              <div class="toggle_btn flex justify-between transition-all">
+                <h3 class="text-[#242729] font-medium md:text-[20px] text-base leading-6">Manzillar</h3>
+                <button class="focus:outline-none transition-all">
+                  <svg class="toggle-icon transition-all" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="toggle-path"
+                      d="M8 9.59L12.8 4.79C12.9925 4.62746 13.2393 4.54353 13.4909 4.55499C13.7426 4.56646 13.9806 4.67249 14.1575 4.85188C14.3344 5.03127 14.437 5.27081 14.4449 5.52261C14.4528 5.77441 14.3654 6.0199 14.2 6.21L8.7 11.71C8.51317 11.8933 8.26185 11.9959 8 11.9959C7.73835 11.9959 7.48703 11.8933 7.3001 11.71L1.8 6.2C1.65567 6.00746 1.58555 5.76925 1.60261 5.52914C1.61968 5.28903 1.72278 5.06313 1.89299 4.89292C2.0632 4.72271 2.2891 4.61961 2.52921 4.60254C2.76932 4.58548 3.00753 4.6556 3.2001 4.8L8 9.59Z"
+                      fill="#ABBDC9" />
+                  </svg>
+                </button>
+              </div>
+              <div style="transition: all 0.5s;" class="max-h-0 overflow-hidden toggle_info">
+                <p class="pt-10 md:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis, laudantium obcaecati
+                  dolorem repudiandae quod, impedit dicta omnis ab rerum neque consectetur repellendus eius itaque
+                  mollitia
+                  ullam recusandae quae necessitatibus, adipisci veritatis tempora veniam? Soluta et,
+                  dolorum asperiores optio, quas fuga animi beatae error rerum repellat delectus adipisci? Odit beatae
+                  necessitatibus optio ipsa deserunt eaque tempore officia numquam ipsam aliquam quasi facere mollitia,
+                  harum eius error
+                  debitis! Vel debitis rem blanditiis. Minima ratione asperiores iusto officia, optio tenetur, incidunt
+                  et
+                  repudiandae est iure commodi voluptatum quasi assumenda, porro aliquam adipisci temporibus voluptate
+                  libero eos fugit
+                  molestias aperiam molestiae fuga consequatur? Sint aliquam beatae voluptatibus fuga amet perspiciatis,
+                  inventore ducimus quidem, debitis obcaecati consectetur expedita itaque doloremque unde omnis nam?
+                  Veritatis,
+                  dolores iste. Iusto, repudiandae.</p>
+              </div>
+            </div>
+
+            <div class="shadow_container cursor-pointer p-6 max-w-[772px] w-full rounded-xl overflow-hidden ">
+              <div class="toggle_btn flex justify-between transition-all">
+                <h3 class="text-[#242729] font-medium md:text-[20px] text-base leading-6">Xizmat ko’rsatuvchi haqida
+                </h3>
+                <button class="focus:outline-none transition-all">
+                  <svg class="toggle-icon transition-all" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="toggle-path"
+                      d="M8 9.59L12.8 4.79C12.9925 4.62746 13.2393 4.54353 13.4909 4.55499C13.7426 4.56646 13.9806 4.67249 14.1575 4.85188C14.3344 5.03127 14.437 5.27081 14.4449 5.52261C14.4528 5.77441 14.3654 6.0199 14.2 6.21L8.7 11.71C8.51317 11.8933 8.26185 11.9959 8 11.9959C7.73835 11.9959 7.48703 11.8933 7.3001 11.71L1.8 6.2C1.65567 6.00746 1.58555 5.76925 1.60261 5.52914C1.61968 5.28903 1.72278 5.06313 1.89299 4.89292C2.0632 4.72271 2.2891 4.61961 2.52921 4.60254C2.76932 4.58548 3.00753 4.6556 3.2001 4.8L8 9.59Z"
+                      fill="#ABBDC9" />
+                  </svg>
+                </button>
+              </div>
+              <div style="transition: all 0.5s;" class="max-h-0 overflow-hidden toggle_info">
+                <p class="pt-10 md:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis, laudantium obcaecati
+                  dolorem repudiandae quod, impedit dicta omnis ab rerum neque consectetur repellendus eius itaque
+                  mollitia
+                  ullam recusandae quae necessitatibus, adipisci veritatis tempora veniam? Soluta et,
+                  dolorum asperiores optio, quas fuga animi beatae error rerum repellat delectus adipisci? Odit beatae
+                  necessitatibus optio ipsa deserunt eaque tempore officia numquam ipsam aliquam quasi facere mollitia,
+                  harum eius error
+                  debitis! Vel debitis rem blanditiis. Minima ratione asperiores iusto officia, optio tenetur, incidunt
+                  et
+                  repudiandae est iure commodi voluptatum quasi assumenda, porro aliquam adipisci temporibus voluptate
+                  libero eos fugit
+                  molestias aperiam molestiae fuga consequatur? Sint aliquam beatae voluptatibus fuga amet perspiciatis,
+                  inventore ducimus quidem, debitis obcaecati consectetur expedita itaque doloremque unde omnis nam?
+                  Veritatis,
+                  dolores iste. Iusto, repudiandae.</p>
+              </div>
+            </div>
+
+            <div class="shadow_container cursor-pointer p-6 max-w-[772px] w-full rounded-xl overflow-hidden ">
+              <div class="toggle_btn flex justify-between transition-all">
+                <h3 class="text-[#242729] font-medium md:text-[20px] text-base leading-6">Xizmat ko’rsatish turlari</h3>
+                <button class="focus:outline-none transition-all">
+                  <svg class="toggle-icon transition-all" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="toggle-path"
+                      d="M8 9.59L12.8 4.79C12.9925 4.62746 13.2393 4.54353 13.4909 4.55499C13.7426 4.56646 13.9806 4.67249 14.1575 4.85188C14.3344 5.03127 14.437 5.27081 14.4449 5.52261C14.4528 5.77441 14.3654 6.0199 14.2 6.21L8.7 11.71C8.51317 11.8933 8.26185 11.9959 8 11.9959C7.73835 11.9959 7.48703 11.8933 7.3001 11.71L1.8 6.2C1.65567 6.00746 1.58555 5.76925 1.60261 5.52914C1.61968 5.28903 1.72278 5.06313 1.89299 4.89292C2.0632 4.72271 2.2891 4.61961 2.52921 4.60254C2.76932 4.58548 3.00753 4.6556 3.2001 4.8L8 9.59Z"
+                      fill="#ABBDC9" />
+                  </svg>
+                </button>
+              </div>
+              <div style="transition: all 0.5s;" class="max-h-0 overflow-hidden toggle_info">
+                <p class="pt-10 md:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis, laudantium obcaecati
+                  dolorem repudiandae quod, impedit dicta omnis ab rerum neque consectetur repellendus eius itaque
+                  mollitia
+                  ullam recusandae quae necessitatibus, adipisci veritatis tempora veniam? Soluta et,
+                  dolorum asperiores optio, quas fuga animi beatae error rerum repellat delectus adipisci? Odit beatae
+                  necessitatibus optio ipsa deserunt eaque tempore officia numquam ipsam aliquam quasi facere mollitia,
+                  harum eius error
+                  debitis! Vel debitis rem blanditiis. Minima ratione asperiores iusto officia, optio tenetur, incidunt
+                  et
+                  repudiandae est iure commodi voluptatum quasi assumenda, porro aliquam adipisci temporibus voluptate
+                  libero eos fugit
+                  molestias aperiam molestiae fuga consequatur? Sint aliquam beatae voluptatibus fuga amet perspiciatis,
+                  inventore ducimus quidem, debitis obcaecati consectetur expedita itaque doloremque unde omnis nam?
+                  Veritatis,
+                  dolores iste. Iusto, repudiandae.</p>
+              </div>
+            </div>
+
+            <div class="shadow_container cursor-pointer p-6 max-w-[772px] w-full rounded-xl overflow-hidden ">
+              <div class="toggle_btn flex justify-between transition-all">
+                <h3 class="text-[#242729] font-medium md:text-[20px] text-base leading-6">Gallereya</h3>
+                <button class="focus:outline-none transition-all">
+                  <svg class="toggle-icon transition-all" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="toggle-path"
+                      d="M8 9.59L12.8 4.79C12.9925 4.62746 13.2393 4.54353 13.4909 4.55499C13.7426 4.56646 13.9806 4.67249 14.1575 4.85188C14.3344 5.03127 14.437 5.27081 14.4449 5.52261C14.4528 5.77441 14.3654 6.0199 14.2 6.21L8.7 11.71C8.51317 11.8933 8.26185 11.9959 8 11.9959C7.73835 11.9959 7.48703 11.8933 7.3001 11.71L1.8 6.2C1.65567 6.00746 1.58555 5.76925 1.60261 5.52914C1.61968 5.28903 1.72278 5.06313 1.89299 4.89292C2.0632 4.72271 2.2891 4.61961 2.52921 4.60254C2.76932 4.58548 3.00753 4.6556 3.2001 4.8L8 9.59Z"
+                      fill="#ABBDC9" />
+                  </svg>
+                </button>
+              </div>
+              <div style="transition: all 0.5s;" class="max-h-0 overflow-hidden toggle_info">
+                <div class="grid md:grid-cols-5 grid-cols-2  sm:grid-cols-3 items-center md:gap-8 gap-2.5 pt-10">
+                  <div class="profile__modal__open relative profil__galereya__img">
+                    <img class="w-full rounded-xl max-w-[120px]" src="./img/face_mini.png" alt="photo">
+                    <img src="./img/profile/eye.svg" alt="" class="profil__galereya__eye__img absolute  top-1/2 left-1/2 
+                    translate-x-[-50%] translate-y-[-50%]">
+                  </div>
+                  <div class="profile__modal__open relative profil__galereya__img">
+                    <img class="w-full rounded-xl max-w-[120px]" src="./img/face_mini.png" alt="photo">
+                    <img src="./img/profile/eye.svg" alt="" class="profil__galereya__eye__img absolute top-1/2 left-1/2 
+                    translate-x-[-50%] translate-y-[-50%]">
+                  </div>
+                  <div class="profile__modal__open relative profil__galereya__img">
+                    <img class="w-full rounded-xl max-w-[120px]" src="./img/face_mini.png" alt="photo">
+                    <img src="./img/profile/eye.svg" alt="" class="profil__galereya__eye__img absolute top-1/2 left-1/2 
+                    translate-x-[-50%] translate-y-[-50%]">
+                  </div>
+                  <div class="profile__modal__open relative profil__galereya__img">
+                    <img class="w-full rounded-xl max-w-[120px]" src="./img/face_mini.png" alt="photo">
+                    <img src="./img/profile/eye.svg" alt="" class="profil__galereya__eye__img absolute top-1/2 left-1/2 
+                    translate-x-[-50%] translate-y-[-50%]">
+                  </div>
+                  <div class="profile__modal__open relative profil__galereya__img">
+                    <img class="w-full rounded-xl max-w-[120px]" src="./img/face_mini.png" alt="photo">
+                    <img src="./img/profile/eye.svg" alt="" class="profil__galereya__eye__img absolute top-1/2 left-1/2 
+                    translate-x-[-50%] translate-y-[-50%]">
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#211E1E4D] hidden profile__modal__close fixed z-10 top-0 left-0 w-full h-full"></div>
+              <div class="profil__galereya__modal  scale-0   z-20 fixed top-[50%] translate-y-[-50%]  translate-x-[-50%] left-[50%] w-full max-w-[772px] h-auto">
+                <div class="relative w-full h-full flex items-center justify-center px-5">
+                  <img class="h-full  w-full relative z-20 block" src="./img/profile/modal__img.png" alt="photo">
+                </div>
+              </div>
+            </div>
+            <script>
+              const toggleBtns = document.querySelectorAll('.toggle_btn');
+              const toggleInfos = document.querySelectorAll('.toggle_info');
+              const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+              toggleBtns.forEach(function (btn, index) {
+                btn.addEventListener('click', function () {
+                  const toggleInfo = toggleInfos[index];
+                  const toggleIcon = toggleIcons[index];
+
+                  const isOpen = toggleInfo.classList.contains('max-h-[500px]');
+
+                  toggleInfos.forEach(function (otherToggleInfo, otherIndex) {
+                    if (otherToggleInfo !== toggleInfo) {
+                      otherToggleInfo.classList.remove('max-h-[500px]');
+                      otherToggleInfo.classList.add('max-h-0');
+                      toggleIcons[otherIndex].classList.remove('rotate-180');
+                    }
+                  });
+
+                  if (!isOpen) {
+                    toggleInfo.classList.add('max-h-[500px]');
+                    toggleInfo.classList.remove('max-h-0');
+                    toggleIcon.classList.add('rotate-180');
+                  } else {
+                    toggleInfo.classList.remove('max-h-[500px]');
+                    toggleInfo.classList.add('max-h-0');
+                    toggleIcon.classList.remove('rotate-180');
+                  }
+                });
+              });
+            </script>
+
+
+            <div class="border border-[#D4D8DF] p-6 max-w-[772px] w-full rounded-xl">
+              <h3 class="text-[#242729] font-medium md:text-[20px] text-base leading-6 mb-4">Ushbu xizmat ko’rsatuvchi
+                xizmatlarini baholang !</h3>
+              <img class="mb-4" src="./img/stars.svg" alt="stars">
+              <form>
+                <input required
+                  class="placeholder:text-xs  outline-none border border-[#ABBDC9] py-3 px-4 rounded-xl text-[#7B92A4] font-medium text-base placeholder:text-[#7B92A4] w-full placeholder:md:text-base placeholder:font-medium mb-4"
+                  type="text" placeholder="Ismingiz">
+                <textarea required
+                  class="placeholder:text-xs resize-none w-full h-[85px] outline-none border border-[#ABBDC9] py-3 px-4 rounded-xl text-[#7B92A4] font-medium text-base placeholder:text-[#7B92A4] placeholder:md:text-base placeholder:font-medium mb-4"
+                  placeholder="Xizmat ko’rsatuvchi haqida fikrlaringiz"></textarea>
+                <button
+                  class="px-4 py-3 bg-[#F0F6FA] rounded-full text-[#242729] font-medium text-base hover:shadow-lg hover:scale-105 active:shadow-none active:scale-95 transition-all">Baholash</button>
+              </form>
+            </div>
+
+
           </div>
+        </div>
+
+        <div class="p-6 xl:block hidden">
+          <img class="mb-2.5 max-w-[126px] w-full" src="./img/shinomontage/div.PromotionPromo-ImageWrap.png"
+            alt="PromotionPromo">
+          <h3 class="text-[#242729] font-medium text-[20px] leading-6 mb-3">Mijozlar sonini oshiring</h3>
+          <p class=" text-[#7B92A4] font-medium text-sm mb-3">Reklama berish orqali xizmatlaringizni <br>
+            mijozlarga birinchilardan bo’lib <br>
+            taklif qilishingiz mumkin. <br>
+            <a class="text-[#FF6432]" href="#">Hozirda bu servis ishga tushmadi.</a>
+          </p>
+          <a class="text-white font-medium text-base leading-10 p-4 bg-[#2DCCB4] rounded-full" href="#">Reklama
+            yoqish</a>
+
+            <div class="flex flex-col gap-[30px]">
+              <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+                <div class="flex items-center gap-[3px] mb-1">
+                  <img src="./img/profile/profil__right.svg" alt="" class="">
+                  <div class="">
+                    <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                    <div class="flex items-center gap-[5px]">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                    </div>
+                  </div>
+                </div>
+                <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+              </div>
+              <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+                <div class="flex items-center gap-[3px] mb-1">
+                  <img src="./img/profile/profil__right.svg" alt="" class="">
+                  <div class="">
+                    <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                    <div class="flex items-center gap-[5px]">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                    </div>
+                  </div>
+                </div>
+                <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+              </div>
+              <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+                <div class="flex items-center gap-[3px] mb-1">
+                  <img src="./img/profile/profil__right.svg" alt="" class="">
+                  <div class="">
+                    <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                    <div class="flex items-center gap-[5px]">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                    </div>
+                  </div>
+                </div>
+                <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+              </div>
+              <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+                <div class="flex items-center gap-[3px] mb-1">
+                  <img src="./img/profile/profil__right.svg" alt="" class="">
+                  <div class="">
+                    <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                    <div class="flex items-center gap-[5px]">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                      <img src="./img/profile/profile__star.svg" alt="" class="">
+                    </div>
+                  </div>
+                </div>
+                <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+              </div>
+            </div>
+
+        </div>
+        <div class="grid xl:hidden xl:mt-0 mt-5 max-sm:grid-cols-1 grid-cols-2 max-sm:gap-5 gap-[30px]">
+          <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+            <div class="flex items-center gap-[3px] mb-1">
+              <img src="./img/profile/profil__right.svg" alt="" class="">
+              <div class="">
+                <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                <div class="flex items-center gap-[5px]">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                </div>
+              </div>
+            </div>
+            <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+          </div>
+          <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+            <div class="flex items-center gap-[3px] mb-1">
+              <img src="./img/profile/profil__right.svg" alt="" class="">
+              <div class="">
+                <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                <div class="flex items-center gap-[5px]">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                </div>
+              </div>
+            </div>
+            <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+          </div>
+          <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+            <div class="flex items-center gap-[3px] mb-1">
+              <img src="./img/profile/profil__right.svg" alt="" class="">
+              <div class="">
+                <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                <div class="flex items-center gap-[5px]">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                </div>
+              </div>
+            </div>
+            <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+          </div>
+          <div class="pt-[24px] pl-4 pr-[14px] pb-[10px] rounded-xl max-w-[257px] mx-auto" style="box-shadow: 0px 4px 4px 0px #00000040;">
+            <div class="flex items-center gap-[3px] mb-1">
+              <img src="./img/profile/profil__right.svg" alt="" class="">
+              <div class="">
+                <h3 class="font-medium text-[13px] mb-[6px]">Abdurahmon Rashidov</h3>
+                <div class="flex items-center gap-[5px]">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                  <img src="./img/profile/profile__star.svg" alt="" class="">
+                </div>
+              </div>
+            </div>
+            <p class="font-normal text-[13px]">Aka yaxshi ish qiladikan , malades mashi ustalarni maslahat beraman !</p>
+          </div>
+        </div>
+        <div
+          class="xl:hidden md:flex flex sm:flex-row flex-col md:gap-24 gap-3 justify-between max-w-[772px] mx-auto items-center">
+          <img class="mb-2.5 max-w-[250px] w-full" src="./img/shinomontage/div.PromotionPromo-ImageWrap.png"
+            alt="PromotionPromo">
+          <div class="text-center">
+            <h3 class="text-[#242729] font-medium text-[20px] leading-6 mb-3">Mijozlar sonini oshiring</h3>
+            <p class=" text-[#7B92A4] font-medium text-sm mb-5">Reklama berish orqali xizmatlaringizni <br>
+              mijozlarga birinchilardan bo’lib <br>
+              taklif qilishingiz mumkin. <br>
+              <a class="text-[#FF6432]" href="#">Hozirda bu servis ishga tushmadi.</a>
+            </p>
+            <a class="text-white font-medium text-base flex justify-center leading-10 p-4 bg-[#2DCCB4] rounded-full"
+              href="#">Reklama yoqish</a>
+          </div>
+        </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  </section>
+
+  <!-- footer start -->
+  <footer class="pt-[73px] pb-[42px] bg-[#242729]">
+    <div class="max-w-[1384px] mx-auto px-5">
+      <div class="flex md:flex-row flex-col md:items-center gap-5 md:gap-[70px] mb-7 md:mb-[49px]">
+        <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+          <li><a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Xizmat ko’rsatish turkumlari</a></li>
+          <li><a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Boshqa xizmatlar</a></li>
+        </ul>
+        <ul class="flex flex-col items-start gap-5 md:max-w-[168px]">
+          <li><a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Xizmat ko’rsatuvchiga aylanish</a>
+          </li>
+          <li><a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Yordam</a></li>
+        </ul>
+        <ul class="flex flex-col items-start  gap-5 md:max-w-[168px]">
+          <li><a href="./profile_service.html"
+              class="font-medium text-base text-[#FFFFFFB2] leading-5 block md:mb-[25px]">Shaxsiy
+              kabinet</a></li>
+          <li><a href="#" class="font-medium text-base text-[#FFFFFFB2] leading-5">Portal haqida</a></li>
+        </ul>
+      </div>
+      <div class="ml-auto flex md:hidden items-center gap-5 mb-5 md:gap-9">
+        <a href="#" target="_blank" class="w-6 flex h-6">
+          <img src="./img/footer/Vector.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
+        </a>
+        <a href="#" target="_blank" class="w-6 flex h-6">
+          <img src="./img/footer/Shape.svg" alt="" class="w-full h-full object-cover hover:opacity-50 slow__default">
+        </a>
+      </div>
+      <div
+        class="flex md:flex-row border-[#FFFFFF4D] pb-[10px] md:border-b  flex-col md:items-center justify-between md:gap-0 gap-5">
+=======
         <div id="header__big__menu" class="fixed md:block bg-[#24272990] pt-2 hidden slow__default bottom-[-100%]  transition-all duration-300 left-0   z-30  w-full h-full">
           <div class="relative h-full w-full ">
             <div id="header__big__menu__backdrop" class="z-20 w-full h-full absolute top-0 left-0"></div>
@@ -489,28 +1058,29 @@
           </a>
         </div>
         <div class="flex md:flex-row border-[#FFFFFF4D] pb-[10px] md:border-b  flex-col md:items-center justify-between md:gap-0 gap-5">
+>>>>>>> 27d7c93ea9457987882dad6fe283a638ef587428
         <div class="flex md:flex-row flex-col md:gap-0 gap-2 md:items-center">
           <p class="font-medium text-base text-[#FFFFFFB2] mr-14">avtoxizmatlar.uz - Abdurahmon Rashidov 2024 yil.</p>
           <a href="#" class="font-medium text-base text-[#FFFFFFB2]">Savol va takliflar yuzasidan:
             abdurakhmonrashidov@yandex.ru</a>
         </div>
-          <div class="hidden md:flex md:gap-0 gap-3 items-center">
-            <div class="max-w-[83px] flex justify-self-end  items-center gap-3 md:gap-9">
-              <a href="#" target="_blank" class="w-6 flex h-6">
-                <img src="./img/footer/Vector.svg" alt=""
-                  class="w-full h-full object-cover hover:opacity-50 slow__default">
-              </a>
-              <a href="#" target="_blank" class="w-6 flex h-6">
-                <img src="./img/footer/Shape.svg" alt=""
-                  class="w-full h-full object-cover hover:opacity-50 slow__default">
-              </a>
-            </div>
+        <div class="hidden md:flex md:gap-0 gap-3 items-center">
+          <div class="max-w-[83px] flex justify-self-end  items-center gap-3 md:gap-9">
+            <a href="#" target="_blank" class="w-6 flex h-6">
+              <img src="./img/footer/Vector.svg" alt=""
+                class="w-full h-full object-cover hover:opacity-50 slow__default">
+            </a>
+            <a href="#" target="_blank" class="w-6 flex h-6">
+              <img src="./img/footer/Shape.svg" alt=""
+                class="w-full h-full object-cover hover:opacity-50 slow__default">
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- footer end -->
-    <script src="./js/app.js"></script>
+    </div>
+  </footer>
+  <!-- footer end -->
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
