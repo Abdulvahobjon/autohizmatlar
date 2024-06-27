@@ -21,13 +21,7 @@ button:hover, a:hover{
   opacity: 0.6;
 }
 
-.swiper {
-  width: 100%;
-  /* height: 300px; */
-}
-
-
-.swiper_mobile {
+.swiper, .swiper_desktop, .swiper_mobile {
   width: 100%;
   /* height: 300px; */
 }
@@ -40,16 +34,21 @@ button:hover, a:hover{
   display: none;
 }
 
+@media (max-width: 768px) {
+  .swiper-pagination-new-1{
+    display: none;
+  }  
+}
 
-
-
-.swiper-pagination{
+@media  (min-width: 768px) {
+.swiper-pagination-new-1{
   position: absolute !important;
   text-align: center !important;
   display: flex !important;
   gap: 10px !important;
   left: 60px !important;
   bottom: 30px!important;
+  z-index: 9999;
 }
 
 
@@ -66,8 +65,9 @@ button:hover, a:hover{
   width: 60px !important;
 }
 
-@media  (min-width: 768px) {
-  .swiper-button-prev-new::before{
+
+
+  .swiper-button-prev-new-1::before{
       content: url("images/swiper/next_icon.png");
       box-shadow: 10px !important;
       width: 40px;
@@ -81,7 +81,7 @@ button:hover, a:hover{
       z-index: 9999;
   }
 
-  .swiper-button-prev-new::before:hover{
+  .swiper-button-prev-new-1::before:hover{
       content: url("images/swiper/next_icon.png");
       box-shadow: 10px !important;
       width: 40px;
@@ -97,7 +97,7 @@ button:hover, a:hover{
       box-shadow: 20px;
   }
 
-  .swiper-button-next-new::before{
+  .swiper-button-next-new-1::before{
       content: url("images/swiper/prev_icon.png");
       box-shadow: 10px !important;
       width: 40px;
