@@ -85,7 +85,7 @@
 
         <button
           class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
-          <img src="./img/navbar/bag_icon.png" alt="" />
+          <img src="./img/navbar/bag_icon.png" alt="bag" />
           <!-- <span>Savatcha</span> -->
           <span
             class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
@@ -101,7 +101,7 @@
             class="inline-block" />
           <span class="sm:inline-block hidden">Katalog</span>
         </button>
-        <div id="catalogDiv" class="fixed duration-300 top-[100%] bg-white md:min-h-[100vh] h-[100vh] overflow-auto md:top-[100%] w-full left-0 z-[9999]">
+        <div id="catalogDiv" class="fixed duration-300 top-[100%] bg-white md:min-h-[100vh] h-[100vh] overflow-auto md:top-[100%] w-full left-0 z-[99]">
           <div class="grid p-5 rounded-lg shadow-lg md:grid-cols-2">
             <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
@@ -472,7 +472,7 @@
 
         <button
           class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
-          <img src="./img/navbar/bag_icon.png" alt="" />
+          <img src="./img/navbar/bag_icon.png" alt="bag" />
           <span>Savatcha</span>
           <span class="bg-[#FB6019] text-[#fff] text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
         </button>
@@ -807,7 +807,7 @@
       </div>
     </div>
   </section>
-  <section class="pt-5 pb-7 bg-[#FCFCFC]">
+  <section class="pt-5 pb-7 bg-[#FCFCFC] relative">
     <div class="max-w-[1292px] mx-auto px-4">
       <h2 class="font-medium text-2xl leading-[34px] mb-6 text-[#1B1D1F]">
         Ko’p sotilayotgan tovarlar
@@ -819,6 +819,7 @@
                   background-image: url(./img/goodsPage/topSales/fuel.png);
                   background-repeat: no-repeat;
                   background-size: cover;
+                  margin-bottom: 40px;
                   background-position: 100%;
                 " class="bg-[#5946D7] p-7 rounded-lg">
               <h3 class="text-white font-medium text-2xl leading-7 mb-[263px]">
@@ -1254,6 +1255,8 @@
           </div>
         </div>
       </div>
+      <button class="navigationBtnL"></button>
+      <button class="navigationBtnR"></button>
     </div>
   </section>
   <section class="py-[30px] bg-[#FCFCFC] relative">
@@ -1428,6 +1431,8 @@
           </div>
         </div>
       </div>
+      <button class="navigationBtnL-1"></button>
+      <button class="navigationBtnR-1"></button>
     </div>
   </section>
   <section class="pt-[29px] pb-[22px] md:block hidden">
@@ -1611,9 +1616,13 @@
       // },
     });
 
-    var swiper = new Swiper(".mySwiper1", {
+    var swiper = new Swiper(".mySwiper2", {
       // slidesPerView: 1,
-      // spaceBetween: 30,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".navigationBtnR",
+        prevEl: ".navigationBtnL",
+      },
       breakpoints: {
         1024: {
           slidesPerView: 4,
@@ -1624,9 +1633,13 @@
       },
     });
 
-    var swiper = new Swiper(".mySwiper2", {
+    var swiper = new Swiper(".mySwiper1", {
       // slidesPerView: 1,
-      // spaceBetween: 30,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".navigationBtnR-1",
+        prevEl: ".navigationBtnL-1",
+      },
       breakpoints: {
         1024: {
           slidesPerView: 4,
