@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+    <style>
+        /* Checkbox container'ga style berish */
+        .custom-checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Default checkbox'ni yashirish */
+        .custom-checkbox input {
+            display: none;
+        }
+
+        /* Checkmark'ga style berish */
+        .custom-checkbox .checkmark {
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 1px solid #DEDEE2;
+            border-radius: 4px;
+            padding: 2px;
+        }
+
+        /* Hover effekti */
+        .custom-checkbox:hover input~.checkmark {
+            background-color: #ffffff;
+        }
+
+        /* Checked holat */
+        .custom-checkbox input:checked~.checkmark {
+            background-color: #6B59CC;
+            border: 1px solid #6B59CC;
+        }
+
+        /* Checkmark'ni qo'shish */
+        .custom-checkbox .checkmark:after {
+            content: "";
+            position: relative;
+            display: none;
+        }
+
+        /* Checked holatda checkmark'ni ko'rsatish */
+        .custom-checkbox input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Checkmark'ni yaratish */
+        .custom-checkbox .checkmark:after {
+            width: 9px;
+            height: 8px;
+            background-image: url(./img/gooda__chek.svg);
+            background-size: cover;
+            width: 16px;
+            height: 16px;
+        }
+
+        .catalog__inp {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19.12px;
+            color: #abbdc9;
+            outline: none;
+            border: 1px solid #DEDEE2;
+        }
+
+        .catalog__inp::placeholder {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #7a7680;
+
+        }
+
+        #time__btn_1 {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        #time__btn_2 {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(180deg);
+        }
+
+        #time__btn_3 {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        #time__btn_4 {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(180deg);
+        }
+
+        #boder_b_t {
+            border-top: 1px solid #E3E3E8;
+            border-bottom: 1px solid #E3E3E8;
+        }
+
+        .border-radius {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .border-radius1 {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        @media(max-width:850px) {
+            .catalog__right_active {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 20px;
+            }
+            #catslog__left{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <nav class="shadow-md mb-[30px]">
+            <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
+                <div class="flex justify-between items-center gap-4">
+                    <a href="/">
+                        <img src="./img/navbar/site_logo.png" alt="site rasm logo" width="211" height="56"
+                            class="flex" />
+                    </a>
+
+                    <div class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]">
+                        <input type="text" placeholder="Tovar nomini kiriting"
+                            class="w-full py-[11px] pl-[20px] focus:outline-none border-none border-transparent bg-transparent" />
+                        <button class="font active:opacity-50">
+                            <img src="./img/navbar/search_icon.png" alt="search icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:flex hidden gap-[30px]">
+                    <a href="tel:+998987000021"
+                        class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
+                        <img src="./img/navbar/phone_icon.png" alt="site rasm phone icon" />
+                        <span>+998 98 700 00 21</span>
+                    </a>
+                    <a href="tel:+998987000021"
+                        class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
+                        <img src="./img/navbar/phone_icon.png" alt="site rasm phone icon" />
+                        <span>+998 98 700 00 21</span>
+                    </a>
+                </div>
+
+                <button
+                    class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+                    <img src="./img/navbar/bag_icon.png" alt="" />
+                    <!-- <span>Savatcha</span> -->
+                    <span
+                        class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
+                </button>
+            </div>
+
+            <hr class="border-[#E3E3E8] w-full h-[1px]" />
+
+            <div class="max-w-[1276px] mx-auto px-3 py-[13px] flex justify-between items-center md:gap-0 gap-[20px]">
+                <button
+                    class="bg-[#FF0000] text-[#fff] font-semibold flex gap-x-[10px] rounded-[8px] h-full sm:px-[20px] sm:py-[10px] py-[10px] px-[15px] hover:opacity-65 active:opacity-50">
+                    <img width="24" height="24" src="./img/navbar/katalog_icon.png" alt="site rasm katalog icon"
+                        class="inline-block" />
+                    <span class="sm:inline-block hidden">Katalog</span>
+                </button>
+
+                <ul class="hidden md:flex gap-[5px]">
+                    <li
+                        class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+                        <a href="#" class="text-[#1B1D1F]">Tuning xizmatlari</a>
+                    </li>
+                    <li
+                        class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+                        <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
+                    </li>
+                    <li
+                        class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+                        <a href="#" class="text-[#1B1D1F]">Biz haqimizda</a>
+                    </li>
+                    <li
+                        class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+                        <a href="#" class="text-[#1B1D1F]">Bog’lanish</a>
+                    </li>
+                </ul>
+
+                <div class="sm:w-[430px] w-full md:hidden flex bg-[#F4F5F6] rounded-[6px] pr-[10px]">
+                    <input type="text" placeholder="Tovar nomini kiriting"
+                        class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent" />
+                    <button class="font active:opacity-50">
+                        <img src="./img/navbar/search_icon.png" alt="search icon" />
+                    </button>
+                </div>
+
+                <button
+                    class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+                    <img src="./img/navbar/bag_icon.png" alt="" />
+                    <span>Savatcha</span>
+                    <span class="bg-[#FB6019] text-[#fff] text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- header end -->
+    <!-- katalog start -->
+    <section class="pt-[30px] pb-[155px] md:pb-[283px] bg-[#F8F8FA]">
+        <div class="max-w-[1300px] px-5 mx-auto">
+            <h1 class="font-semibold text-2xl text-[#1B1D1F] mb-2">
+                Rullar katalogi
+            </h1>
+            <div class="flex items-start md:flex-row flex-col ">
+                <button id="filter__catalog" class=" border border-[#DEDEE2] flex md:hidden items-center w-full gap-[14px] py-[7.44px] justify-center mb-12 font-medium text-lg text-[#000000]">
+                    <img src="./img/catalog/filter.svg" alt="" class="">
+                    Filterlash
+                </button>
+                <div id="catalog__res" class="hidden max-w-[300px] mx-auto pt-[28px] pb-[33px] bg-[white]  flex-col gap-[15px] px-5">
+                    <input type="text" placeholder="Qidiruv"
+                        class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded  font-normal text-base text-[#7A7680]" />
+                    <div class="py-[15px] border-b border-[#E3E3E8]">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F] ">Kategoriya</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mb-[15px]">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Rul (1450)
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Bar
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Fara
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Chexol&Polik
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Tonirovka
+                            </label>
+                        </div>
+                        <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
+                    </div>
+                    <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mb-[15px]">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Charmho
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Magic Car
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Kumho
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Chevrolet
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                EA
+                            </label>
+                        </div>
+                        <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
+                    </div>
+                    <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F]">Summani tanlang</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
+                                placeholder="10$ dan" />
+                            <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
+                                placeholder="1200$ gacha" />
+                        </div>
+                    </div>
+                    <div id="boder_b_t" class="">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F]">Avtomobil rusumi</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mb-[15px]">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Chevrolet
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Kia
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                BYD
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Isuzi
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Daewo
+                            </label>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full font-medium text-lg text-[#FFFFFF] pt-4 pb-3 px-[87px] bg-[#FF0000] rounded">Filterlash</button>
+                    <button class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]">Filterni
+                        bekor qilish</button>
+                </div>
+                <div id="catslog__left" class="max-w-[300px] pt-[42px] pb-[33px] bg-[white] flex flex-col gap-[15px] px-5">
+                    <input type="text" placeholder="Qidiruv"
+                        class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded  font-normal text-base text-[#7A7680]" />
+                    <div class="py-[15px] border-b border-[#E3E3E8]">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F] ">Kategoriya</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mb-[15px]">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Rul (1450)
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Bar
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Fara
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Chexol&Polik
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Tonirovka
+                            </label>
+                        </div>
+                        <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
+                    </div>
+                    <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mb-[15px]">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Charmho
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Magic Car
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Kumho
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Chevrolet
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                EA
+                            </label>
+                        </div>
+                        <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
+                    </div>
+                    <div id="boder_b_t" class="py-[15px] border-b  border-[#E3E3E8]">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F]">Summani tanlang</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
+                                placeholder="10$ dan" />
+                            <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
+                                placeholder="1200$ gacha" />
+                        </div>
+                    </div>
+                    <div id="boder_b_t" class="">
+                        <div class="mb-[15px] flex items-center justify-between">
+                            <h2 class="font-medium text-lg text-[#1B1D1F]">Avtomobil rusumi</h2>
+                            <button class=""></button>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mb-[15px]">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Chevrolet
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Kia
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                BYD
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Isuzi
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                                Daewo
+                            </label>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full font-medium text-lg text-[#FFFFFF] pt-4 pb-3 px-[87px] bg-[#FF0000] rounded">Filterlash</button>
+                    <button class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]">Filterni
+                        bekor qilish</button>
+                </div>
+                <div id="catalog__right" class="bg-[#F8F8FA] catalog__right_active   w-full grid grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col  lg:items-center border border-[#DEDEE2]">
+                        <div class="mx-auto xl:px-5">
+                            <img src="./img/catalog/rul.png" alt="" class=" w-[220px] h-[220px] mb-[45px]">
+                        </div>
+                        <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">Rul</h2>
+                        <h3
+                            class="max-w-[240px] text-[#1B1D1F] font-medium  md:font-semibold mb-1 text-base md:mb-[11px]">
+                            Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan</h3>
+                        <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+                            <h4
+                                class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                                235$
+                                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+                            </h4>
+                            <button class="border-2 md:block hidden  border-[RED] rounded-[8px] p-2">
+                                <img src="./img/catalog/shopping.svg" alt="" class="w-full h-full object-cover">
+                            </button>
+                            <button
+                                class="w-full pt-[13px] pb-[9px]  bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">Savatchaga
+                                olish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- katalog end -->
+    <!-- footer start -->
+    <footer>
+        <div class="bg-[#000000] pb-[13px]">
+            <div class="max-w-[1276px] mx-auto px-3 flex justify-center">
+                <div class="flex flex-col items-center border-b-[1px] w-full pb-[8px] mb-[17px] border-b-[#5f5f5f94]">
+                    <a href="/">
+                        <img src="./img/footer/footer_logo.png" alt="site rasm footer logo" />
+                    </a>
+                    <ul class="flex gap-[37px]">
+                        <li>
+                            <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                                <img src="./img/footer/youtube_icon.png" alt="site icon youtube icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                                <img src="./img/footer/Instagram_icon.png" alt="site icon youtube icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                                <img src="./img/footer/telegram_icon.png" alt="site icon youtube icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                                <img src="./img/footer/tik_tok_icon.png" alt="site icon youtube icon" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-[#fff]">
+                Copyright © ООО «Prestige Tuning» 2024. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="./js/catalog.js"></script>
+</body>
+
+</html>
