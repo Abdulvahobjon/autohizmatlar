@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savatcha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="bg-[#F9F9FB]">
+    <header>
+      <nav class="shadow-md mb-1">
+        <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
+          <div class="flex justify-between items-center gap-4">
+            <a href="/">
+              <img
+                src="./img/navbar/site_logo.png"
+                alt="site rasm logo"
+                width="211"
+                height="56"
+                class="flex"
+              />
+            </a>
+
+            <div
+              class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]"
+            >
+              <input
+                type="text"
+                placeholder="Tovar nomini kiriting"
+                class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent"
+              />
+              <button class="font active:opacity-50">
+                <img src="./img/navbar/search_icon.png" alt="search icon" />
+              </button>
+            </div>
+          </div>
+
+          <div class="md:flex hidden gap-[30px]">
+            <a
+              href="tel:+998987000021"
+              class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50"
+            >
+              <img
+                src="./img/navbar/phone_icon.png"
+                alt="site rasm phone icon"
+              />
+              <span>+998 98 700 00 21</span>
+            </a>
+            <a
+              href="tel:+998987000021"
+              class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50"
+            >
+              <img
+                src="./img/navbar/phone_icon.png"
+                alt="site rasm phone icon"
+              />
+              <span>+998 98 700 00 21</span>
+            </a>
+          </div>
+
+          <button
+            class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50"
+          >
+            <img src="./img/navbar/bag_icon.png" alt="" />
+            <!-- <span>Savatcha</span> -->
+            <span
+              class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]"
+              >5</span
+            >
+          </button>
+        </div>
+
+        <hr class="border-[#E3E3E8] w-full h-[1px]" />
+
+        <div
+          class="max-w-[1276px] mx-auto px-3 py-[13px] flex justify-between items-center md:gap-0 gap-[20px]"
+        >
+          <button
+            class="bg-[#FF0000] text-[#fff] font-semibold flex gap-x-[10px] rounded-[8px] h-full sm:px-[20px] sm:py-[10px] py-[10px] px-[15px] hover:opacity-65 active:opacity-50"
+          >
+            <img
+              width="24"
+              height="24"
+              src="./img/navbar/katalog_icon.png"
+              alt="site rasm katalog icon"
+              class="inline-block"
+            />
+            <span class="sm:inline-block hidden">Katalog</span>
+          </button>
+
+          <ul class="hidden md:flex gap-[5px]">
+            <li
+              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
+            >
+              <a href="#" class="text-[#1B1D1F]">Tuning xizmatlari</a>
+            </li>
+            <li
+              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
+            >
+              <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
+            </li>
+            <li
+              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
+            >
+              <a href="#" class="text-[#1B1D1F]">Biz haqimizda</a>
+            </li>
+            <li
+              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
+            >
+              <a href="#" class="text-[#1B1D1F]">Bog’lanish</a>
+            </li>
+          </ul>
+
+          <div
+            class="sm:w-[430px] w-full md:hidden flex bg-[#F4F5F6] rounded-[6px] pr-[10px]"
+          >
+            <input
+              type="text"
+              placeholder="Tovar nomini kiriting"
+              class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent"
+            />
+            <button class="font active:opacity-50">
+              <img src="./img/navbar/search_icon.png" alt="search icon" />
+            </button>
+          </div>
+
+          <button
+            class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50"
+          >
+            <img src="./img/navbar/bag_icon.png" alt="" />
+            <span>Savatcha</span>
+            <span
+              class="bg-[#FB6019] text-[#fff] text-[14px] rounded-[50%] w-[20px] h-[20px]"
+              >5</span
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="pt-[30px] pb-[70px]">
+      <div class="max-w-[1292px] mx-auto px-4">
+        <h2 class="text-[#1B1D1F] font-semibold md:text-[24px] text-[20px] leading-[30px] mb-2.5 md:mb-5">Savatcha</h2>
+        <div class="flex lg:flex-row flex-col items-start justify-between gap-5">
+          <div class="border max-w-[941px] w-full rounded-md bg-white">
+            <!-- ======================================================================================================================== -->
+            <div
+              class="flex items-center justify-between pt-5 pb-3 pl-2.5 pr-5 border-b"
+            >
+              <h4 class="text-[#1B1D1F] text-base leading-5 font-medium">
+                Savatchaga olingan tovarlar
+              </h4>
+              <button class="flex gap-2.5 text-[#F11A22]">
+                Savatchani tozalash
+                <span class="w-5 h-5 flex items-center justify-center">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.74759 5.41667C5.74759 5.00245 5.4118 4.66667 4.99759 4.66667C4.58338 4.66667 4.24759 5.00245 4.24759 5.41667H5.74759ZM15.7518 5C15.7518 4.58579 15.416 4.25 15.0018 4.25C14.5875 4.25 14.2518 4.58579 14.2518 5H15.7518ZM12.417 8.33264C12.417 7.91842 12.0812 7.58264 11.667 7.58264C11.2528 7.58264 10.917 7.91842 10.917 8.33264H12.417ZM10.917 14.1684C10.917 14.5826 11.2528 14.9184 11.667 14.9184C12.0812 14.9184 12.417 14.5826 12.417 14.1684H10.917ZM9.08231 8.33264C9.08231 7.91842 8.74653 7.58264 8.33231 7.58264C7.9181 7.58264 7.58231 7.91842 7.58231 8.33264H9.08231ZM7.58231 14.1684C7.58231 14.5826 7.9181 14.9184 8.33231 14.9184C8.74653 14.9184 9.08231 14.5826 9.08231 14.1684H7.58231ZM3.74707 4.24792C3.33286 4.24792 2.99707 4.5837 2.99707 4.99792C2.99707 5.41213 3.33286 5.74792 3.74707 5.74792V4.24792ZM16.2523 5.74792C16.6665 5.74792 17.0023 5.41213 17.0023 4.99792C17.0023 4.5837 16.6665 4.24792 16.2523 4.24792V5.74792ZM5.95344 4.76074C5.82245 5.1537 6.03482 5.57844 6.42778 5.70943C6.82074 5.84041 7.24548 5.62804 7.37647 5.23509L5.95344 4.76074ZM7.11847 3.63735L7.82999 3.87452L7.83004 3.87435L7.11847 3.63735ZM8.7008 2.49687L8.70062 3.24687H8.7008V2.49687ZM11.2985 2.49687V3.24687L11.2995 3.24687L11.2985 2.49687ZM12.8825 3.63735L13.5943 3.40096L13.5941 3.40035L12.8825 3.63735ZM12.6226 5.2343C12.7532 5.6274 13.1777 5.84024 13.5708 5.70969C13.9639 5.57914 14.1767 5.15463 14.0462 4.76153L12.6226 5.2343ZM4.24759 5.41667V15.8358H5.74759V5.41667H4.24759ZM4.24759 15.8358C4.24759 17.1708 5.32988 18.2531 6.66495 18.2531V16.7531C6.15831 16.7531 5.74759 16.3424 5.74759 15.8358H4.24759ZM6.66495 18.2531H13.3344V16.7531H6.66495V18.2531ZM13.3344 18.2531C14.6695 18.2531 15.7518 17.1708 15.7518 15.8358H14.2518C14.2518 16.3424 13.841 16.7531 13.3344 16.7531V18.2531ZM15.7518 15.8358V5H14.2518V15.8358H15.7518ZM10.917 8.33264V14.1684H12.417V8.33264H10.917ZM7.58231 8.33264V14.1684H9.08231V8.33264H7.58231ZM3.74707 5.74792H16.2523V4.24792H3.74707V5.74792ZM7.37647 5.23509L7.82999 3.87452L6.40696 3.40018L5.95344 4.76074L7.37647 5.23509ZM7.83004 3.87435C7.95487 3.49957 8.3056 3.24678 8.70062 3.24687L8.70098 1.74687C7.66005 1.74662 6.73584 2.41275 6.40691 3.40035L7.83004 3.87435ZM8.7008 3.24687H11.2985V1.74687H8.7008V3.24687ZM11.2995 3.24687C11.6948 3.24638 12.046 3.49925 12.171 3.87435L13.5941 3.40035C13.2649 2.41191 12.3394 1.74558 11.2976 1.74687L11.2995 3.24687ZM12.1708 3.87374L12.6226 5.2343L14.0462 4.76153L13.5943 3.40096L12.1708 3.87374Z"
+                      fill="#F11A22"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- -=-=-=-=-==-=-=-==-==-==-- -->
+            <div
+              class="flex items-center justify-between pt-3 px-5 pb-[18px] border-b"
+            >
+              <input type="checkbox" style="accent-color: #6b59cc" />
+              <div class="flex lg:gap-9 gap-5 items-start">
+                <div class="max-w-[48px] min-h-[80px]">
+                  <img
+                    src="./img/savatcha/benzin.png"
+                    alt="fuel png"
+                    class="min-h-[80px]"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-base text-[#1B1D1F] mb-2.5 leading-[22px]"
+                    >Motor moyi</span
+                  >
+                  <span
+                    class="font-medium max-w-[279px] leading-5 text-base text-[#1B1D1F]"
+                    >Масло Genesis SUPER 3000 X1 5W-40, 1 л.
+                  </span>
+                </div>
+              </div>
+              <span class="text-base text-[#1B1D1F] mb-2.5 leading-[22px]"
+                >5 kun</span
+              >
+              <div
+                class="flex pt-4 flex-col justify-center items-center gap-1.5 mb-1.5"
+              >
+                <div
+                  class="w-[120px] flex justify-between items-center rounded-full p-1.5 bg-[#F1F2F4]"
+                >
+                  <button
+                    class="w-[30px] h-[30px] bg-white minusButton flex items-center justify-center text-[#7A7680] rounded-full"
+                  >
+                    -
+                  </button>
+                  <span
+                    class="text-[18px] leading-[22px] counterNumber text-center text-[#1B1D1F]"
+                    >1</span
+                  >
+                  <button
+                    class="w-[30px] h-[30px] bg-white plusButton flex items-center justify-center text-[#7A7680] rounded-full"
+                  >
+                    +
+                  </button>
+                </div>
+                <span
+                  class="text-[#7A7680] text-[14px] leading-[18px] txt-center"
+                  >1 ta = 210$</span
+                >
+              </div>
+              <span class=" text-[#1B1D1F] leading-[22px] text-right text-[18px]"
+                ><span class="narx">210</span>$</span
+              >
+              <button class="text-[#92979E] w-5 h-5 hover:text-[#F11A22]">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.74759 5.41667C5.74759 5.00245 5.4118 4.66667 4.99759 4.66667C4.58338 4.66667 4.24759 5.00245 4.24759 5.41667H5.74759ZM15.7518 5C15.7518 4.58579 15.416 4.25 15.0018 4.25C14.5875 4.25 14.2518 4.58579 14.2518 5H15.7518ZM12.417 8.33264C12.417 7.91842 12.0812 7.58264 11.667 7.58264C11.2528 7.58264 10.917 7.91842 10.917 8.33264H12.417ZM10.917 14.1684C10.917 14.5826 11.2528 14.9184 11.667 14.9184C12.0812 14.9184 12.417 14.5826 12.417 14.1684H10.917ZM9.08231 8.33264C9.08231 7.91842 8.74653 7.58264 8.33231 7.58264C7.9181 7.58264 7.58231 7.91842 7.58231 8.33264H9.08231ZM7.58231 14.1684C7.58231 14.5826 7.9181 14.9184 8.33231 14.9184C8.74653 14.9184 9.08231 14.5826 9.08231 14.1684H7.58231ZM3.74707 4.24792C3.33286 4.24792 2.99707 4.5837 2.99707 4.99792C2.99707 5.41213 3.33286 5.74792 3.74707 5.74792V4.24792ZM16.2523 5.74792C16.6665 5.74792 17.0023 5.41213 17.0023 4.99792C17.0023 4.5837 16.6665 4.24792 16.2523 4.24792V5.74792ZM5.95344 4.76074C5.82245 5.1537 6.03482 5.57844 6.42778 5.70943C6.82074 5.84041 7.24548 5.62804 7.37647 5.23509L5.95344 4.76074ZM7.11847 3.63735L7.82999 3.87452L7.83004 3.87435L7.11847 3.63735ZM8.7008 2.49687L8.70062 3.24687H8.7008V2.49687ZM11.2985 2.49687V3.24687L11.2995 3.24687L11.2985 2.49687ZM12.8825 3.63735L13.5943 3.40096L13.5941 3.40035L12.8825 3.63735ZM12.6226 5.2343C12.7532 5.6274 13.1777 5.84024 13.5708 5.70969C13.9639 5.57914 14.1767 5.15463 14.0462 4.76153L12.6226 5.2343ZM4.24759 5.41667V15.8358H5.74759V5.41667H4.24759ZM4.24759 15.8358C4.24759 17.1708 5.32988 18.2531 6.66495 18.2531V16.7531C6.15831 16.7531 5.74759 16.3424 5.74759 15.8358H4.24759ZM6.66495 18.2531H13.3344V16.7531H6.66495V18.2531ZM13.3344 18.2531C14.6695 18.2531 15.7518 17.1708 15.7518 15.8358H14.2518C14.2518 16.3424 13.841 16.7531 13.3344 16.7531V18.2531ZM15.7518 15.8358V5H14.2518V15.8358H15.7518ZM10.917 8.33264V14.1684H12.417V8.33264H10.917ZM7.58231 8.33264V14.1684H9.08231V8.33264H7.58231ZM3.74707 5.74792H16.2523V4.24792H3.74707V5.74792ZM7.37647 5.23509L7.82999 3.87452L6.40696 3.40018L5.95344 4.76074L7.37647 5.23509ZM7.83004 3.87435C7.95487 3.49957 8.3056 3.24678 8.70062 3.24687L8.70098 1.74687C7.66005 1.74662 6.73584 2.41275 6.40691 3.40035L7.83004 3.87435ZM8.7008 3.24687H11.2985V1.74687H8.7008V3.24687ZM11.2995 3.24687C11.6948 3.24638 12.046 3.49925 12.171 3.87435L13.5941 3.40035C13.2649 2.41191 12.3394 1.74558 11.2976 1.74687L11.2995 3.24687ZM12.1708 3.87374L12.6226 5.2343L14.0462 4.76153L13.5943 3.40096L12.1708 3.87374Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex items-center justify-between pt-3 px-5 pb-[18px] border-b"
+            >
+              <input type="checkbox" style="accent-color: #6b59cc" />
+              <div class="flex gap-5 items-start">
+                <div class="lg:max-w-[80px] lg:min-h-[80px] max-w-[60px] min-h-[60px]">
+                  <img
+                    src="./img/savatcha/bosh.png"
+                    alt="fuel png"
+                    class="min-h-[80px] object-cover"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-base text-[#1B1D1F] mb-2.5 leading-[22px]"
+                    >Bosh</span
+                  >
+                  <span
+                    class="font-medium max-w-[279px] leading-5 text-base text-[#1B1D1F]"
+                    >Батарея аккумуляторная "S4 Silver", 12в 60а/ч
+                  </span>
+                </div>
+              </div>
+              <span class="text-base text-[#1B1D1F] mb-2.5 leading-[22px]"
+                >2 kun</span
+              >
+              <div
+                class="flex pt-4 flex-col justify-center items-center gap-1.5 mb-1.5"
+              >
+                <div
+                  class="w-[120px] flex justify-between items-center rounded-full p-1.5 bg-[#F1F2F4]"
+                >
+                  <button
+                    class="w-[30px] h-[30px] bg-white minusButton flex items-center justify-center text-[#7A7680] rounded-full"
+                  >
+                    -
+                  </button>
+                  <span
+                    class="text-[18px] leading-[22px] counterNumber text-center text-[#1B1D1F]"
+                    >1</span
+                  >
+                  <button
+                    class="w-[30px] h-[30px] bg-white plusButton flex items-center justify-center text-[#7A7680] rounded-full"
+                  >
+                    +
+                  </button>
+                </div>
+                <span
+                  class="text-[#7A7680] text-[14px] leading-[18px] txt-center"
+                  >1 ta = 210$</span
+                >
+              </div>
+              <span class=" text-[#1B1D1F] leading-[22px] text-right text-[18px]"
+                ><span class="narx">210</span>$</span
+              >
+              <button class="text-[#92979E] w-5 h-5 hover:text-[#F11A22]">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.74759 5.41667C5.74759 5.00245 5.4118 4.66667 4.99759 4.66667C4.58338 4.66667 4.24759 5.00245 4.24759 5.41667H5.74759ZM15.7518 5C15.7518 4.58579 15.416 4.25 15.0018 4.25C14.5875 4.25 14.2518 4.58579 14.2518 5H15.7518ZM12.417 8.33264C12.417 7.91842 12.0812 7.58264 11.667 7.58264C11.2528 7.58264 10.917 7.91842 10.917 8.33264H12.417ZM10.917 14.1684C10.917 14.5826 11.2528 14.9184 11.667 14.9184C12.0812 14.9184 12.417 14.5826 12.417 14.1684H10.917ZM9.08231 8.33264C9.08231 7.91842 8.74653 7.58264 8.33231 7.58264C7.9181 7.58264 7.58231 7.91842 7.58231 8.33264H9.08231ZM7.58231 14.1684C7.58231 14.5826 7.9181 14.9184 8.33231 14.9184C8.74653 14.9184 9.08231 14.5826 9.08231 14.1684H7.58231ZM3.74707 4.24792C3.33286 4.24792 2.99707 4.5837 2.99707 4.99792C2.99707 5.41213 3.33286 5.74792 3.74707 5.74792V4.24792ZM16.2523 5.74792C16.6665 5.74792 17.0023 5.41213 17.0023 4.99792C17.0023 4.5837 16.6665 4.24792 16.2523 4.24792V5.74792ZM5.95344 4.76074C5.82245 5.1537 6.03482 5.57844 6.42778 5.70943C6.82074 5.84041 7.24548 5.62804 7.37647 5.23509L5.95344 4.76074ZM7.11847 3.63735L7.82999 3.87452L7.83004 3.87435L7.11847 3.63735ZM8.7008 2.49687L8.70062 3.24687H8.7008V2.49687ZM11.2985 2.49687V3.24687L11.2995 3.24687L11.2985 2.49687ZM12.8825 3.63735L13.5943 3.40096L13.5941 3.40035L12.8825 3.63735ZM12.6226 5.2343C12.7532 5.6274 13.1777 5.84024 13.5708 5.70969C13.9639 5.57914 14.1767 5.15463 14.0462 4.76153L12.6226 5.2343ZM4.24759 5.41667V15.8358H5.74759V5.41667H4.24759ZM4.24759 15.8358C4.24759 17.1708 5.32988 18.2531 6.66495 18.2531V16.7531C6.15831 16.7531 5.74759 16.3424 5.74759 15.8358H4.24759ZM6.66495 18.2531H13.3344V16.7531H6.66495V18.2531ZM13.3344 18.2531C14.6695 18.2531 15.7518 17.1708 15.7518 15.8358H14.2518C14.2518 16.3424 13.841 16.7531 13.3344 16.7531V18.2531ZM15.7518 15.8358V5H14.2518V15.8358H15.7518ZM10.917 8.33264V14.1684H12.417V8.33264H10.917ZM7.58231 8.33264V14.1684H9.08231V8.33264H7.58231ZM3.74707 5.74792H16.2523V4.24792H3.74707V5.74792ZM7.37647 5.23509L7.82999 3.87452L6.40696 3.40018L5.95344 4.76074L7.37647 5.23509ZM7.83004 3.87435C7.95487 3.49957 8.3056 3.24678 8.70062 3.24687L8.70098 1.74687C7.66005 1.74662 6.73584 2.41275 6.40691 3.40035L7.83004 3.87435ZM8.7008 3.24687H11.2985V1.74687H8.7008V3.24687ZM11.2995 3.24687C11.6948 3.24638 12.046 3.49925 12.171 3.87435L13.5941 3.40035C13.2649 2.41191 12.3394 1.74558 11.2976 1.74687L11.2995 3.24687ZM12.1708 3.87374L12.6226 5.2343L14.0462 4.76153L13.5943 3.40096L12.1708 3.87374Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex items-center justify-between pt-3 px-5 pb-[18px] border-b"
+            >
+              <input type="checkbox" style="accent-color: #6b59cc" />
+              <div class="flex gap-5 items-start">
+                <div class="max-w-[80px] min-h-[80px]">
+                  <img
+                    src="./img/savatcha/bosh1.png"
+                    alt="fuel png"
+                    class="min-h-[80px] object-cover"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-base text-[#1B1D1F] mb-2.5 leading-[22px]"
+                    >Bosh</span
+                  >
+                  <span
+                    class="font-medium max-w-[279px] leading-5 text-base text-[#1B1D1F]"
+                    >Батарея аккумуляторная "S4 Silver", 12в 60а/ч
+                  </span>
+                </div>
+              </div>
+              <span class="text-base text-[#1B1D1F] mb-2.5 leading-[22px]"
+                >2 kun</span
+              >
+              <div
+                class="flex pt-4 flex-col justify-center items-center gap-1.5 mb-1.5"
+              >
+                <div
+                  class="w-[120px] flex justify-between items-center rounded-full p-1.5 bg-[#F1F2F4]"
+                >
+                  <button
+                    class="w-[30px] h-[30px] bg-white minusButton flex items-center justify-center text-[#7A7680] rounded-full"
+                  >
+                    -
+                  </button>
+                  <span
+                    class="text-[18px] leading-[22px] counterNumber text-center text-[#1B1D1F]"
+                    >1</span
+                  >
+                  <button
+                    class="w-[30px] h-[30px] bg-white plusButton flex items-center justify-center text-[#7A7680] rounded-full"
+                  >
+                    +
+                  </button>
+                </div>
+                <span
+                  class="text-[#7A7680] text-[14px] leading-[18px] txt-center"
+                  >1 ta = 210$</span
+                >
+              </div>
+              <span class=" text-[#1B1D1F] leading-[22px] text-right text-[18px]"
+                ><span class="narx">210</span>$</span
+              >
+              <button class="text-[#92979E] w-5 h-5 hover:text-[#F11A22]">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.74759 5.41667C5.74759 5.00245 5.4118 4.66667 4.99759 4.66667C4.58338 4.66667 4.24759 5.00245 4.24759 5.41667H5.74759ZM15.7518 5C15.7518 4.58579 15.416 4.25 15.0018 4.25C14.5875 4.25 14.2518 4.58579 14.2518 5H15.7518ZM12.417 8.33264C12.417 7.91842 12.0812 7.58264 11.667 7.58264C11.2528 7.58264 10.917 7.91842 10.917 8.33264H12.417ZM10.917 14.1684C10.917 14.5826 11.2528 14.9184 11.667 14.9184C12.0812 14.9184 12.417 14.5826 12.417 14.1684H10.917ZM9.08231 8.33264C9.08231 7.91842 8.74653 7.58264 8.33231 7.58264C7.9181 7.58264 7.58231 7.91842 7.58231 8.33264H9.08231ZM7.58231 14.1684C7.58231 14.5826 7.9181 14.9184 8.33231 14.9184C8.74653 14.9184 9.08231 14.5826 9.08231 14.1684H7.58231ZM3.74707 4.24792C3.33286 4.24792 2.99707 4.5837 2.99707 4.99792C2.99707 5.41213 3.33286 5.74792 3.74707 5.74792V4.24792ZM16.2523 5.74792C16.6665 5.74792 17.0023 5.41213 17.0023 4.99792C17.0023 4.5837 16.6665 4.24792 16.2523 4.24792V5.74792ZM5.95344 4.76074C5.82245 5.1537 6.03482 5.57844 6.42778 5.70943C6.82074 5.84041 7.24548 5.62804 7.37647 5.23509L5.95344 4.76074ZM7.11847 3.63735L7.82999 3.87452L7.83004 3.87435L7.11847 3.63735ZM8.7008 2.49687L8.70062 3.24687H8.7008V2.49687ZM11.2985 2.49687V3.24687L11.2995 3.24687L11.2985 2.49687ZM12.8825 3.63735L13.5943 3.40096L13.5941 3.40035L12.8825 3.63735ZM12.6226 5.2343C12.7532 5.6274 13.1777 5.84024 13.5708 5.70969C13.9639 5.57914 14.1767 5.15463 14.0462 4.76153L12.6226 5.2343ZM4.24759 5.41667V15.8358H5.74759V5.41667H4.24759ZM4.24759 15.8358C4.24759 17.1708 5.32988 18.2531 6.66495 18.2531V16.7531C6.15831 16.7531 5.74759 16.3424 5.74759 15.8358H4.24759ZM6.66495 18.2531H13.3344V16.7531H6.66495V18.2531ZM13.3344 18.2531C14.6695 18.2531 15.7518 17.1708 15.7518 15.8358H14.2518C14.2518 16.3424 13.841 16.7531 13.3344 16.7531V18.2531ZM15.7518 15.8358V5H14.2518V15.8358H15.7518ZM10.917 8.33264V14.1684H12.417V8.33264H10.917ZM7.58231 8.33264V14.1684H9.08231V8.33264H7.58231ZM3.74707 5.74792H16.2523V4.24792H3.74707V5.74792ZM7.37647 5.23509L7.82999 3.87452L6.40696 3.40018L5.95344 4.76074L7.37647 5.23509ZM7.83004 3.87435C7.95487 3.49957 8.3056 3.24678 8.70062 3.24687L8.70098 1.74687C7.66005 1.74662 6.73584 2.41275 6.40691 3.40035L7.83004 3.87435ZM8.7008 3.24687H11.2985V1.74687H8.7008V3.24687ZM11.2995 3.24687C11.6948 3.24638 12.046 3.49925 12.171 3.87435L13.5941 3.40035C13.2649 2.41191 12.3394 1.74558 11.2976 1.74687L11.2995 3.24687ZM12.1708 3.87374L12.6226 5.2343L14.0462 4.76153L13.5943 3.40096L12.1708 3.87374Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- -=-=-=-=-=-=-=-=-=-=-=-=-- -->
+            <!-- ========================================================================================================================== -->
+          </div>
+          <div class="lg:max-w-[300px] w-full border rounded-sm bg-white pt-5">
+            <h3 class="text-[24px] font-medium leading-[30px] text-[#1B1D1F] pb-[18px] border-b px-[30px]">Buyurtmangiz</h3>
+            <h4 class="text-[20px] leading-[30px] text-[#1B1D1F] flex justify-between items-center px-[30px] border-b py-[18px]">Tovarlar <span>6</span></h4>
+            <h4 class="text-[20px] leading-[30px] text-[#1B1D1F] flex font-medium justify-between items-center px-[30px] py-[18px]">Jami <span>840$</span></h4>
+            <button class="py-4 px-10 bg-[#FF0000] font-semibold text-[18px] leading-[22px] text-white flex mb-[29px] rounded-md mx-auto max-w-[239px] w-full">Buyurtma berish</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="bg-[#000000] pb-[13px]">
+        <div class="max-w-[1276px] mx-auto px-3 flex justify-center">
+          <div
+            class="flex flex-col items-center border-b-[1px] w-full pb-[8px] mb-[17px] border-b-[#5f5f5f94]"
+          >
+            <a href="/">
+              <img
+                src="./img/footer/footer_logo.png"
+                alt="site rasm footer logo"
+              />
+            </a>
+            <ul class="flex gap-[37px]">
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="hover:opacity-65 active:opacity-50"
+                >
+                  <img
+                    src="./img/footer/youtube_icon.png"
+                    alt="site icon youtube icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="hover:opacity-65 active:opacity-50"
+                >
+                  <img
+                    src="./img/footer/Instagram_icon.png"
+                    alt="site icon youtube icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="hover:opacity-65 active:opacity-50"
+                >
+                  <img
+                    src="./img/footer/telegram_icon.png"
+                    alt="site icon youtube icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="hover:opacity-65 active:opacity-50"
+                >
+                  <img
+                    src="./img/footer/tik_tok_icon.png"
+                    alt="site icon youtube icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center text-[#fff]">
+          Copyright © ООО «Prestige Tuning» 2024. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/savatcha.js"></script>
+  </body>
+</html>
