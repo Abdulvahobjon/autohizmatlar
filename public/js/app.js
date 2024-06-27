@@ -93,6 +93,8 @@ profile__xizmat__text.forEach(function (item, index) {
     });
 });
 
+
+
 let pas1 = document.querySelector("#pas1");
 let pas2 = document.querySelector("#pas2");
 let reset__pas__form = document.querySelector("#reset__pas__form");
