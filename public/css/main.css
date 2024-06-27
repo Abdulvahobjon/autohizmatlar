@@ -97,7 +97,7 @@ a:hover {
     gap: 10px !important;
     left: 60px !important;
     bottom: 30px !important;
-    z-index: 9999;
+    z-index: 50;
   }
 
   .swiper-pagination-bullet {
@@ -124,7 +124,7 @@ a:hover {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 50;
   }
 
   .swiper-button-prev-new-1::before:hover {
@@ -154,7 +154,7 @@ a:hover {
     top: 0;
     right: 0;
     position: absolute !important;
-    z-index: 9999;
+    z-index: 50;
   }
 }
 
