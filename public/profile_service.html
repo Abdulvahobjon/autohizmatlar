@@ -70,7 +70,7 @@
             top: 1.5px;
             width: 9px;
             height: 8px;
-            background-image: url(../public/img/profile/profile__check.svg);
+            background-image: url(./img/profile/profile_ptichka.svg);
             background-size: cover;
         }
         input{
@@ -360,42 +360,42 @@
                                 class="px-4 h-[45px] block py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl w-full">
                                 <!-- Upload File -->
                             </label>
-                            <input id="file-upload" type="file"
+                            <input id="file-upload" name="file" type="file"
                                 class="hidden h-[45px] absolute left-0 top-0 w-full opacity-0 cursor-pointer" />
                         </div>
                         <div class="grid grid-cols-1">
                             <label for="xizmat" class="font-medium text-[13px] leading-7 text-[#242729] block">Xizmat ko’rsatuvchi shirkat nomi</label>
-                            <input type="text" name="" id="xizmat" placeholder="Avtosoz"
+                            <input type="text" name="xizmat" id="xizmat" placeholder="Avtosoz"
                                 class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
                         </div>
                         <div class="grid grid-cols-1">
                             <label for="manzil" class="font-medium text-[13px] leading-7 text-[#242729] block">Manzil</label>
-                            <input type="text" name="" id="manzil" placeholder="Boburshox ko’chasi 23a uy"
+                            <input type="text" name="manzil" id="manzil" placeholder="Boburshox ko’chasi 23a uy"
                                 class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
                         </div>
                         <div class="grid grid-cols-1">
                             <label for="moljal" class="font-medium text-[13px] leading-7 text-[#242729] block">Mo’ljal</label>
-                            <input type="text" name="" id="moljal" placeholder="Davlat arxivi yoni"
+                            <input type="text" name="moljal" id="moljal" placeholder="Davlat arxivi yoni"
                                 class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
                         </div>
                         <div class="grid grid-cols-1">
                             <label for="tel_a" class="font-medium text-[13px] leading-7 text-[#242729] block">Telefon asosiy</label>
-                            <input type="text" name="" id="tel_a" placeholder="+998"
+                            <input type="text" name="tel_a" id="tel_a" placeholder="+998"
                                 class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
                         </div>
                         <div class="grid grid-cols-1">
                             <label for="tel" class="font-medium text-[13px] leading-7 text-[#242729] block">Telefon 2</label>
-                            <input type="text" name="" id="tel" placeholder="+998"
+                            <input type="text" name="tel" id="tel" placeholder="+998"
                                 class="px-4 h-[45px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" />
                         </div>
                         <div class="grid grid-cols-1 mb-[10px]">
                             <label for="haqida" class="font-medium text-[13px] leading-7 text-[#242729] block">Xizmat ko’rsatuvchi tashkilot haqida yozing</label>
-                             <textarea class="px-4 h-[117px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" name="" id="haqida" cols="30" rows="10"></textarea>
+                             <textarea class="px-4 h-[117px] py-[13px] outline-none border-2 border-[#ABBDC9] rounded-xl" name="haqida" id="haqida" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <h5 class="mb-[10px] font-medium text-[13px] text-[#242729] leading-7">Xizmat ko’rsatish turlarini tanlang</h5>
                     <div class="max-w-[552px] mb-[10px] border-b border-[#D9E4EB] pb-[10px] flex gap-[10px] flex-wrap">
-                        <p class="profile__xizmat__text rounded-[5px]  bg-[#D8D8D8] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer rounded-[5px]  bg-[#D8D8D8] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Moy almashtirish
                             <svg class="profile__xizmat__close" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -404,7 +404,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Motor sozlash
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -413,7 +413,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Xodovoy
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -422,7 +422,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Razval
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -431,7 +431,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Elektrik
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -440,7 +440,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Ximchistka
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -449,7 +449,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Shumoizolyatsiya
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +458,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Signalizatsiya
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -467,7 +467,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Kraska
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -476,7 +476,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Moyka
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -485,7 +485,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Shinomantaj
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -494,7 +494,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Radiator sozlash
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -503,7 +503,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Kuzov sozlash
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -512,7 +512,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Eshik sozlash
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +521,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Boshqa
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -530,7 +530,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Yoqilg’i sozlash
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -539,7 +539,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Propan sozlash
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -548,7 +548,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Metan o’rnatish
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -557,7 +557,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Texnik ko’rik
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -566,7 +566,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Ehtiyot qismlari
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -575,7 +575,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Diagnostika
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -584,7 +584,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Tyuning
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -593,7 +593,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Detailing
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -602,7 +602,7 @@
                                     fill="#374957" />
                             </svg>
                         </p>
-                        <p class="profile__xizmat__text bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
+                        <p class="profile__xizmat__text cursor-pointer bg-[#F0F6FA] flex px-[10px] items-center gap-[5px] py-[5px]">
                             Kompyuter diagnostika
                             <svg class="profile__xizmat__close hidden" width="16" height="15" viewBox="0 0 16 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -616,18 +616,10 @@
                         <h6 class="font-medium text-[15px] mb-4 text-[#242729]">Ish vaqtlari</h6>
                         <div class="flex items-center gap-[10px] mb-4">
                             <div class="py-3 px-4 bg-[#F0F6FA] flex items-center gap-12">
-                                9:00
-                                <div class="flex flex-col items-center gap-[2px] rounded-xl">
-                                    <button id="time__btn_1" class="w-[6px] h-[6px] bg-[#172033]"></button>
-                                    <button id="time__btn_2" class="w-[6px] h-[6px] bg-[#172033]"></button>
-                                </div>
+                                <input type="time" name="" id="" class="bg-transparent">
                             </div>
                             <div class="py-3 px-4 bg-[#F0F6FA] flex items-center gap-12 rounded-xl">
-                                23:00
-                                <div class="flex flex-col items-center gap-[2px]">
-                                    <button id="time__btn_3" class="w-[6px] h-[6px] bg-[#172033]"></button>
-                                    <button id="time__btn_4" class="w-[6px] h-[6px] bg-[#172033]"></button>
-                                </div>
+                                <input type="time" name="" id="" class="bg-transparent">
                             </div>
                         </div>
                         <label class="custom-checkbox mb-[10px]">

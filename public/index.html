@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
+
+
 
 <head>
+
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
@@ -9,14 +14,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="./img/header/header__logo.svg" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Home</title>
 </head>
 
+<script>
+  new WOW().init();
+  var rellax = new Rellax('.rellax');
+</script>
+
 <body class="font-[Onest]">
   <!-- header start -->
   <header class="py-[14px] relative">
-    <div class="max-w-[1384px] mx-auto px-5 flex justify-between items-center">
+    <div class="max-w-[1384px] mx-auto px-5 flex justify-between items-center wow animate__animated animate__slideInDown">
       <div class="flex items-center gap-28 w-full max-w-[520px]">
         <a href="index.html"><img src="./img/header/header__logo.svg" alt="logo"></a>
         <div id="header__search__box"
@@ -66,8 +78,8 @@
         });
       </script>
     </div>
-    <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20">
-    </div>
+    
+    <div id="res__nav__backdrop" class="w-full h-full hidden fixed top-0 left-0 z-20"></div>
     <div  class="slow__default fixed z-30 w-full h-full top-0 right-[-100%]">
         <div id="res__nav" class=" ml-auto py-[22px] px-5 slow__default fixed z-30  top-0 right-[-100%]  w-[70%] bg-[#B0D9FF] h-full">
           <div class="">
@@ -134,13 +146,13 @@
   <section class="bg-[#B0D9FF] pt-[30px] md:pt-[59px] pb-20 md:pb-[119px] relative">
     <div class="max-w-[1384px] mx-auto px-5 ">
       <div class="max-w-[624px] relative z-10">
-        <h1 class="font-medium text-3xl md:text-[56px] md:leading-[60px] mb-8 md:mb-[45px]">Mashinangiz uchun ustaxonani
+        <h1 class="font-medium text-3xl md:text-[56px] md:leading-[60px] mb-8 md:mb-[45px] wow animate__animated animate__fadeInLeft">Mashinangiz uchun ustaxonani
           oson toping</h1>
         <a href="#"
-          class="block text-white hover:opacity-80 slow__default max-w-[250px] sm:max-w-[313px] bg-[#FF5500] rounded-full font-medium text-base leading-[56px] text-center">Ustaxonalar
+          class="block wow animate__animated animate__fadeInLeft text-white hover:opacity-80 slow__default max-w-[250px] sm:max-w-[313px] bg-[#FF5500] rounded-full font-medium text-base leading-[56px] text-center">Ustaxonalar
           topish</a>
       </div>
-      <img src="./img/hero/hero__right.png" alt="" class="sm:block hidden absolute right-0 top-0 z-0 h-full">
+      <img src="./img/hero/hero__right.png" alt="" class="wow animate__animated animate__fadeInRight sm:block hidden absolute right-0 top-0 z-0 h-full">
     </div>
   </section>
   <!-- hero end -->
@@ -148,39 +160,39 @@
   <section class="pt-[30px] md:pt-[59px] pb-20 md:pb-[93px]">
     <div class="max-w-[1384px] mx-auto px-5">
       <div class="max-w-[1350px]">
-        <h2 class="font-medium text-xl md:text-[26px] text-[#242729] mb-6 max-w-[845px]">
+        <h2 class="font-medium wow animate__animated animate__fadeIn text-xl md:text-[26px] text-[#242729] mb-6 max-w-[845px]">
           avtoxizmatlar.uz - bu haydovchilar uchun xizmatlar topish xizmat ko’rsatuvchilar uchun esa oson mijoz topish
           mumkin bo’lgan portal
         </h2>
         <div class="flex lg:flex-row flex-col lg:items-center lg:gap-0 gap-7 justify-between">
           <h3
-            class="max-w-[845px] lg:max-w-[486px] bg-[#1E3779] py-[17.5px] px-5 rounded-xl font-medium text-base text-white">
+            class="max-w-[845px] wow animate__animated animate__fadeIn lg:max-w-[486px] bg-[#1E3779] py-[17.5px] px-5 rounded-xl font-medium text-base text-white">
             Mashinangizdagi muammolar va nosozliklarga qarab <br class="lg:block hidden"> o’zingizga yaqin bo’lgan
             sifatli xizmat ko’rsatuvchi ustaxonani <br class="lg:block hidden"> toping.
           </h3>
           <div id="info__card__box" class="grid grid-cols-2 sm:grid-cols-3 gap-x-5 gap-y-5 md:gap-y-[26px]">
-            <div class="flex items-center gap-5 w-full">
+            <div class="flex items-center gap-5 w-full wow animate__animated animate__fadeInUp">
               <img src="./img/info/1.png" alt="" class="max-w-6 h-6 object-cover">
               <p id="info__text" class="font-medium text-base leading-5">Avtoustaxonalar ro’yhati</p>
             </div>
-            <div class="flex items-center gap-5 w-full">
+            <div class="flex items-center gap-5 w-full wow animate__animated animate__fadeInUp">
               <img src="./img/info/2.png" alt="" class="max-w-6 h-6 object-cover">
               <p id="info__text" class="font-medium text-base leading-5">Qisqa vaqt ichida</p>
             </div>
-            <div class="flex items-center gap-5 w-full">
+            <div class="flex items-center gap-5 w-full wow animate__animated animate__fadeInUp">
               <img src="./img/info/3.png" alt="" class="max-w-6 h-6 object-cover">
               <p id="info__text" class="font-medium text-base leading-5">Mijozlar fikrlari orqali</p>
             </div>
-            <div class="flex items-center gap-5 w-full">
+            <div class="flex items-center gap-5 w-full wow animate__animated animate__fadeInUp">
               <img src="./img/info/4.png" alt="" class="max-w-6 h-6 object-cover">
               <p id="info__text" class="font-medium text-base leading-5">Ehtiyot qismlari <br class="sm:block hidden">
                 do’konlari</p>
             </div>
-            <div class="flex items-center gap-5 w-full">
+            <div class="flex items-center gap-5 w-full wow animate__animated animate__fadeInUp">
               <img src="./img/info/5.png" alt="" class="max-w-6 h-6 object-cover">
               <p id="info__text" class="font-medium text-base leading-5">Diagnostika markazlari</p>
             </div>
-            <div class="flex items-center gap-5 w-full">
+            <div class="flex items-center gap-5 w-full wow animate__animated animate__fadeInUp">
               <img src="./img/info/6.png" alt="" class="max-w-6 h-6 object-cover">
               <p id="info__text" class="font-medium text-base leading-5">Boshqa xizmatlar</p>
             </div>
@@ -193,15 +205,15 @@
   <!-- register start -->
   <section class="pb-[40px] md:pb-[60px] ">
     <div class="md:pt-[38px] py-[15px] rounded-xl px-5 md:px-12 md:pb-7 bg-[#F0F6FA] max-w-[1384px] mx-auto ">
-      <h4 class="font-medium text-3xl md:text-[38px] leading-[42px] max-w-[582px] mb-6 md:mb-[31px]">Portaldan
+      <h4 class="font-medium text-3xl md:text-[38px] leading-[42px] max-w-[582px] mb-6 md:mb-[31px] wow animate__animated animate__fadeInDown">Portaldan
         foydalanish uchun ro’yhatdan o’ting.</h4>
       <div id="register__card_1" class="flex lg:flex-row flex-col lg:items-center gap-4">
-        <a href="./login.html" class="lg:max-w-[616px] w-full h-[150px] md:h-[240px] md:pb-[186px] pt-6 pl-6 rounded-[20px] relative z-10">
+        <a href="./login.html" class="lg:max-w-[616px] wow animate__animated animate__fadeInLeft w-full h-[150px] md:h-[240px] md:pb-[186px] pt-6 pl-6 rounded-[20px] relative z-10">
           <h5 class="font-medium text-sm md:text-[26px] text-[#242729] leading-[30px]">Men haydovchiman</h5>
           <img src="./img/register/left.png" alt="" class="absolute w-full h-[150px] md:h-full top-0 left-0 z-[-1]">
         </a>
         <a href="./login.html" id="register__card_2"
-          class="lg:max-w-[616px] w-full h-[150px] md:h-[240px] md:pb-[186px] pt-6 relative z-10 pl-6 rounded-[20px]">
+          class="lg:max-w-[616px] wow animate__animated animate__fadeInRight w-full h-[150px] md:h-[240px] md:pb-[186px] pt-6 relative z-10 pl-6 rounded-[20px]">
           <h5 class="font-medium text-sm md:text-[26px] text-[#242729] leading-[30px]">Men xizmat ko’rsatuvchiman</h5>
           <img src="./img/register/right.png" alt="" class="absolute w-full h-[150px] md:h-full top-0 left-0 z-[-1]">
         </a>
@@ -210,73 +222,73 @@
   </section>
   <!-- register end -->
   <!-- problem start -->
-  <section class="bg-[#F0F6FA] pb-10 md:pb-[83px]">
-    <div class="max-w-[1384px] mx-auto px-5 md:px-12 pt-[30px] pb-[26px] rounded-[36px] ">
+  <section class="pb-10 md:pb-[83px]">
+    <div class="max-w-[1384px] bg-[#F0F6FA]  mx-auto px-5 md:px-12 pt-[30px] pb-[26px] rounded-[36px] ">
       <h5 class="font-medium text-[26px] text-[#242729] mb-[26px]">Muammoni turini tanlang</h5>
       <div id="probleb__t_box" class="flex items-center gap-3 md:py-5 mb-[18px]">
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/1.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Moy almashtirish</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/2.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Amartizatsiya</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/3.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Kuzov</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/4.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Elektronika</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/5.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Boshqa</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/6.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Yonilg’i</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/7.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Motor</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/8.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Detailing</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/9.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Bo’yash</p>
         </div>
-        <div class="lg:max-w-[129px] w-full">
+        <div class="lg:max-w-[129px] w-full ">
           <img id="problem__center__img" src="./img/problem/10.png" alt="" class="w-14 h-14 object-cover mx-auto mb-2">
           <p id="problem__text" class="font-medium text-[13px] text-center">Ximchistka</p>
         </div>
       </div>
       <div id="probleb__b_box" class="grid grid-cols-3 gap-x-4 gap-y-[22px]">
-        <div id="problem_b_card" class="rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
+        <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Moy almashtirish</h6>
           <img src="./img/problem/b-1.png" alt="" class="absolute right-0 bottom-0">
         </div>
-        <div id="problem_b_card" class="rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
+        <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Amartizatsiya</h6>
           <img src="./img/problem/b-2.png" alt="" class="absolute right-0 bottom-0">
         </div>
-        <div id="problem_b_card" class="rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
+        <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Kuzov</h6>
           <img src="./img/problem/b-3.png" alt="" class="absolute right-0 bottom-0">
         </div>
-        <div id="problem_b_card" class="rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
+        <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Bo’yash</h6>
           <img src="./img/problem/b-4.png" alt="" class="absolute right-8 bottom-0">
         </div>
-        <div id="problem_b_card" class="rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
+        <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Motor</h6>
           <img src="./img/problem/b-5.png" alt="" class="absolute right-0 bottom-0">
         </div>
-        <div id="problem_b_card" class="rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
+        <div id="problem_b_card" class="bg-white wow animate__animated animate__zoomIn rounded-[20px] w-full pt-6 pl-6 pb-[186px] relative">
           <h6 class="font-medium text-[26px] text-[#242729]">Detailing</h6>
           <img src="./img/problem/b-6.png" alt="" class="absolute right-0 bottom-0">
         </div>
