@@ -1,4 +1,3 @@
-let btns = document.querySelectorAll("#btns");
 
 // btns.forEach(function (item, index) {
 //   item.addEventListener("click", function () {

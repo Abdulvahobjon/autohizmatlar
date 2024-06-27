@@ -176,6 +176,7 @@ a:hover {
     z-index: 50;
   }
 
+<<<<<<< HEAD
   .swiper-pagination-new-2 {
     position: absolute !important;
     text-align: center !important;
@@ -184,6 +185,22 @@ a:hover {
     justify-content: center !important;
     gap: 10px !important;
   }
+=======
+            .swiper-button-prev-new-2::after{
+              content: url("../img/swiper/next_icon.png");
+              box-shadow: 10px !important;
+              width: 40px;
+              height: 40px;
+              position: absolute !important;
+              display: flex;
+              align-items: center;
+              height: 100%;
+              top: 0;
+              left: 0;
+              display: ;
+              z-index: 50;
+            }
+>>>>>>> 3dd6bae9cdff8d407901a3940dc86bc6550adae5
 
   .swiper-pagination-bullet {
     opacity: 100 !important;
