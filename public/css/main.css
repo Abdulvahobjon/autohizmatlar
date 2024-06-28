@@ -159,6 +159,10 @@ a:hover {
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 768px) {
   .swiper-button-prev-new-2::after {
     content: url("../img/swiper/next_icon.png");
