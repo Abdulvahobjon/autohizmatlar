@@ -901,12 +901,6 @@ video {
 .h-screen {
   height: 100vh;
 }
-<<<<<<< HEAD
-=======
-.h-\[180px\] {
-  height: 180px;
-}
->>>>>>> 03ee83da3f6ac01e252966a7197e5dc27e797698
 .max-h-0 {
   max-height: 0px;
 }
@@ -936,9 +930,6 @@ video {
 }
 .min-h-\[80px\] {
   min-height: 80px;
-}
-.min-h-\[280px\] {
-  min-height: 280px;
 }
 .w-10 {
   width: 2.5rem;
