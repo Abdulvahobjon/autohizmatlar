@@ -20,6 +20,9 @@
     body {
       transition: all 0.3s;
     }
+    .catalog__inp{
+      border: 1px solid #DEDEE2;
+    }
 
     .custom-checkbox {
       display: inline-block;
@@ -584,7 +587,7 @@
           <input id="catalog__search" type="text" placeholder="Qidiruv" class="w-full pl-5 pb-[9px] pt-[11px] border outline-none border-[#DEDEE2]  catalog__inp rounded font-normal text-base text-[#7A7680]" />
           <div id="catalog__left__box"
             class="h-[58px] slow__default overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">Kategoriya</h2>
               <button>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -624,7 +627,7 @@
           </div>
           <div id="catalog__left__box"
             class="h-[58px] slow__default overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
               <button>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -664,7 +667,7 @@
           </div>
           <div id="catalog__left__box"
             class="h-[58px] slow__default max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">
                 Summani tanlang
               </h2>
@@ -676,15 +679,15 @@
               </button>
             </div>
             <div class="grid grid-cols-2">
-              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
+              <input type="text" class="w-full outline-none catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
                 placeholder="10$ dan" />
-              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
+              <input type="text" class="w-full outline-none catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
                 placeholder="1200$ gacha" />
             </div>
           </div>
           <div id="catalog__left__box"
             class="h-[58px] slow__default max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">
                 Avtomobil rusumi
               </h2>
@@ -732,11 +735,10 @@
         </div>
         <div id="catslog__left"
           class="max-w-[300px]  pt-[42px] pb-[33px] bg-[white] hidden md:flex flex-col gap-[15px] px-5 mx-auto wow animate__animated animate__slideInLeft">
-          <input type="text" placeholder="Qidiruv"
-            class="w-full pl-5 pb-[9px] pt-[11px] outline-none border-[#DEDEE2] border catalog__inp rounded font-normal text-base text-[#7A7680]" />
+          <input id="catalog__search" type="text" placeholder="Qidiruv" class="w-full pl-5 pb-[9px] pt-[11px] border outline-none border-[#DEDEE2]  catalog__inp rounded font-normal text-base text-[#7A7680]" />
           <div id="catalog__left__box"
             class="h-[58px] slow__default overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">Kategoriya</h2>
               <button>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -776,7 +778,7 @@
           </div>
           <div id="catalog__left__box"
             class="h-[58px] slow__default overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
               <button>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -816,7 +818,7 @@
           </div>
           <div id="catalog__left__box"
             class="h-[58px] slow__default max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">
                 Summani tanlang
               </h2>
@@ -828,15 +830,15 @@
               </button>
             </div>
             <div class="grid grid-cols-2">
-              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
+              <input type="text" class="w-full outline-none catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
                 placeholder="10$ dan" />
-              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
+              <input type="text" class="w-full outline-none catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
                 placeholder="1200$ gacha" />
             </div>
           </div>
           <div id="catalog__left__box"
-            class="h-[58px] slow__default max-h-[237px] overflow-hidden cursor-pointer boder_b_t pt-[15px] pb-5 border-b border-[#E3E3E8]">
-            <div class="mb-[15px] flex items-center justify-between">
+            class="h-[58px] slow__default max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
+            <div id="catalog__left__box__title" class="mb-[15px] flex items-center justify-between">
               <h2 class="font-medium text-lg text-[#1B1D1F]">
                 Avtomobil rusumi
               </h2>
