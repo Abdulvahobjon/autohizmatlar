@@ -188,7 +188,7 @@ html {
 
 @media (max-width: 768px) {
   .swiper-button-prev-new-2::after {
-    content: url("../img/swiper/next_icon.png");
+    content: url("../img/swiper/next_icon1.svg");
     box-shadow: 10px !important;
     width: 40px;
     height: 40px;
@@ -198,7 +198,8 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 30;
+    border-radius: 12px !important;
   }
 
   .navigationBtnL,
@@ -209,7 +210,7 @@ html {
 }
 
   .swiper-button-next-new-2::after {
-    content: url("../img/swiper/prev_icon.png");
+    content: url("../img/swiper/prev_icon1.svg");
     box-shadow: 10px !important;
     width: 40px;
     height: 40px;
@@ -217,9 +218,10 @@ html {
     align-items: center;
     height: 100%;
     top: 0;
-    right: 0;
+    right: 15px;
     position: absolute !important;
-    z-index: 50;
+    z-index: 30;
+    border-radius: 12px !important;
   }
 
   .swiper-pagination-new-2 {

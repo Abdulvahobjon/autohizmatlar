@@ -106,41 +106,7 @@
                 stroke-linejoin="round" />
             </svg>
           </button>
-          <div id="goods__nav"
-            class="fixed duration-300 top-0 left-full w-full min-h-[100vh] bg-white z-[999] py-10 px-12">
-            <button id="goods__close"
-              class="w-8 h-8 relative top-[-20px] right-[28px] flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z"
-                    fill="#000000"></path>
-                </g>
-              </svg>
-            </button>
-            <ul class="flex flex-col gap-4">
-              <li>
-                <a href="#" class="text-black font-medium text-xl">Tuning xizmatlari</a>
-              </li>
-              <li>
-                <a href="#" class="text-black font-medium text-xl">Tuning tovarlari</a>
-              </li>
-              <li>
-                <a href="#" class="text-black font-medium text-xl">Biz haqimizda</a>
-              </li>
-              <li>
-                <a href="#" class="text-black font-medium text-xl">Bog’lanish</a>
-              </li>
-              <li>
-                <a href="tel:+998 98 700 00 21" class="text-black font-medium text-xl">+998 98 700 00 21</a>
-              </li>
-              <li>
-                <a href="tel:+998 98 700 00 21" class="text-black font-medium text-xl">+998 98 700 00 21</a>
-              </li>
-            </ul>
-          </div>
+
           <a href="./index.html">
             <img src="../img/navbar/site_logo.png" alt="site rasm logo" width="211" height="56" class="flex" />
           </a>
@@ -170,7 +136,6 @@
         <a href="./savatcha.html"
           class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
           <img src="../img/navbar/bag_icon.png" alt="bag" />
-          <!-- <span>Savatcha</span> -->
           <span
             class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] flex items-center justify-center rounded-[50%] w-[20px] h-[20px]">5</span>
         </a>
@@ -186,9 +151,10 @@
           <span class="sm:inline-block hidden">Katalog</span>
         </button>
         <div id="catalogDiv"
-          class="fixed duration-300 top-[100%] bg-white md:min-h-[100vh] h-[100vh] overflow-auto md:top-[100%] w-full left-0 z-[99]">
+          class="fixed duration-300 top-[100%] bg-white md:min-h-[100vh] h-[100vh] overflow-auto md:top-[100%] w-full right-0 z-[88]">
           <div class="grid p-5 rounded-lg shadow-lg md:grid-cols-2">
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -208,8 +174,9 @@
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Оригинальные
                 запчасти</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.6697 15.6758H9.39746" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
@@ -226,8 +193,9 @@
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Кузовные
                 запчасти</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 19.9999L7.5 8.49992L8 7.99992H20L26.5 14.9999L27 25.9999L26 27.4999H17V19.9999Z"
@@ -247,8 +215,9 @@
                 </svg>
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автомасла</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.5 24.5001L3 10.0001V9.50008H9L11.5 7.00008L16 6.50008V26.5001H4L2.5 24.5001Z"
@@ -271,8 +240,9 @@
                 </svg>
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Аккумуляторы</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.1">
@@ -299,8 +269,9 @@
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Неоригинальные
                 запчасти</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -338,10 +309,12 @@
                     stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти для ТО
+              <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти
+                для ТО
               </span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 19.9999L7.5 8.49992L8 7.99992H20L26.5 14.9999L27 25.9999L26 27.4999H17V19.9999Z"
@@ -362,8 +335,9 @@
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автохимия
               </span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -382,8 +356,9 @@
                 </svg>
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автолампы</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 27V10V9L15 2.5L13 17H8.5V27H3Z" fill="#5946D7" fill-opacity="0.1" />
@@ -419,10 +394,12 @@
                     stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти ВАЗ, ГАЗ,
+              <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти
+                ВАЗ, ГАЗ,
                 КАМАЗ</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 27V10V9L15 2.5L13 17H8.5V27H3Z" fill="#5946D7" fill-opacity="0.1" />
@@ -458,10 +435,12 @@
                     stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
-              <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти ВАЗ, ГАЗ,
+              <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти
+                ВАЗ, ГАЗ,
                 КАМАЗ</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 26L3.5 14.5V14L9 11.5L16 10.5V24.5L9 26Z" fill="#5946D7" fill-opacity="0.1" />
@@ -489,8 +468,9 @@
                 </svg>
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автостёкла</span>
-            </button>
-            <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
+            </a>
+            <a href="#"
+              class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
               <div class="w-8 h-8 flex items-center">
                 <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_301_7764)">
@@ -528,7 +508,7 @@
                 </svg>
               </div>
               <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Диски</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -540,10 +520,10 @@
             <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
           </li>
           <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
-            <a href="./index.html#dssad565da" class="text-[#1B1D1F]">Biz haqimizda</a>
+            <a href="./index.html#about" class="text-[#1B1D1F]">Biz haqimizda</a>
           </li>
           <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
-            <a href="./index.html#bog\'lanish" class="text-[#1B1D1F]">Bog’lanish</a>
+            <a href="./index.html#bog'lanish" class="text-[#1B1D1F]">Bog’lanish</a>
           </li>
         </ul>
 
@@ -565,7 +545,89 @@
       </div>
     </nav>
 
+    <div id="goods__nav" class="fixed md:hidden duration-300 top-0 w-full bg-white z-[100] pr-5 pl-3 py-5 right-full">
+      <div class="justify-between flex">
+        <button id="goods__close"
+          class="w-8 h-8 active:opacity-80 rounded-full bg-[#FF0000] text-white flex items-center justify-center">
+          <svg class="flex translate-y-[1.4px]" width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 11L8 7M8 7L4 3M8 7L12 3M8 7L4 11" stroke="currentColor" stroke-width="1.225"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <ul class="flex flex-col gap-4 text-right mb-5">
+          <li>
+            <a href="./index.html" class="text-black font-medium text-xl hover:text-[#FF0000] transiton-all ">Tuning
+              xizmatlari</a>
+          </li>
+          <li>
+            <a href="#" class="text-black font-medium text-xl hover:text-[#FF0000] transiton-all ">Tuning
+              tovarlari</a>
+          </li>
+          <li>
+            <a href="./index.html#about" class="text-black font-medium text-xl hover:text-[#FF0000] transiton-all ">Biz
+              haqimizda</a>
+          </li>
+          <li>
+            <a href="./index.html#bog'lanish"
+              class="text-black font-medium text-xl hover:text-[#FF0000] transiton-all ">Bog’lanish</a>
+          </li>
+          <li>
+            <a href="tel:+998 98 700 00 21"
+              class="text-black font-medium text-xl hover:text-[#FF0000] transiton-all ">+998 98 700 00
+              21</a>
+          </li>
+          <li>
+            <a href="tel:+998 98 700 00 21"
+              class="text-black font-medium text-xl hover:text-[#FF0000] transiton-all ">+998 98 700 00
+              21</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <a href="./savatcha.html"
+          class="flex gap-2.5 border border-[#FF0000] justify-center text-[#FF0000] hover:text-white hover:bg-[#FF0000] transition-all uppercase items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+          <span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M17.1093 19.267C16.9073 19.267 16.7433 19.431 16.7453 19.633C16.7453 19.835 16.9093 19.999 17.1113 19.999C17.3133 19.999 17.4773 19.835 17.4773 19.633C17.4763 19.431 17.3123 19.267 17.1093 19.267"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          savatcha
+        </a>
+      </div>
+    </div>
+
+    <div class="overlay z-[90] md:hidden block"></div>
+
+    <style>
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #221f1fdb;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+      }
+
+      .overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
   </header>
+
   <!-- header end -->
   <!-- katalog start -->
   <section class="pb-[155px] md:pb-[283px] bg-[#F8F8FA] pt-[30px]">
@@ -1427,6 +1489,7 @@
   </footer>
   <!-- footer end -->
   <script src="../js/catalog.js"></script>
+  <script src="../js/delivery.js"></script>
 </body>
 
 </html>
