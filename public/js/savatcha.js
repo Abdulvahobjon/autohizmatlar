@@ -21,7 +21,6 @@ minusBtn.forEach((item, index) => {
   });
 });
 
-
 // delete function from savatcha
 
 let btnForDeleteFun = document.querySelectorAll('.btnForDeleteFun')
