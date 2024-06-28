@@ -57,7 +57,7 @@ a:hover {
 .navigationBtnL-1 {
   position: absolute;
   top: 250px;
-  left: 25px;
+  left: 0px;
   background-image: url("../img/swiper/next_icon.png");
   width: 30px;
   height: 40px;
@@ -74,7 +74,7 @@ a:hover {
 .navigationBtnR-1 {
   position: absolute;
   top: 250px;
-  right: 25px;
+  right: 0;
   border-radius: 10px !important;
   box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.438);
   background-image: url("../img/swiper/prev_icon.png");
@@ -200,6 +200,13 @@ html {
     left: 0;
     z-index: 50;
   }
+
+  .navigationBtnL,
+.navigationBtnR,
+.navigationBtnR-1,
+.navigationBtnL-1 {
+  display: none;
+}
 
   .swiper-button-next-new-2::after {
     content: url("../img/swiper/prev_icon.png");
