@@ -1015,6 +1015,12 @@ video {
 .w-\[36px\] {
   width: 36px;
 }
+.w-\[40px\] {
+  width: 40px;
+}
+.w-\[57px\] {
+  width: 57px;
+}
 .max-w-6 {
   max-width: 1.5rem;
 }
