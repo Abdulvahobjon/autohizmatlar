@@ -204,6 +204,8 @@
             <button
               class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center"
             >
+              <img src="../img/navbar/bag_icon.png" alt="bag_icon" />
+              <span>Savatcha</span>
               <div class="w-8 h-8 flex items-center">
                 <svg
                   width="32"
@@ -1226,51 +1228,153 @@
                             </div>
                         </div>
 
+
+
                         <div class="bg-[#fff] w-full shadow-lg  p-[30px]">
                             <div class=" md:mb-[29px] mb-10">
-                                <form>
-                                    <div class="md:flex items-start justify-between">
-                                        <div class="md:mb-0 mb-10">
-                                            <h2 class="mb-[10px] text-[24px] font-medium">Buyurtmachi </h2>
-                                            <div class="mb-5">
-                                                <label for="name" hidden>Ism va familya *</label>
-                                                <input
-                                                    class="lg:w-[400px] md:w-[300px] sm:w-[250px] w-[200px] px-[20px] py-[13px] placeholder:text-[#55556D] rounded-[6px] border-[1px] border-[#E3E3E8]"
-                                                    type="text" name="userName" id="name"
-                                                    placeholder="Ism va familya *">
-                                            </div>
-                                            <div>
-                                                <label for="phone" hidden>Telefon *</label>
-                                                <input
-                                                    class="lg:w-[400px] md:w-[300px] sm:w-[250px] w-[200px] px-[20px] py-[13px] placeholder:text-[#55556D] rounded-[6px] border-[1px] border-[#E3E3E8]"
-                                                    type="text" name="userPhoneNumber" id="phone"
-                                                    placeholder="Telefon raqam *">
-                                            </div>
-                                        </div>
-                                        <div class="max-w-[300px] w-full md:text-center">
-                                            <h2 class="mb-[15px] text-[24px] leading-[30px] font-medium">Buyurtmangiz
-                                            </h2>
-                                            <hr class="w-full h-[1px] text-[#E3E3E8] mb-5">
-                                            <div class="flex items-center justify-between mb-[18px]">
-                                                <p class="font-normal text-xl leading-[30px] text-[#1B1D1F]">
-                                                    Tovarlar
-                                                </p>
-                                                <p class="font-normal text-xl leading-[30px] text-[#1B1D1F]">
-                                                    6
-                                                </p>
-                                            </div>
-                                            <hr class="w-full h-[1px] text-[#E3E3E8] mb-5">
-                                            <div class="flex items-center justify-between">
-                                                <p class="font-semibold text-xl leading-[30px] text-[#1B1D1F]">
-                                                    Jami
-                                                </p>
-                                                <p class="font-semibold text-xl leading-[30px] text-[#1B1D1F]">
-                                                    840$
-                                                </p>
-                                            </div>
-                                        </div>
+
+                              <style>
+                                .floating-label-group {
+                                  position: relative;
+                                }
+              
+                                .floating-label-group input {
+                                  outline: none;
+                                  transition: border-color 0.2s;
+                                }
+              
+                                .floating-label-group label {
+                                  position: absolute;
+                                  top: 13px;
+                                  left: 1rem;
+                                  pointer-events: none;
+                                  font-size: 1rem;
+                                  transition: all 0.2s;
+                                  color: #55556d;
+                                }
+              
+                                .floating-label-group input:focus ~ label,
+                                .floating-label-group input:not(:placeholder-shown) ~ label {
+                                  top: -15px;
+                                  left: 0.75rem;
+                                  font-size: 0.75rem;
+                                  color: #1b1d1f;
+                                  padding: 0 4px;
+                                  background-color: white;
+                                }
+                                .floating-label-group input:focus ~ label .star_form,
+                                .floating-label-group
+                                  input:not(:placeholder-shown)
+                                  ~ label
+                                  .star_form {
+                                  color: red;
+                                }
+                              </style>
+                              <form>
+                                <div class="md:flex items-start justify-between">
+                                  <div class="md:mb-0 mb-10">
+                                    <h2 class="mb-2.5 text-2xl font-medium">Buyurtmachi</h2>
+                                    <div class="floating-label-group">
+                                      <input autocomplete="off"
+                                        type="text"
+                                        name="userName"
+                                        id="name"
+                                        placeholder=" "
+                                        required
+                                        class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[400px] md:w-[300px] w-full px-[20px] placeholder-transparent"
+                                      />
+                                      <label
+                                        class="px-1 bg-white text-[#55556D] text-lg"
+                                        for="name"
+                                        >Ism va familya
+                                        <span class="star_form">*</span></label
+                                      >
                                     </div>
-                                </form>
+                                    <div class="floating-label-group">
+                                      <input autocomplete="off"
+                                        type="tel"
+                                        name="userPhoneNumber"
+                                        id="phone"
+                                        placeholder=" "
+                                        required
+                                        class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[400px] md:w-[300px] w-full px-[20px] placeholder-transparent"
+                                      />
+                                      <label
+                                        class="px-1 bg-white text-[#55556D] text-lg"
+                                        for="phone"
+                                        >Telefon raqam <span class="star_form">*</span></label
+                                      >
+                                    </div>
+                                    <script>
+                                      document.addEventListener("DOMContentLoaded", () => {
+                                        const phoneInput = document.getElementById("phone");
+              
+                                        phoneInput.addEventListener("focus", () => {
+                                          if (!phoneInput.value.startsWith("+998-")) {
+                                            phoneInput.value = "+998-";
+                                          }
+                                        });
+              
+                                        phoneInput.addEventListener("input", (event) => {
+                                          let value = phoneInput.value.replace(/\D/g, ""); // Remove all non-digit characters
+                                          if (value.startsWith("998")) {
+                                            value = value.slice(3); // Remove leading '998'
+                                          } else if (value.startsWith("+998")) {
+                                            value = value.slice(4); // Remove leading '+998'
+                                          }
+              
+                                          const formattedValue = `+998-${value.slice(0, 2)}${
+                                            value.length > 2 ? "-" : ""
+                                          }${value.slice(2, 5)}${
+                                            value.length > 5 ? "-" : ""
+                                          }${value.slice(5, 7)}${
+                                            value.length > 7 ? "-" : ""
+                                          }${value.slice(7, 9)}`;
+              
+                                          phoneInput.value = formattedValue;
+                                        });
+              
+                                        phoneInput.addEventListener("blur", () => {
+                                          if (phoneInput.value === "+998-") {
+                                            phoneInput.value = "";
+                                          }
+                                        });
+                                      });
+                                    </script>
+                                  </div>
+                                  <div class="max-w-[300px] w-full md:text-center">
+                                    <h2 class="mb-3.75 text-2xl leading-7.5 font-medium">
+                                      Buyurtmangiz
+                                    </h2>
+                                    <hr class="w-full h-0.25 text-[#E3E3E8] mb-5" />
+                                    <div class="flex items-center justify-between mb-4.5">
+                                      <p
+                                        class="font-normal text-xl leading-7.5 text-[#1B1D1F]"
+                                      >
+                                        Tovarlar
+                                      </p>
+                                      <p
+                                        class="font-normal text-xl leading-7.5 text-[#1B1D1F]"
+                                      >
+                                        6
+                                      </p>
+                                    </div>
+                                    <hr class="w-full h-0.25 text-[#E3E3E8] mb-5" />
+                                    <div class="flex items-center justify-between">
+                                      <p
+                                        class="font-semibold text-xl leading-7.5 text-[#1B1D1F]"
+                                      >
+                                        Jami
+                                      </p>
+                                      <p
+                                        class="font-semibold text-xl leading-7.5 text-[#1B1D1F]"
+                                      >
+                                        840$
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
                             </div>
                             <div class="md:flex items-start justify-between">
                                 <div class="max-w-[400px] md:mb-0 mb-5">
@@ -1296,10 +1400,9 @@
                                         Buyurtma berish
                                     </a>
                                 </div>
-                                <iframe class="md:w-[433px] w-full min-h-[180px]"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d363.54067254119076!2d72.34279635575227!3d40.750937490184995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedd6a16efb51%3A0xde3157b76b87001!2sPrestige%20Tuning!5e0!3m2!1suz!2s!4v1719455446648!5m2!1suz!2s"
-                                    style="border: 0" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="md:w-[433px] grid grid-cols-1 w-full h-[200px]">
+                                  <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d188.90702036928062!2d72.34233134341241!3d40.750755190879765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcedd6a16efb51%3A0xde3157b76b87001!2sPrestige%20Tuning!5e0!3m2!1suz!2sus!4v1719572185313!5m2!1suz!2sus" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
