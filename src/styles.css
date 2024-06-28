@@ -7,12 +7,12 @@ body{
     font: Onest;
 }
 
-button{
-    transition: all .3s;
-}
-button:hover{
-    opacity: 70%;
-}
+    button{
+        transition: all .3s;
+    }
+    button:hover{
+        opacity: 70%;
+    }
 .transition-all {
     transition: all 0.3s ease-in-out;
 }

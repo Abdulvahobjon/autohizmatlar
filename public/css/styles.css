@@ -613,6 +613,12 @@ video {
 .top-\[50\%\] {
   top: 50%;
 }
+.left-4 {
+  left: 1rem;
+}
+.top-2 {
+  top: 0.5rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -633,6 +639,12 @@ video {
 }
 .z-\[99\] {
   z-index: 99;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 .mx-auto {
   margin-left: auto;
@@ -832,6 +844,9 @@ video {
 }
 .hidden {
   display: none;
+}
+.h-0 {
+  height: 0px;
 }
 .h-10 {
   height: 2.5rem;
@@ -1676,6 +1691,9 @@ video {
 .p-7 {
   padding: 1.75rem;
 }
+.p-8 {
+  padding: 2rem;
+}
 .p-\[30px\] {
   padding: 30px;
 }
@@ -1849,6 +1867,10 @@ video {
 .py-\[7\.44px\] {
   padding-top: 7.44px;
   padding-bottom: 7.44px;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -2313,6 +2335,15 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-\[\] {
+  color: ;
+}
+.placeholder-transparent::-moz-placeholder {
+  color: transparent;
+}
+.placeholder-transparent::placeholder {
+  color: transparent;
+}
 .opacity-0 {
   opacity: 0;
 }
@@ -2338,6 +2369,13 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+.outline {
+  outline-style: solid;
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2366,12 +2404,12 @@ body{
     font: Onest;
 }
 
-button{
-    transition: all .3s;
-}
-button:hover{
-    opacity: 70%;
-}
+    button{
+        transition: all .3s;
+    }
+    button:hover{
+        opacity: 70%;
+    }
 .transition-all {
     transition: all 0.3s ease-in-out;
 }
@@ -2739,6 +2777,10 @@ button:hover{
     max-width: 313px;
   }
 
+  .sm\:max-w-\[250px\] {
+    max-width: 250px;
+  }
+
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2901,6 +2943,10 @@ button:hover{
 
   .md\:max-w-\[320px\] {
     max-width: 320px;
+  }
+
+  .md\:max-w-\[300px\] {
+    max-width: 300px;
   }
 
   .md\:grid-cols-2 {
@@ -3199,6 +3245,10 @@ button:hover{
 
   .lg\:max-w-\[80px\] {
     max-width: 80px;
+  }
+
+  .lg\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .lg\:grid-cols-3 {
