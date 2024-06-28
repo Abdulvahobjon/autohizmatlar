@@ -13,6 +13,8 @@ body {
   color: #5946d7;
 }
 
+<<<<<<< HEAD
+=======
 #category__container > a:hover {
   opacity: 1;
 }
@@ -26,6 +28,7 @@ button:hover,
 a:hover {
   opacity: 0.6;
 }
+>>>>>>> 4c7b72eb301ada559a856c9cd9b629821114e5d3
 
 .swiper,
 .swiper_desktop,

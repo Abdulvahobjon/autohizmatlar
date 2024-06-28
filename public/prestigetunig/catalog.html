@@ -1,1567 +1,1030 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <!-- amination -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <!-- amination -->
-    <title>Catalaog</title>
-    <script>
-      new WOW().init();
-      var rellax = new Rellax(".rellax");
-    </script>
 
-    <style></style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <!-- amination -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!-- amination -->
+  <title>Catalaog</title>
+  <script>
+    new WOW().init();
+    var rellax = new Rellax(".rellax");
+  </script>
 
-  <body>
-    <!-- header start -->
-    <header>
-      <nav class="shadow-md mb-[30px]">
-        <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
-          <div class="flex justify-between items-center gap-4">
-            <button id="goods_burger" class="w-6 h-6 flex md:hidden items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6H20" stroke="#1B1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12H20" stroke="#1B1D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path opacity="0.4" d="M4 18H20" stroke="#1B1D1F" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-            <div id="goods__nav"
-              class="fixed duration-300 top-0 left-full w-full min-h-[100vh] bg-white z-[999] py-10 px-12">
-              <button id="goods__close" class="w-8 h-8 relative top-[-20px] right-[28px] flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z"
-                      fill="#000000"></path>
-                  </g>
-                </svg>
-              </button>
-              <ul class="flex flex-col gap-4">
-                <li>
-                  <a href="#" class="text-black font-medium text-xl">Tuning xizmatlari</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black font-medium text-xl">Tuning tovarlari</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black font-medium text-xl">Biz haqimizda</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black font-medium text-xl">Bog’lanish</a>
-                </li>
-                <li>
-                  <a href="tel:+998 98 700 00 21" class="text-black font-medium text-xl">+998 98 700 00 21</a>
-                </li>
-                <li>
-                  <a href="tel:+998 98 700 00 21" class="text-black font-medium text-xl">+998 98 700 00 21</a>
-                </li>
-              </ul>
-            </div>
-            <a href="./index.html">
-              <img src="../img/navbar/site_logo.png" alt="site rasm logo" width="211" height="56" class="flex" />
-            </a>
-  
-            <div class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]">
-              <input type="text" placeholder="Tovar nomini kiriting"
-                class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent" />
-              <button class="font active:opacity-50">
-                <img src="../img/navbar/search_icon.png" alt="search icon" />
-              </button>
-            </div>
-          </div>
-  
-          <div class="md:flex hidden gap-[30px]">
-            <a href="tel:+998987000021"
-              class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
-              <img src="../img/navbar/phone_icon.png" alt="site rasm phone icon" />
-              <span>+998 98 700 00 21</span>
-            </a>
-            <a href="tel:+998987000021"
-              class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
-              <img src="../img/navbar/phone_icon.png" alt="site rasm phone icon" />
-              <span>+998 98 700 00 21</span>
-            </a>
-          </div>
-  
-          <button
-            class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
-            <img src="../img/navbar/bag_icon.png" alt="bag" />
-            <!-- <span>Savatcha</span> -->
-            <span
-              class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
-          </button>
-        </div>
-  
-        <hr class="border-[#E3E3E8] w-full h-[1px]" />
-  
-        <div class="max-w-[1276px] mx-auto px-3 py-[13px] flex justify-between items-center md:gap-0 gap-[20px]">
-          <button id="catalog"
-            class="bg-[#FF0000] text-[#fff] font-semibold flex gap-x-[10px] rounded-[8px] h-full sm:px-[20px] sm:py-[10px] py-[10px] px-[15px] hover:opacity-65 active:opacity-50">
-            <img width="24" height="24" src="../img/navbar/katalog_icon.png" alt="site rasm katalog icon"
-              class="inline-block" />
-            <span class="sm:inline-block hidden">Katalog</span>
-          </button>
-          <div id="catalogDiv" class="fixed duration-300 top-[100%] bg-white md:min-h-[100vh] h-[100vh] overflow-auto md:top-[100%] w-full left-0 z-[99]">
-            <div class="grid p-5 rounded-lg shadow-lg md:grid-cols-2">
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M29.2947 15.9613C29.2947 8.61865 23.3427 2.66666 16 2.66666V7.98399C20.4053 7.98399 23.9773 11.5547 23.9773 15.9613H29.2947Z"
-                      fill="#5946D7" fill-opacity="0.1" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M26.5609 15.9613V16.7C26.5609 22.9413 21.5023 28 15.2609 28C9.01961 28 3.96094 22.9413 3.96094 16.7C3.96094 10.4587 9.01961 5.39999 15.2609 5.39999H15.9996"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M18.2375 13.7236C19.8814 15.3674 19.8814 18.0326 18.2375 19.6764C16.5937 21.3203 13.9285 21.3203 12.2846 19.6764C10.6408 18.0326 10.6408 15.3674 12.2846 13.7236C13.9285 12.0797 16.5937 12.0797 18.2375 13.7236Z"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M18.2375 13.7236C19.8814 15.3674 19.8814 18.0326 18.2375 19.6764C16.5937 21.3203 13.9285 21.3203 12.2846 19.6764C10.6408 18.0326 10.6408 15.3674 12.2846 13.7236C13.9285 12.0797 16.5937 12.0797 18.2375 13.7236"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Оригинальные
-                  запчасти</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.6697 15.6758H9.39746" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M18.3344 18.5798H19.0014" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M9.33008 16.4095V20.4272C9.33008 21.6537 10.3232 22.6486 11.5497 22.6508L20.4467 22.6694C21.0364 22.6691 21.6019 22.4345 22.0186 22.0172C22.4354 21.6 22.6693 21.0342 22.669 20.4445V11.5555C22.6697 10.329 21.6772 9.33349 20.4507 9.33055H14.7884C14.109 9.33055 13.4669 9.64114 13.045 10.1736L10.2945 13.651C9.67175 14.4358 9.33196 15.4077 9.33008 16.4095Z"
-                      fill="#5946D7" fill-opacity="0.1" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <rect x="3.99512" y="3.99503" width="24.01" height="24.01" rx="5" stroke="#FF0000" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Кузовные
-                  запчасти</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 19.9999L7.5 8.49992L8 7.99992H20L26.5 14.9999L27 25.9999L26 27.4999H17V19.9999Z"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path d="M10.666 24H17.3327" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M10.666 20H13.3327" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M6.66602 10C6.66602 8.89543 7.56145 8 8.66602 8H19.1709C19.7014 8 20.2101 8.21071 20.5851 8.58579L26.0802 14.0809C26.4553 14.456 26.666 14.9647 26.666 15.4951V25C26.666 26.6569 25.3229 28 23.666 28H9.66602C8.00916 28 6.66602 26.6569 6.66602 25V10Z"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                      d="M16.6663 8V5C16.6663 4.44772 16.2186 4 15.6663 4H10.333C9.78072 4 9.33301 4.44772 9.33301 5V8"
-                      stroke="#FF0000" stroke-width="2" />
-                    <rect x="18.0811" y="11.2524" width="7.17158" height="3.58579" rx="1.79289"
-                      transform="rotate(45 18.0811 11.2524)" stroke="#FF0000" stroke-width="2" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автомасла</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.5 24.5001L3 10.0001V9.50008H9L11.5 7.00008L16 6.50008V26.5001H4L2.5 24.5001Z"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M22.667 9.33334V6.66667C22.667 5.93067 23.2643 5.33334 24.0003 5.33334H26.667C27.403 5.33334 28.0003 5.93067 28.0003 6.66667V9.33334"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M22.6667 15.3333V19.3333" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M24.667 17.3333H20.667" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M11.333 17.3333H7.33301" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M4 9.33334V6.66667C4 5.93067 4.59733 5.33334 5.33333 5.33334H8C8.736 5.33334 9.33333 5.93067 9.33333 6.66667V9.33334"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M22.667 9.33334H28.0003C28.7363 9.33334 29.3337 9.93067 29.3337 10.6667V24C29.3337 25.4733 28.1403 26.6667 26.667 26.6667H5.33366C3.86033 26.6667 2.66699 25.4733 2.66699 24V10.6667C2.66699 9.93067 3.26433 9.33334 4.00033 9.33334H9.33366L11.6097 7.05734C11.8603 6.80667 12.199 6.66667 12.5523 6.66667H19.4483C19.8017 6.66667 20.1417 6.80667 20.391 7.05734L22.667 9.33334V9.33334Z"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Аккумуляторы</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.1">
-                      <path d="M5.5 12.0001L9 11.5001L11 9.00008H18V28.5001L12.5 28.0001L9 22.5001H5.5V12.0001Z"
-                        fill="#2E1066" />
-                      <path d="M5.5 12.0001L9 11.5001L11 9.00008H18V28.5001L12.5 28.0001L9 22.5001H5.5V12.0001Z"
-                        fill="#410F9E" />
-                      <path d="M5.5 12.0001L9 11.5001L11 9.00008H18V28.5001L12.5 28.0001L9 22.5001H5.5V12.0001Z"
-                        fill="#453888" />
-                      <path d="M5.5 12.0001L9 11.5001L11 9.00008H18V28.5001L12.5 28.0001L9 22.5001H5.5V12.0001Z"
-                        fill="#5946D7" />
-                    </g>
-                    <path d="M1.33366 12V22.6667" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M16.0007 4V9.33333" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M12 4H20" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M26.6673 12V14.6667H24.0006L21.334 9.33333H10.6673L8.00065 12H5.33398V22.6667H9.33398L11.6327 27.2627C11.858 27.7147 12.3193 28 12.8247 28H21.334C22.07 28 22.6673 27.4027 22.6673 26.6667V22.6667H26.6673V25.3333H29.334C30.07 25.3333 30.6673 24.736 30.6673 24V13.3333C30.6673 12.5973 30.07 12 29.334 12H26.6673Z"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M5.33398 17.3333H1.33398" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Неоригинальные
-                  запчасти</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M5.15795 16.472L7.04329 14.5867C8.08462 13.5453 9.77262 13.5453 10.814 14.5867L17.414 21.1867C18.4553 22.228 18.4553 23.916 17.414 24.9573L15.5286 26.8427C14.4873 27.884 12.7993 27.884 11.758 26.8427L5.15795 20.2427C4.11662 19.2013 4.11662 17.5133 5.15795 16.472Z"
-                      fill="#5946D7" fill-opacity="0.1" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M6.09327 21.1866L3.2666 24.0133" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M8.34668 29.08L11.1733 26.2534" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M22.1286 5.15732L20.2433 3.27198C19.722 2.75065 18.878 2.75065 18.358 3.27198L16.8633 4.76665C16.6126 5.01732 16.4726 5.35598 16.4726 5.70932V8.92798L14.5873 10.8133C14.066 11.3347 14.066 12.1786 14.5873 12.6986L19.302 17.4133C19.8233 17.9346 20.6673 17.9346 21.1873 17.4133L23.0726 15.528H26.2913C26.6446 15.528 26.9846 15.388 27.234 15.1373L28.7286 13.6426C29.25 13.1213 29.25 12.2773 28.7286 11.7573L26.8433 9.87198"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M22.1286 5.15732L20.2433 3.27198C19.722 2.75065 18.878 2.75065 18.358 3.27198L16.8633 4.76665C16.6126 5.01732 16.4726 5.35598 16.4726 5.70932V8.92798L14.5873 10.8133C14.066 11.3346 14.066 12.1786 14.5873 12.6986L19.302 17.4133C19.8233 17.9346 20.6673 17.9346 21.1873 17.4133L23.0726 15.528H26.2913C26.6446 15.528 26.9846 15.388 27.234 15.1373L28.7286 13.6426C29.25 13.1213 29.25 12.2773 28.7286 11.7573L26.8433 9.87198"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20.3333 13L19 11.6667" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M21.3337 29.3333V28" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M29.3333 21.3333H28" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M28.0003 28L26.667 26.6667" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M10.6667 2.66666V4" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M2.66699 10.6667H4.00033" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M4 4L5.33333 5.33333" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M10 19.3333L12.6667 22" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M28.7286 7.98669L25.9006 10.8147C25.3793 11.336 24.5353 11.336 24.0153 10.8147L21.1859 7.98669C20.6646 7.46536 20.6646 6.62136 21.1859 6.10136L24.0139 3.27336"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти для ТО
-                </span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 19.9999L7.5 8.49992L8 7.99992H20L26.5 14.9999L27 25.9999L26 27.4999H17V19.9999Z"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path d="M10.666 24H17.3327" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M10.666 20H13.3327" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M6.66602 10C6.66602 8.89544 7.56145 8.00001 8.66602 8.00001H19.1709C19.7014 8.00001 20.2101 8.21072 20.5851 8.58579L26.0802 14.0809C26.4553 14.456 26.666 14.9647 26.666 15.4951V25C26.666 26.6569 25.3229 28 23.666 28H9.66602C8.00916 28 6.66602 26.6569 6.66602 25V10Z"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                      d="M16.6663 8.00001V5.00001C16.6663 4.44772 16.2186 4.00001 15.6663 4.00001H10.333C9.78072 4.00001 9.33301 4.44772 9.33301 5.00001V8.00001"
-                      stroke="#FF0000" stroke-width="2" />
-                    <rect x="18.0811" y="11.2524" width="7.17158" height="3.58579" rx="1.79289"
-                      transform="rotate(45 18.0811 11.2524)" stroke="#FF0000" stroke-width="2" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автохимия
-                </span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M18.7318 21.4356C17.8855 21.5768 17.02 21.3384 16.3653 20.784C15.7106 20.2295 15.333 19.415 15.333 18.5571V13.4429C15.333 12.585 15.7106 11.7705 16.3653 11.2161C17.02 10.6616 17.8855 10.4232 18.7318 10.5644C21.3889 11.0072 23.3365 13.3062 23.3363 16C23.3365 18.6938 21.3889 20.9928 18.7318 21.4356Z"
-                      fill="#5946D7" fill-opacity="0.1" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M9.33008 13.3322L11.9979 12.6652" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M9.33008 16.667L11.9979 16" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M16.0001 28.005V28.005C9.36994 28.005 3.99512 22.6302 3.99512 16V16C3.99512 9.36985 9.36994 3.99503 16.0001 3.99503V3.99503C22.6303 3.99503 28.0051 9.36985 28.0051 16V16C28.0051 22.6302 22.6303 28.005 16.0001 28.005V28.005Z"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M9.33008 20.0016L11.9979 19.3347" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автолампы</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 27V10V9L15 2.5L13 17H8.5V27H3Z" fill="#5946D7" fill-opacity="0.1" />
-                    <path d="M12.1973 9.91374H17.5517" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M12.7488 17H8.49707V26.9208" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M8.49715 26.9208H2.82812V10.7102C2.82812 9.73787 3.35548 8.84204 4.2057 8.3703L13.5752 3.16471C14.3838 2.71538 15.3672 2.71538 16.1759 3.16471L25.5453 8.3703C26.3948 8.84263 26.9215 9.73825 26.9215 10.7102V12.7482"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M31.1731 25.2201C31.1731 23.6546 29.904 22.3855 28.3386 22.3855H17.0005C15.4351 22.3855 14.166 23.6546 14.166 25.2201"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M31.1731 25.2201C31.1731 23.6546 29.904 22.3855 28.3386 22.3855H17.0005C15.4351 22.3855 14.166 23.6546 14.166 25.2201"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M14.166 25.2201V29.7553C14.166 30.5381 14.8005 31.1726 15.5833 31.1726H16.9864C17.7691 31.1726 18.4036 30.5381 18.4036 29.7553V28.8185H26.9355V29.7553C26.9355 30.5381 27.57 31.1726 28.3528 31.1726H29.7558C30.5386 31.1726 31.1731 30.5381 31.1731 29.7553V25.2201"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M14.166 25.2201V29.7553C14.166 30.5381 14.8005 31.1726 15.5833 31.1726H16.9864C17.7691 31.1726 18.4036 30.5381 18.4036 29.7553V28.8185H26.9355V29.7553C26.9355 30.5381 27.57 31.1726 28.3528 31.1726H29.7558C30.5386 31.1726 31.1731 30.5381 31.1731 29.7553V25.2201"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M19.4625 25.6453H17.3438" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M27.9958 25.6453H25.877" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M29.0537 22.2963L31.1725 21.2376" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M16.2919 22.2963L14.166 21.2376" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M19.2228 17C18.2391 17.0025 17.3855 17.6796 17.1593 18.6369L16.2607 22.4777L17.1593 18.6369C17.3855 17.6796 18.2391 17.0025 19.2228 17H26.1163C27.1001 17.0025 27.9536 17.6796 28.1799 18.6369L29.0784 22.4777"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти ВАЗ, ГАЗ,
-                  КАМАЗ</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 27V10V9L15 2.5L13 17H8.5V27H3Z" fill="#5946D7" fill-opacity="0.1" />
-                    <path d="M12.1973 9.91374H17.5517" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M12.7488 17H8.49707V26.9208" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M8.49715 26.9208H2.82812V10.7102C2.82812 9.73787 3.35548 8.84204 4.2057 8.3703L13.5752 3.16471C14.3838 2.71538 15.3672 2.71538 16.1759 3.16471L25.5453 8.3703C26.3948 8.84263 26.9215 9.73825 26.9215 10.7102V12.7482"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M31.1731 25.2201C31.1731 23.6546 29.904 22.3855 28.3386 22.3855H17.0005C15.4351 22.3855 14.166 23.6546 14.166 25.2201"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M31.1731 25.2201C31.1731 23.6546 29.904 22.3855 28.3386 22.3855H17.0005C15.4351 22.3855 14.166 23.6546 14.166 25.2201"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M14.166 25.2201V29.7553C14.166 30.5381 14.8005 31.1726 15.5833 31.1726H16.9864C17.7691 31.1726 18.4036 30.5381 18.4036 29.7553V28.8185H26.9355V29.7553C26.9355 30.5381 27.57 31.1726 28.3528 31.1726H29.7558C30.5386 31.1726 31.1731 30.5381 31.1731 29.7553V25.2201"
-                      fill="#5946D7" fill-opacity="0.1" />
-                    <path
-                      d="M14.166 25.2201V29.7553C14.166 30.5381 14.8005 31.1726 15.5833 31.1726H16.9864C17.7691 31.1726 18.4036 30.5381 18.4036 29.7553V28.8185H26.9355V29.7553C26.9355 30.5381 27.57 31.1726 28.3528 31.1726H29.7558C30.5386 31.1726 31.1731 30.5381 31.1731 29.7553V25.2201"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M19.4625 25.6453H17.3438" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M27.9958 25.6453H25.877" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M29.0537 22.2963L31.1725 21.2376" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M16.2919 22.2963L14.166 21.2376" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M19.2228 17C18.2391 17.0025 17.3855 17.6796 17.1593 18.6369L16.2607 22.4777L17.1593 18.6369C17.3855 17.6796 18.2391 17.0025 19.2228 17H26.1163C27.1001 17.0025 27.9536 17.6796 28.1799 18.6369L29.0784 22.4777"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Запчасти ВАЗ, ГАЗ,
-                  КАМАЗ</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 26L3.5 14.5V14L9 11.5L16 10.5V24.5L9 26Z" fill="#5946D7" fill-opacity="0.1" />
-                    <path d="M10 17.3333L16 29.3333" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M28.3848 15.2973L23.2994 25.4667C22.9834 26.1 22.2234 26.3827 21.5808 26.088C19.7701 25.2573 17.8168 24.8547 15.8634 24.8533C13.9101 24.8547 11.9568 25.2573 10.1461 26.088C9.50209 26.3827 8.74209 26.1 8.42609 25.4667L3.34209 15.2973C3.01942 14.6533 3.25942 13.8493 3.89942 13.5213C7.64609 11.6 11.7528 10.668 15.8621 10.6667C19.9714 10.668 24.0781 11.6 27.8261 13.5213C28.4674 13.8507 28.7061 14.6533 28.3848 15.2973Z"
-                      stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.9994 6.66658C15.9994 6.44525 15.9794 6.22258 15.9394 6.00391" stroke="#FF0000"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M16.0599 6.00391C16.0199 6.22258 15.9999 6.44525 15.9999 6.66658" stroke="#FF0000"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M23.4489 3.83858C23.2835 3.68658 23.1075 3.54925 22.9235 3.42792" stroke="#FF0000"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M19.1736 2.81729C18.9309 2.87995 18.6989 2.97062 18.4722 3.07995" stroke="#FF0000"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M9.07582 3.42792C8.89182 3.54925 8.71582 3.68658 8.55048 3.83858" stroke="#FF0000"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12.8248 2.81729C13.0675 2.87995 13.2995 2.97062 13.5261 3.07995" stroke="#FF0000"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.9997 17.3333V16" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M15.9997 10.6667V12" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Автостёкла</span>
-              </button>
-              <button class="hover:bg-[#F4F5F6] rounded-xl hover:opacity-100 px-5 py-[14px] flex gap-[15px] items-center">
-                <div class="w-8 h-8 flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_301_7764)">
-                      <path d="M24 20V10" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M24 38V28" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M26.8203 21.18L33.9003 14.1" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M14.0996 33.9L21.1796 26.82" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M28 24H38" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M10 24H20" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M26.8203 26.82L33.9003 33.9" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M14.0996 14.1L21.1796 21.18" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M38.1421 9.85786C45.9525 17.6683 45.9525 30.3317 38.1421 38.1421C30.3316 45.9525 17.6683 45.9525 9.85786 38.1421C2.04738 30.3316 2.04738 17.6683 9.85786 9.85786C17.6683 2.04738 30.3317 2.04738 38.1421 9.85786"
-                        stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path
-                        d="M33.8995 14.1005C39.3668 19.5678 39.3668 28.4321 33.8995 33.8995C28.4321 39.3668 19.5678 39.3668 14.1005 33.8995C8.63316 28.4321 8.63316 19.5678 14.1005 14.1005C19.5678 8.63316 28.4321 8.63316 33.8995 14.1005"
-                        stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path
-                        d="M26.8284 21.1716C28.3905 22.7337 28.3905 25.2664 26.8284 26.8285C25.2663 28.3906 22.7337 28.3906 21.1716 26.8285C19.6095 25.2664 19.6095 22.7337 21.1716 21.1716C22.7337 19.6095 25.2663 19.6095 26.8284 21.1716"
-                        stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_301_7764">
-                        <rect width="48" height="48" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <span class="hover:text-[#5946D7] text-[14px] font-stolzi leading-5 text-[#1B1D1F]">Диски</span>
-              </button>
-            </div>
-          </div>
-  
-          <ul class="hidden md:flex gap-[5px]">
-            <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
-              <a href="#" class="text-[#1B1D1F]">Tuning xizmatlari</a>
-            </li>
-            <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
-              <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
-            </li>
-            <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
-              <a href="#" class="text-[#1B1D1F]">Biz haqimizda</a>
-            </li>
-            <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
-              <a href="#" class="text-[#1B1D1F]">Bog’lanish</a>
-            </li>
-          </ul>
-  
-          <div class="sm:w-[430px] w-full md:hidden flex bg-[#F4F5F6] rounded-[6px] pr-[10px]">
-            <input type="text" placeholder="Tovar nomini kiriting"
-              class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent" />
+  <style>
+    body {
+      transition: all 0.3s;
+    }
+
+    .custom-checkbox {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 2px;
+    }
+
+    /* Default checkbox'ni yashirish */
+    .custom-checkbox input {
+      display: none;
+    }
+
+    /* Checkmark'ga style berish */
+    .custom-checkbox .checkmark {
+      position: relative;
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border: 2px solid #DEDEE2;
+      border-radius: 4px;
+    }
+
+    /* Hover effekti */
+    .custom-checkbox:hover input~.checkmark {
+      background-color: #ffffff;
+    }
+
+    /* Checked holat */
+    .custom-checkbox input:checked~.checkmark {
+      background-color: #6B59CC;
+      border: 2px solid #6B59CC;
+    }
+
+    /* Checkmark'ni qo'shish */
+    .custom-checkbox .checkmark:after {
+      content: "";
+      display: none;
+      background-image: url(../img/catalog/check.svg);
+    }
+
+    /* Checked holatda checkmark'ni ko'rsatish */
+    .custom-checkbox input:checked~.checkmark:after {
+      display: block;
+    }
+
+    /* Checkmark'ni yaratish */
+    .custom-checkbox .checkmark:after {
+      width: 16px;
+      height: 16px;
+      background-image: url(../img/catalog/check.svg);
+      background-size: cover;
+    }
+    .active_btn{
+      background-color: #6b59cc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header start -->
+  <header>
+    <nav class="shadow-md mb-1">
+      <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
+        <div class="flex justify-between items-center gap-4">
+          <a href="/">
+            <img src="../img/navbar/site_logo.png" alt="site rasm logo" width="211" height="56" class="flex" />
+          </a>
+
+          <div class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]">
+            <input type="text" placeholder="Tovar nomini kiriting" name="search"
+              class="w-full py-[11px] pl-[20px] focus:outline-none border-none border-transparent bg-transparent" />
             <button class="font active:opacity-50">
               <img src="../img/navbar/search_icon.png" alt="search icon" />
             </button>
           </div>
-  
-          <a href="./savatcha.html"
-            class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
-            <img src="../img/navbar/bag_icon.png" alt="bag" />
-            <span>Savatcha</span>
-            <span class="bg-[#FB6019] text-[#fff] text-[14px] rounded-[50%] flex items-center justify-center w-[20px] h-[20px]">5</span>
+        </div>
+
+        <div class="md:flex hidden gap-[30px]">
+          <a href="tel:+998987000021"
+            class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
+            <img src="../img/navbar/phone_icon.png" alt="site rasm phone icon" />
+            <span>+998 98 700 00 21</span>
+          </a>
+          <a href="tel:+998987000021"
+            class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
+            <img src="../img/navbar/phone_icon.png" alt="site rasm phone icon" />
+            <span>+998 98 700 00 21</span>
           </a>
         </div>
-      </nav>
-  
-    
-    </header>
-    <!-- header end -->
-    <!-- katalog start -->
-    <section class="pb-[155px] md:pb-[283px] bg-[#F8F8FA] pt-[30px]">
-      <div class="max-w-[1300px] px-5 mx-auto">
-        <h1 class="font-semibold text-2xl text-[#1B1D1F] mb-2">
-          Rullar katalogi
-        </h1>
-        <div class="flex items-start gap-[20px] md:flex-row flex-col">
-          <button
-            id="filter__catalog"
-            class="border border-[#DEDEE2] flex md:hidden items-center w-full gap-[14px] py-[7.44px] justify-center mb-12 font-medium text-lg text-[#000000]"
-          >
-            <img src="../img/catalog/filter.svg" alt="filter" />
+
+        <button
+          class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+          <img src="../img/navbar/bag_icon.png" alt="" />
+          <!-- <span>Savatcha</span> -->
+          <span
+            class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
+        </button>
+      </div>
+
+      <hr class="border-[#E3E3E8] w-full h-[1px]" />
+
+      <div class="max-w-[1276px] mx-auto px-3 py-[13px] flex justify-between items-center md:gap-0 gap-[20px]">
+        <button
+          class="bg-[#FF0000] text-[#fff] font-semibold flex gap-x-[10px] rounded-[8px] h-full sm:px-[20px] sm:py-[10px] py-[10px] px-[15px] hover:opacity-65 active:opacity-50">
+          <img width="24" height="24" src="../img/navbar/katalog_icon.png" alt="site rasm katalog icon"
+            class="inline-block" />
+          <span class="sm:inline-block hidden">Katalog</span>
+        </button>
+
+        <ul class="hidden md:flex gap-[5px]">
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Tuning xizmatlari</a>
+          </li>
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
+          </li>
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Biz haqimizda</a>
+          </li>
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Bog’lanish</a>
+          </li>
+        </ul>
+
+        <div class="sm:w-[430px] w-full md:hidden flex bg-[#F4F5F6] rounded-[6px] pr-[10px]">
+          <input type="text" placeholder="Tovar nomini kiriting"
+            class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent" />
+          <button class="font active:opacity-50">
+            <img src="../img/navbar/search_icon.png" alt="search icon" />
+          </button>
+        </div>
+
+        <a href="./savatcha.html"
+          class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+          <img src="../img/navbar/bag_icon.png" alt="" />
+          <span>Savatcha</span>
+          <span
+            class="bg-[#FB6019] text-[#fff] text-[14px] flex items-center justify-center rounded-[50%] w-[20px] h-[20px]">5</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- header end -->
+  <!-- katalog start -->
+  <section class="pb-[155px] md:pb-[283px] bg-[#F8F8FA] pt-[30px]">
+    <div class="max-w-[1300px] px-5 mx-auto">
+      <h1 class="font-semibold text-2xl text-[#1B1D1F] mb-2">
+        Rullar katalogi
+      </h1>
+      <div  class="flex items-center md:items-start  md:flex-row flex-col">
+        <div id="filter__catalog" class="py-[9.3px] px-[10px] md:hidden w-full mb-12" style="
+        box-shadow: 0px 2px 5px 0px #0000000D;
+          ">
+          <button 
+          class="border border-[#DEDEE2] rounded flex md:hidden items-center w-full gap-[14px] py-[7.44px] justify-center  font-medium text-lg text-[#000000]">
+          <img src="../img/catalog/filter.svg" alt="filter" />
+          Filterlash
+        </button>
+        </div>
+        <div id="catalog__res"
+          class="max-w-[300px] hidden md:hidden pt-[28px] pb-[28px] bg-[white]  flex-col gap-[15px] px-5 mx-auto wow animate__animated animate__slideInLeft">
+          <input type="text" placeholder="Qidiruv"
+            class="w-full pl-5 pb-[9px] pt-[11px] border border-[#DEDEE2]  catalog__inp rounded font-normal text-base text-[#7A7680]" />
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">Kategoriya</h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col gap-[10px] mb-[15px]">
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Rul (1450)
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Bar
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Fara
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Chexol&Polik
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Tonirovka
+              </label>
+            </div>
+            <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
+          </div>
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col gap-[10px] mb-[15px]">
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Charmho
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Magic Car
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Kumho
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Chevrolet
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                EA
+              </label>
+            </div>
+            <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
+          </div>
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">
+                Summani tanlang
+              </h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="grid grid-cols-2">
+              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
+                placeholder="10$ dan" />
+              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
+                placeholder="1200$ gacha" />
+            </div>
+          </div>
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">
+                Avtomobil rusumi
+              </h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col gap-[10px] mb-[15px]">
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Chevrolet
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Kia
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                BYD
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Isuzi
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Daewo
+              </label>
+            </div>
+          </div>
+          <button class="w-full font-medium text-lg text-[#FFFFFF] pt-4 pb-3 px-[87px] bg-[#FF0000] rounded">
             Filterlash
           </button>
-          <div
-            id="catalog__res"
-            class="hidden max-w-[300px] mx-auto pt-[28px] pb-[33px] bg-[white] flex-col gap-[15px] px-5"
-          >
-            <input
-              type="text"
-              placeholder="Qidiruv"
-              class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded font-normal text-base text-[#7A7680]"
-            />
-            <div class="py-[15px] border-b border-[#E3E3E8]">
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">Kategoriya</h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-col gap-[10px] mb-[15px]">
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Rul (1450)
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Bar
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Fara
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Chexol&Polik
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Tonirovka
-                </label>
-              </div>
-              <a href="#" class="text-[#6B59CC] font-normal text-base"
-                >Barchasini ko’rish</a
-              >
+          <button class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]">
+            Filterni bekor qilish
+          </button>
+        </div>
+        <div id="catslog__left"
+          class="max-w-[300px]  pt-[42px] pb-[33px] bg-[white] hidden md:flex flex-col gap-[15px] px-5 mx-auto wow animate__animated animate__slideInLeft">
+          <input type="text" placeholder="Qidiruv"
+            class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded font-normal text-base text-[#7A7680]" />
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">Kategoriya</h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
-            <div id="boder_b_t" class="py-[15px] border-b border-[#E3E3E8]">
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-col gap-[10px] mb-[15px]">
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Charmho
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Magic Car
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Kumho
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Chevrolet
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  EA
-                </label>
-              </div>
-              <a href="#" class="text-[#6B59CC] font-normal text-base"
-                >Barchasini ko’rish</a
-              >
+            <div class="flex flex-col gap-[10px] mb-[15px]">
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Rul (1450)
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Bar
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Fara
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Chexol&Polik
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Tonirovka
+              </label>
             </div>
-            <div id="boder_b_t" class="py-[15px] border-b border-[#E3E3E8]">
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">
-                  Summani tanlang
-                </h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="grid grid-cols-2">
-                <input
-                  type="text"
-                  class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
-                  placeholder="10$ dan"
-                />
-                <input
-                  type="text"
-                  class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
-                  placeholder="1200$ gacha"
-                />
-              </div>
-            </div>
-            <div id="boder_b_t">
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">
-                  Avtomobil rusumi
-                </h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-col gap-[10px] mb-[15px]">
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Chevrolet
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Kia
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  BYD
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Isuzi
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Daewo
-                </label>
-              </div>
-            </div>
-            <button
-              class="w-full font-medium text-lg text-[#FFFFFF] pt-4 pb-3 px-[87px] bg-[#FF0000] rounded"
-            >
-              Filterlash
-            </button>
-            <button
-              class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]"
-            >
-              Filterni bekor qilish
-            </button>
+            <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
           </div>
-          <div
-            id="catslog__left"
-            class="max-w-[300px] pt-[42px] pb-[33px] bg-[white] flex flex-col gap-[15px] px-5 mx-auto wow animate__animated animate__slideInLeft"
-          >
-            <input
-              type="text"
-              placeholder="Qidiruv"
-              class="w-full pl-5 pb-[9px] pt-[11px] catalog__inp rounded font-normal text-base text-[#7A7680]"
-            />
-            <div
-              id="catalog__left__box"
-              class="h-[58px] overflow-hidden cursor-pointer py-[15px] border-b border-[#E3E3E8]"
-            >
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">Kategoriya</h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-col gap-[10px] mb-[15px]">
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Rul (1450)
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Bar
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Fara
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Chexol&Polik
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Tonirovka
-                </label>
-              </div>
-              <a href="#" class="text-[#6B59CC] font-normal text-base"
-                >Barchasini ko’rish</a
-              >
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
-            <div
-              id="catalog__left__box"
-              class="h-[58px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]"
-            >
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">Brend</h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-col gap-[10px] mb-[15px]">
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Charmho
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Magic Car
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Kumho
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Chevrolet
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  EA
-                </label>
-              </div>
-              <a href="#" class="text-[#6B59CC] font-normal text-base"
-                >Barchasini ko’rish</a
-              >
+            <div class="flex flex-col gap-[10px] mb-[15px]">
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Charmho
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Magic Car
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Kumho
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Chevrolet
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                EA
+              </label>
             </div>
-            <div
-              id="catalog__left__box"
-              class="h-[58px] max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]"
-            >
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">
-                  Summani tanlang
-                </h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="grid grid-cols-2">
-                <input
-                  type="text"
-                  class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
-                  placeholder="10$ dan"
-                />
-                <input
-                  type="text"
-                  class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
-                  placeholder="1200$ gacha"
-                />
-              </div>
-            </div>
-            <div
-              id="catalog__left__box"
-              class="h-[58px] max-h-[220px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]"
-            >
-              <div class="mb-[15px] flex items-center justify-between">
-                <h2 class="font-medium text-lg text-[#1B1D1F]">
-                  Avtomobil rusumi
-                </h2>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 10L12 14L16 10"
-                      stroke="#55556D"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-col gap-[10px] mb-[15px]">
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Chevrolet
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Kia
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  BYD
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Isuzi
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                  Daewo
-                </label>
-              </div>
-            </div>
-            <button
-              class="w-full font-medium text-lg text-[#FFFFFF] pt-4 pb-3 px-[87px] bg-[#FF0000] rounded"
-            >
-              Filterlash
-            </button>
-            <button
-              class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]"
-            >
-              Filterni bekor qilish
-            </button>
+            <a href="#" class="text-[#6B59CC] font-normal text-base">Barchasini ko’rish</a>
           </div>
-          <div
-            id="catalog__right"
-            class="bg-[#F8F8FA] catalog__right_active w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 wow animate__animated animate__slideInRight"
-          >
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default max-h-[117px] overflow-hidden cursor-pointer boder_b_t py-[15px] border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">
+                Summani tanlang
               </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
-            </div>
-            <div
-              class="w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border border-[#DEDEE2]"
-            >
-              <div class="mx-auto xl:px-5">
-                <img
-                  src="../img/catalog/rul.png"
-                  alt="mahinani ruli"
-                  class="w-[220px] h-[220px] mb-[45px]"
-                />
-              </div>
-              <h2
-                class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden"
-              >
-                Rul
-              </h2>
-              <h3
-                class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]"
-              >
-                Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
-              </h3>
-              <div
-                class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full"
-              >
-                <h4
-                  class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]"
-                >
-                  235$
-                  <p class="tex-[#7A7680] text-base font-normal">250$</p>
-                </h4>
-                <button
-                  class="border-2 md:block hidden border-[RED] rounded-[8px] p-2"
-                >
-                  <img
-                    src="../img/catalog/shopping.svg"
-                    alt="savatcha"
-                    class="w-full h-full object-cover"
-                  />
-                </button>
-                <button
-                  class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base"
-                >
-                  Savatchaga olish
-                </button>
-              </div>
+            <div class="grid grid-cols-2">
+              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius"
+                placeholder="10$ dan" />
+              <input type="text" class="w-full catalog__inp pl-5 pt-[11px] pb-[11px] border-radius1"
+                placeholder="1200$ gacha" />
             </div>
           </div>
+          <div id="catalog__left__box"
+            class="h-[58px] slow__default max-h-[237px] overflow-hidden cursor-pointer boder_b_t pt-[15px] pb-5 border-b border-[#E3E3E8]">
+            <div class="mb-[15px] flex items-center justify-between">
+              <h2 class="font-medium text-lg text-[#1B1D1F]">
+                Avtomobil rusumi
+              </h2>
+              <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#55556D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col gap-[10px] mb-[15px]">
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Chevrolet
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Kia
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                BYD
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Isuzi
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Daewo
+              </label>
+            </div>
+          </div>
+          <button class="w-full font-medium text-lg text-[#FFFFFF] pt-4 pb-3 px-[87px] bg-[#FF0000] rounded">
+            Filterlash
+          </button>
+          <button class="font-medium text-lg text-[#92979E] pt-4 pb-3 px-[42px] rounded bg-[#F4F5F6]">
+            Filterni bekor qilish
+          </button>
+        </div>
+        <div id="catalog__right"
+          class="flex flex-col items-center gap-10 md:gap-[68px]">
+          <div class="bg-[#F8F8FA] catalog__right_active w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 wow animate__animated animate__slideInRight">
+            <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          <a href="#"
+            class="hover:opacity-100 w-full px-5 bg-[#FFFFFF] rounded-[10px] pt-[30px] pb-5 flex flex-col lg:items-center border  border-[#DEDEE2]">
+            <div class="mx-auto xl:px-5">
+              <img src="../img/catalog/rul.png" alt="mahinani ruli" class=" mb-[45px]" />
+            </div>
+            <h2 class="font-normal text-lg text-[#1B1D1F] w-full mb-[6px] md:hidden">
+              Rul
+            </h2>
+            <h3 class="max-w-[240px] text-[#1B1D1F] font-medium md:font-semibold mb-1 text-base md:mb-[11px]">
+              Malibu rul SUPER 3000 X1 5W-40 GM Uzbekistan
+            </h3>
+            <div class="flex md:items-center md:flex-row flex-col gap-[6px] justify-between w-full">
+              <h4 class="font-medium text-[30px] text-[#1B1D1F] flex items-center md:items-start gap-[29px]">
+                235$
+                <p class="tex-[#7A7680] text-base font-normal">250$</p>
+              </h4>
+                  <button
+                  class="w-10 h-10 bg-white hover:text-white border-2  border-[#ff0000] hover:bg-[#FF0000] text-[#FF0000] duration-300  p-2 rounded-md flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.87402 7L7.40902 14.246C7.62002 15.244 8.54902 15.923 9.56502 15.822L16.381 15.14C17.221 15.056 17.917 14.454 18.122 13.635L19.47 8.243C19.628 7.611 19.151 7 18.5 7H10.187"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.874 7L5.224 4H3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M17.1093 19.2671C16.9073 19.2671 16.7433 19.4311 16.7453 19.6331C16.7453 19.8351 16.9093 19.9991 17.1113 19.9991C17.3133 19.9991 17.4773 19.8351 17.4773 19.6331C17.4763 19.4311 17.3123 19.2671 17.1093 19.2671"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M8.69675 19.267C8.49475 19.267 8.33075 19.431 8.33275 19.633C8.33075 19.836 8.49575 20 8.69775 20C8.89975 20 9.06375 19.836 9.06375 19.634C9.06375 19.431 8.89975 19.267 8.69675 19.267"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              <button
+                class="w-full pt-[13px] pb-[9px] bg-[#EFEDFB] rounded md:hidden text-[#6B59CC] font-normal text-base">
+                Savatchaga olish
+              </button>
+            </div>
+          </a>
+          </div>
+          <div class="w-[332px] flex items-center gap-[20px] ">
+            <div class="w-[36px] h-[36px] flex items-center justify-center border-[1px] border-[#DEDEE2] rounded-[8px]">
+                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 9L1 5L5 1" stroke="#7A7680" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>     
+            </div>
+            <div class="flex items-center gap-[10px] ">
+                <div class="btns w-[36px] h-[36px] rounded-lg bg-[#FFFFFF] cursor-pointer flex items-center justify-center font-normal text-base leading-[22px] text-center text-[#3D3D4B]">
+                    1
+                </div>
+                <div class="btns active_btn w-[36px] rounded-lg bg-[#FFFFFF] cursor-pointer h-[36px] flex items-center justify-center font-normal text-base leading-[22px] text-center text-[#3D3D4B]">
+                    2
+                </div>
+                <div class="btns w-[36px] h-[36px] rounded-lg bg-[#FFFFFF] cursor-pointer flex items-center justify-center font-normal text-base leading-[22px] text-center text-[#3D3D4B]">
+                    3
+                </div>
+                <div class="btns w-[36px] h-[36px] rounded-lg bg-[#FFFFFF] cursor-pointer flex items-center justify-center font-normal text-base leading-[22px] text-center text-[#3D3D4B]">
+                    ...
+                </div>
+                <div class="btns w-[36px] h-[36px] rounded-lg bg-[#FFFFFF] cursor-pointer flex items-center justify-center font-normal text-base leading-[22px] text-center text-[#3D3D4B]">
+                    10
+                </div>
+            </div>
+            <div class="w-[36px] h-[36px] flex items-center justify-center border-[1px] border-[#DEDEE2] rounded-[8px]">
+              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L5 5L1 1" stroke="#7A7680" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+        </div>
         </div>
       </div>
-    </section>
-    <!-- katalog end -->
-    <!-- footer start -->
-    <footer>
-      <div class="bg-[#000000] pb-[13px]">
-        <div class="max-w-[1276px] mx-auto px-3 flex justify-center">
-          <div
-            class="flex flex-col items-center border-b-[1px] w-full pb-[8px] mb-[17px] border-b-[#5f5f5f94]"
-          >
-            <a href="/">
-              <img
-                src="../img/footer/footer_logo.png"
-                alt="site rasm footer logo"
-              />
-            </a>
-            <ul class="flex gap-[37px]">
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/youtube_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/Instagram_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/telegram_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/tik_tok_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+    </div>
+  </section>
+  <!-- katalog end -->
+  <!-- footer start -->
+  <footer>
+    <div class="bg-[#000000] pb-[13px]">
+      <div class="max-w-[1276px] mx-auto px-3 flex justify-center">
+        <div class="flex flex-col items-center border-b-[1px] w-full pb-[8px] mb-[17px] border-b-[#5f5f5f94]">
+          <a href="/">
+            <img src="../img/footer/footer_logo.png" alt="site rasm footer logo" />
+          </a>
+          <ul class="flex gap-[37px]">
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/youtube_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/Instagram_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/telegram_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/tik_tok_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+          </ul>
         </div>
-        <p class="text-center text-[#fff]">
-          Copyright © ООО «Prestige Tuning» 2024. All rights reserved.
-        </p>
       </div>
-    </footer>
-    <!-- footer end -->
-    <script src="../js/catalog.js"></script>
-  </body>
+      <p class="text-center text-[#fff]">
+        Copyright © ООО «Prestige Tuning» 2024. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- footer end -->
+  <script src="../js/catalog.js"></script>
+</body>
+
 </html>

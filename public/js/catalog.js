@@ -12,15 +12,13 @@ filter__catalog.addEventListener("click" , function(){
     catalog__right.classList.toggle("hidden")
     catalog__right.classList.toggle("catalog__right_active")
     catalog__right.classList.toggle("grid")
-
-    catslog__left.classList.toggle("hidden")
 })
 let catalog__left__box = document.querySelectorAll("#catalog__left__box")
 
 catalog__left__box.forEach(function(item , index){
     item.addEventListener("click" , function(){
         catalog__left__box[index].classList.toggle("h-[58px]")
-        catalog__left__box[index].classList.toggle("h-[252px]")
+        catalog__left__box[index].classList.toggle("h-[267px]")
     }) 
 })
 
