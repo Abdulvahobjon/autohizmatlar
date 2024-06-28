@@ -9,10 +9,26 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-#category__container > div:hover .categories__title {
+#category__container > a:hover .categories__title {
   color: #5946d7;
 }
 
+<<<<<<< HEAD
+=======
+#category__container > a:hover {
+  opacity: 1;
+}
+
+button,
+a {
+  transition: all 0.3s;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.6;
+}
+>>>>>>> 4c7b72eb301ada559a856c9cd9b629821114e5d3
 
 .swiper,
 .swiper_desktop,
@@ -40,8 +56,8 @@ body {
   }
 }
 
-
-.navigationBtnL, .navigationBtnL-1  {
+.navigationBtnL,
+.navigationBtnL-1 {
   position: absolute;
   top: 250px;
   left: 25px;
@@ -50,37 +66,49 @@ body {
   height: 40px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 10px !important;
+  box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.438);
   background-position-x: -8px;
   border: none;
   outline: none;
   z-index: 0;
 }
-.navigationBtnR, .navigationBtnR-1 {
+.navigationBtnR,
+.navigationBtnR-1 {
   position: absolute;
   top: 250px;
   right: 25px;
+  border-radius: 10px !important;
+  box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.438);
   background-image: url("../img/swiper/prev_icon.png");
   width: 30px;
   height: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
-  background-position-x: 4px;
+  background-position-x: 0px;
   border: none;
   outline: none;
   z-index: 0;
 }
 
+.navigationBtnL.swiper-button-disabled,
+.navigationBtnR.swiper-button-disabled,
+.navigationBtnR-1.swiper-button-disabled,
+.navigationBtnL-1.swiper-button-disabled {
+  display: none;
+}
+
 @media (max-width: 1115px) {
-  .navigationBtnL, .navigationBtnL-1, .navigationBtnR, .navigationBtnR-1  {
+  .navigationBtnL,
+  .navigationBtnL-1,
+  .navigationBtnR,
+  .navigationBtnR-1 {
     z-index: 1;
   }
 }
 
 @media (min-width: 768px) {
- 
-
   .swiper-pagination-new-1 {
     position: absolute !important;
     text-align: center !important;
@@ -113,8 +141,12 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    top: 0;
+    border-radius: 14px !important;
+    overflow: hidden;
+    width: 38px;
+    height: 38px;
     left: 0;
+    top: 180px;
     z-index: 50;
   }
 
@@ -139,14 +171,23 @@ body {
     box-shadow: 10px !important;
     width: 40px;
     height: 40px;
+    border-radius: 8px !important;
     display: flex;
     align-items: center;
     height: 100%;
-    top: 0;
+    top: 180px;
+    width: 38px;
+    border-radius: 12px !important;
+    height: 38px;
+    overflow: hidden !important;
     right: 0;
     position: absolute !important;
     z-index: 50;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
@@ -200,10 +241,3 @@ body {
     width: 60px !important;
   }
 }
-
-
-
-
-
-
-
