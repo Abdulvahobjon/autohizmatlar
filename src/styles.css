@@ -10,6 +10,13 @@ body{
 button{
     transition: all .3s;
 }
+a{
+    transition: all .3s;
+}
+
+#header__big__menu a:hover{
+    opacity: .5;
+}
 button:hover{
     opacity: 70%;
 }

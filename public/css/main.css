@@ -13,15 +13,6 @@ body {
   color: #5946d7;
 }
 
-button,
-a {
-  transition: all 0.3s;
-}
-
-button:hover,
-a:hover {
-  opacity: 0.6;
-}
 
 .swiper,
 .swiper_desktop,
