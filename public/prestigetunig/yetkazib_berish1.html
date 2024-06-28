@@ -1,594 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <body>
-    <header>
-      <nav class="shadow-md mb-1">
-        <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
-          <div class="flex justify-between items-center gap-4">
-            <a href="/">
-              <img
-                src="../img/navbar/site_logo.png"
-                alt="site rasm logo"
-                width="211"
-                height="56"
-                class="flex"
-              />
-            </a>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
 
-            <div
-              class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]"
-            >
-              <input
-                type="text"
-                placeholder="Tovar nomini kiriting"
-                class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent"
-              />
-              <button class="font active:opacity-50">
-                <img src="../img/navbar/search_icon.png" alt="search icon" />
-              </button>
-            </div>
-          </div>
+<body>
+  <header>
+    <nav class="shadow-md mb-1">
+      <div class="max-w-[1276px] mx-auto px-3 py-2 flex justify-between">
+        <div class="flex justify-between items-center gap-4">
+          <a href="/">
+            <img src="../img/navbar/site_logo.png" alt="site rasm logo" width="211" height="56" class="flex" />
+          </a>
 
-          <div class="md:flex hidden gap-[30px]">
-            <a
-              href="tel:+998987000021"
-              class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50"
-            >
-              <img
-                src="../img/navbar/phone_icon.png"
-                alt="site rasm phone icon"
-              />
-              <span>+998 98 700 00 21</span>
-            </a>
-            <a
-              href="tel:+998987000021"
-              class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50"
-            >
-              <img
-                src="../img/navbar/phone_icon.png"
-                alt="site rasm phone icon"
-              />
-              <span>+998 98 700 00 21</span>
-            </a>
-          </div>
-
-          <button
-            class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50"
-          >
-            <img src="../img/navbar/bag_icon.png" alt="bag_icon" />
-            <!-- <span>Savatcha</span> -->
-            <span
-              class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]"
-              >5</span
-            >
-          </button>
-        </div>
-
-        <hr class="border-[#E3E3E8] w-full h-[1px]" />
-
-        <div
-          class="max-w-[1276px] mx-auto px-3 py-[13px] flex justify-between items-center md:gap-0 gap-[20px]"
-        >
-          <button
-            class="bg-[#FF0000] text-[#fff] font-semibold flex gap-x-[10px] rounded-[8px] h-full sm:px-[20px] sm:py-[10px] py-[10px] px-[15px] hover:opacity-65 active:opacity-50"
-          >
-            <img
-              width="24"
-              height="24"
-              src="../img/navbar/katalog_icon.png"
-              alt="site rasm katalog icon"
-              class="inline-block"
-            />
-            <span class="sm:inline-block hidden">Katalog</span>
-          </button>
-
-          <ul class="hidden md:flex gap-[5px]">
-            <li
-              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
-            >
-              <a href="#" class="text-[#1B1D1F]">Tuning xizmatlari</a>
-            </li>
-            <li
-              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
-            >
-              <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
-            </li>
-            <li
-              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
-            >
-              <a href="#" class="text-[#1B1D1F]">Biz haqimizda</a>
-            </li>
-            <li
-              class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]"
-            >
-              <a href="#" class="text-[#1B1D1F]">Bog’lanish</a>
-            </li>
-          </ul>
-
-          <div
-            class="sm:w-[430px] w-full md:hidden flex bg-[#F4F5F6] rounded-[6px] pr-[10px]"
-          >
-            <input
-              type="text"
-              placeholder="Tovar nomini kiriting"
-              class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent"
-            />
+          <div class="w-[430px] md:flex hidden bg-[#F4F5F6] rounded-[6px] pr-[10px]">
+            <input type="text" placeholder="Tovar nomini kiriting"
+              class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent" />
             <button class="font active:opacity-50">
               <img src="../img/navbar/search_icon.png" alt="search icon" />
             </button>
           </div>
+        </div>
 
-          <button
-            class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50"
-          >
-            <img src="../img/navbar/bag_icon.png" alt="bag_icon" />
-            <span>Savatcha</span>
-            <span
-              class="bg-[#FB6019] text-[#fff] text-[14px] rounded-[50%] w-[20px] h-[20px]"
-              >5</span
-            >
+        <div class="md:flex hidden gap-[30px]">
+          <a href="tel:+998987000021"
+            class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
+            <img src="../img/navbar/phone_icon.png" alt="site rasm phone icon" />
+            <span>+998 98 700 00 21</span>
+          </a>
+          <a href="tel:+998987000021"
+            class="lg:w-[196px] max-w-[196px] flex lg:text-[18px] font-medium items-center gap-2 hover:opacity-65 active:opacity-50">
+            <img src="../img/navbar/phone_icon.png" alt="site rasm phone icon" />
+            <span>+998 98 700 00 21</span>
+          </a>
+        </div>
+
+        <button
+          class="relative md:hidden flex gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+          <img src="../img/navbar/bag_icon.png" alt="bag_icon" />
+          <!-- <span>Savatcha</span> -->
+          <span
+            class="bg-[#FB6019] text-[#fff] absolute top-1 right-3 text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
+        </button>
+      </div>
+
+      <hr class="border-[#E3E3E8] w-full h-[1px]" />
+
+      <div class="max-w-[1276px] mx-auto px-3 py-[13px] flex justify-between items-center md:gap-0 gap-[20px]">
+        <button
+          class="bg-[#FF0000] text-[#fff] font-semibold flex gap-x-[10px] rounded-[8px] h-full sm:px-[20px] sm:py-[10px] py-[10px] px-[15px] hover:opacity-65 active:opacity-50">
+          <img width="24" height="24" src="../img/navbar/katalog_icon.png" alt="site rasm katalog icon"
+            class="inline-block" />
+          <span class="sm:inline-block hidden">Katalog</span>
+        </button>
+
+        <ul class="hidden md:flex gap-[5px]">
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Tuning xizmatlari</a>
+          </li>
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Tuning tovarlari</a>
+          </li>
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Biz haqimizda</a>
+          </li>
+          <li class="px-[15px] py-[12px] hover:bg-[#F4F5F6] transition-all duration-150 cursor-pointer rounded-[8px]">
+            <a href="#" class="text-[#1B1D1F]">Bog’lanish</a>
+          </li>
+        </ul>
+
+        <div class="sm:w-[430px] w-full md:hidden flex bg-[#F4F5F6] rounded-[6px] pr-[10px]">
+          <input type="text" placeholder="Tovar nomini kiriting"
+            class="w-full py-[11px] pl-[20px] focus:outline-none bg-transparent" />
+          <button class="font active:opacity-50">
+            <img src="../img/navbar/search_icon.png" alt="search icon" />
           </button>
         </div>
-      </nav>
-    </header>
 
-    <section class="w-full bg-[#F9F9FB] pt-[30px] pb-[132px]">
-      <div class="max-w-[1284px] border mx-auto px-3 lg:flex gap-[20px]">
-        <div class="max-w-[940px] w-full">
-          <h1 class="font-medium text-[24px] mb-[20px]">Buyurtma berish</h1>
-          <div>
+        <button
+          class="bg-[#F4F5F6] md:flex hidden gap-[10px] items-center rounded-[8px] px-[20px] py-[10px] hover:opacity-65 active:opacity-50">
+          <img src="../img/navbar/bag_icon.png" alt="bag_icon" />
+          <span>Savatcha</span>
+          <span class="bg-[#FB6019] text-[#fff] text-[14px] rounded-[50%] w-[20px] h-[20px]">5</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="w-full bg-[#F9F9FB] pt-[30px] pb-[132px]">
+    <div class="max-w-[1284px] border mx-auto px-3 lg:flex gap-[20px]">
+      <div class="max-w-[940px] w-full">
+        <h1 class="font-medium text-[24px] mb-[20px]">Buyurtma berish</h1>
+        <div>
+          <div class="bg-[#fff] w-full shadow-lg px-[30px] py-[25px] rounded-[6px] mb-[30px]">
             <div
-              class="bg-[#fff] w-full shadow-lg px-[30px] py-[25px] rounded-[6px] mb-[30px]"
-            >
-              <div
-                class="bg-[#F4F5F6] max-w-[336px] rounded-[6px] border-[1px] border-[#E3E3E8] flex gap-[24px] p-[5px] py-[10px]"
-              >
-                <button id="btns" class="px-[20px] py-[10px] active_button rounded-[6px]">
-                  Yetkazib berish
-                </button>
-                <a href="./yetkazib_berish2.html"
-                  id="btns"
-                  class="px-[20px] py-[10px] rounded-[6px] "
-                >
-                  Olib ketish
-                </a>
-              </div>
+              class="bg-[#F4F5F6] max-w-[336px] rounded-[6px] border-[1px] border-[#E3E3E8] flex gap-[24px] p-[5px] py-[10px]">
+              <button id="btns" class="px-[20px] py-[10px] active_button rounded-[6px]">
+                Yetkazib berish
+              </button>
+              <a href="./yetkazib_berish2.html" id="btns" class="px-[20px] py-[10px] rounded-[6px] ">
+                Olib ketish
+              </a>
             </div>
+          </div>
 
-            <div class="bg-[#fff] w-full shadow-lg p-[30px]">
-              <div class="md:mb-[29px] mb-10">
-                <style>
-                  .floating-label-group {
-                    position: relative;
-                  }
+          <form class="bg-[#fff] w-full shadow-lg p-[30px]">
+            <div class="md:mb-[29px] mb-10">
+              <style>
+                .floating-label-group {
+                  position: relative;
+                }
 
-                  .floating-label-group input {
-                    outline: none;
-                    transition: border-color 0.2s;
-                  }
+                .floating-label-group input {
+                  outline: none;
+                  transition: border-color 0.2s;
+                }
 
-                  .floating-label-group label {
-                    position: absolute;
-                    top: 13px;
-                    left: 1rem;
-                    pointer-events: none;
-                    font-size: 1rem;
-                    transition: all 0.2s;
-                    color: #55556d;
-                  }
+                .floating-label-group label {
+                  position: absolute;
+                  top: 13px;
+                  left: 1rem;
+                  pointer-events: none;
+                  font-size: 1rem;
+                  transition: all 0.2s;
+                  color: #55556d;
+                }
 
-                  .floating-label-group input:focus ~ label,
-                  .floating-label-group input:not(:placeholder-shown) ~ label {
-                    top: -15px;
-                    left: 0.75rem;
-                    font-size: 0.75rem;
-                    color: #1b1d1f;
-                    padding: 0 4px;
-                    background-color: white;
-                  }
-                  .floating-label-group input:focus ~ label .star_form,
-                  .floating-label-group
-                    input:not(:placeholder-shown)
-                    ~ label
-                    .star_form {
-                    color: red;
-                  }
-                </style>
-                <form>
-                  <div class="md:flex items-start justify-between">
-                    <div class="md:mb-0 mb-10">
-                      <h2 class="mb-2.5 text-2xl font-medium">Buyurtmachi</h2>
-                      <div class="floating-label-group">
-                        <input autocomplete="off"
-                          type="text"
-                          name="userName"
-                          id="name"
-                          placeholder=" "
-                          required
-                          class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[400px] md:w-[300px] w-full px-[20px] placeholder-transparent"
-                        />
-                        <label
-                          class="px-1 bg-white text-[#55556D] text-lg"
-                          for="name"
-                          >Ism va familya
-                          <span class="star_form">*</span></label
-                        >
-                      </div>
-                      <div class="floating-label-group">
-                        <input autocomplete="off"
-                          type="tel"
-                          name="userPhoneNumber"
-                          id="phone"
-                          placeholder=" "
-                          required
-                          class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[400px] md:w-[300px] w-full px-[20px] placeholder-transparent"
-                        />
-                        <label
-                          class="px-1 bg-white text-[#55556D] text-lg"
-                          for="phone"
-                          >Telefon raqam <span class="star_form">*</span></label
-                        >
-                      </div>
-                      <script>
-                        document.addEventListener("DOMContentLoaded", () => {
-                          const phoneInput = document.getElementById("phone");
+                .floating-label-group input:focus~label,
+                .floating-label-group input:not(:placeholder-shown)~label {
+                  top: -15px;
+                  left: 0.75rem;
+                  font-size: 0.75rem;
+                  color: #1b1d1f;
+                  padding: 0 4px;
+                  background-color: white;
+                }
 
-                          phoneInput.addEventListener("focus", () => {
-                            if (!phoneInput.value.startsWith("+998-")) {
-                              phoneInput.value = "+998-";
-                            }
-                          });
+                .floating-label-group input:focus~label .star_form,
+                .floating-label-group input:not(:placeholder-shown)~label .star_form {
+                  color: red;
+                }
+              </style>
+              <div>
+                <div class="md:flex items-start justify-between">
+                  <div class="md:mb-0 mb-10">
+                    <h2 class="mb-2.5 text-2xl font-medium">Buyurtmachi</h2>
+                    <div class="floating-label-group">
+                      <input autocomplete="off" type="text" name="userName" id="name" placeholder=" " required
+                        class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[400px] md:w-[300px] w-full px-[20px] placeholder-transparent" />
+                      <label class="px-1 bg-white text-[#55556D] text-lg" for="name">Ism va familya
+                        <span class="star_form">*</span></label>
+                    </div>
+                    <div class="floating-label-group">
+                      <input autocomplete="off" type="tel" name="userPhoneNumber" id="phone" placeholder=" " required
+                        class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[400px] md:w-[300px] w-full px-[20px] placeholder-transparent" />
+                      <label class="px-1 bg-white text-[#55556D] text-lg" for="phone">Telefon raqam <span
+                          class="star_form">*</span></label>
+                    </div>
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        const phoneInput = document.getElementById("phone");
 
-                          phoneInput.addEventListener("input", (event) => {
-                            let value = phoneInput.value.replace(/\D/g, ""); // Remove all non-digit characters
-                            if (value.startsWith("998")) {
-                              value = value.slice(3); // Remove leading '998'
-                            } else if (value.startsWith("+998")) {
-                              value = value.slice(4); // Remove leading '+998'
-                            }
+                        phoneInput.addEventListener("focus", () => {
+                          if (!phoneInput.value.startsWith("+998-")) {
+                            phoneInput.value = "+998-";
+                          }
+                        });
 
-                            const formattedValue = `+998-${value.slice(0, 2)}${
-                              value.length > 2 ? "-" : ""
-                            }${value.slice(2, 5)}${
-                              value.length > 5 ? "-" : ""
-                            }${value.slice(5, 7)}${
-                              value.length > 7 ? "-" : ""
+                        phoneInput.addEventListener("input", (event) => {
+                          let value = phoneInput.value.replace(/\D/g, ""); 
+                          if (value.startsWith("998")) {
+                            value = value.slice(3);
+                          } else if (value.startsWith("+998")) {
+                            value = value.slice(4);
+                          }
+
+                          const formattedValue = `+998-${value.slice(0, 2)}${value.length > 2 ? "-" : ""
+                            }${value.slice(2, 5)}${value.length > 5 ? "-" : ""
+                            }${value.slice(5, 7)}${value.length > 7 ? "-" : ""
                             }${value.slice(7, 9)}`;
 
-                            phoneInput.value = formattedValue;
-                          });
-
-                          phoneInput.addEventListener("blur", () => {
-                            if (phoneInput.value === "+998-") {
-                              phoneInput.value = "";
-                            }
-                          });
+                          phoneInput.value = formattedValue;
                         });
-                      </script>
+
+                        phoneInput.addEventListener("blur", () => {
+                          if (phoneInput.value === "+998-") {
+                            phoneInput.value = "";
+                          }
+                        });
+                      });
+                    </script>
+                  </div>
+                  <div class="max-w-[300px] w-full md:text-center">
+                    <h2 class="mb-3.75 text-2xl leading-7.5 font-medium">
+                      Buyurtmangiz
+                    </h2>
+                    <hr class="w-full h-0.25 text-[#E3E3E8] mb-5" />
+                    <div class="flex items-center justify-between mb-4.5">
+                      <p class="font-normal text-xl leading-7.5 text-[#1B1D1F]">
+                        Tovarlar
+                      </p>
+                      <p class="font-normal text-xl leading-7.5 text-[#1B1D1F]">
+                        6
+                      </p>
                     </div>
-                    <div class="max-w-[300px] w-full md:text-center">
-                      <h2 class="mb-3.75 text-2xl leading-7.5 font-medium">
-                        Buyurtmangiz
-                      </h2>
-                      <hr class="w-full h-0.25 text-[#E3E3E8] mb-5" />
-                      <div class="flex items-center justify-between mb-4.5">
-                        <p
-                          class="font-normal text-xl leading-7.5 text-[#1B1D1F]"
-                        >
-                          Tovarlar
-                        </p>
-                        <p
-                          class="font-normal text-xl leading-7.5 text-[#1B1D1F]"
-                        >
-                          6
-                        </p>
-                      </div>
-                      <hr class="w-full h-0.25 text-[#E3E3E8] mb-5" />
-                      <div class="flex items-center justify-between">
-                        <p
-                          class="font-semibold text-xl leading-7.5 text-[#1B1D1F]"
-                        >
-                          Jami
-                        </p>
-                        <p
-                          class="font-semibold text-xl leading-7.5 text-[#1B1D1F]"
-                        >
-                          840$
-                        </p>
-                      </div>
+                    <hr class="w-full h-0.25 text-[#E3E3E8] mb-5" />
+                    <div class="flex items-center justify-between">
+                      <p class="font-semibold text-xl leading-7.5 text-[#1B1D1F]">
+                        Jami
+                      </p>
+                      <p class="font-semibold text-xl leading-7.5 text-[#1B1D1F]">
+                        840$
+                      </p>
                     </div>
                   </div>
-                </form>
-              </div>
-
-              <div class="">
-                <div class="max-w-[400px] md:mb-0 mb-5">
-                  <h2
-                    class="mb-[11px] leading-[30px] text-[#1B1D1F] text-[24px] font-medium"
-                  >
-                    Yetkazib berish manzili
-                  </h2>
-                  <form>
-                    <div class="flex flex-col mb-10">
-                      <div class="floating-label-group">
-                        <input autocomplete="off"
-                          type="text"
-                          name="userName"
-                          id="name"
-                          placeholder=" "
-                          required
-                          class="mb-5 border-[1px] py-[13px] rounded-md lg:max-w-[400px] w-full px-[20px] placeholder-transparent"
-                        />
-                        <label class="text-[#55556D] text-lg" for="name"
-                          >Viloyat/Shahar</label
-                        >
-                      </div>
-                      <div class="floating-label-group">
-                        <input autocomplete="off"
-                          type="text"
-                          name="userName"
-                          id="name"
-                          placeholder=" "
-                          required
-                          class="mb-5 border-[1px] py-[13px] rounded-md lg:max-w-[400px] w-full px-[20px] placeholder-transparent"
-                        />
-                        <label class="text-[#55556D] text-lg" for="name"
-                          >Tuman</label
-                        >
-                      </div>
-                      <div class="lg:flex items-center gap-5">
-                        <div class="floating-label-group">
-                          <input autocomplete="off"
-                            type="text"
-                            name="userName"
-                            id="name"
-                            placeholder=" "
-                            required
-                            class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[190px] w-full px-[20px] placeholder-transparent"
-                          />
-                          <label class="text-[#55556D] text-lg" for="name"
-                            >Ko’cha</label
-                          >
-                        </div>
-                        <div class="floating-label-group">
-                          <input autocomplete="off"
-                            type="text"
-                            name="userName"
-                            id="name"
-                            placeholder=" "
-                            required
-                            class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[190px] w-full px-[20px] placeholder-transparent"
-                          />
-                          <label class="text-[#55556D] text-lg" for="name"
-                            >Uy</label
-                          >
-                        </div>
-                      </div>
-                      <div class="floating-label-group">
-                        <input autocomplete="off"
-                          type="text"
-                          name="userName"
-                          id="name"
-                          placeholder=" "
-                          required
-                          class="mb-5 border-[1px] py-[13px] rounded-md lg:max-w-[400px] w-full px-[20px] placeholder-transparent"
-                        />
-                        <label class="text-[#55556D] text-lg" for="name"
-                          >Kuryerga qo’shimcha ma’lumot</label
-                        >
-                      </div>
-                    </div>
-                    <a
-                      href="./yetkazib_berish2.html"
-                      class="py-4 px-[41px] transition-all rounded-md hover:bg-[white] hover:text-[#FF0000] border-2 border-[#FF0000] bg-[#FF0000] text-[18px] leading-[22px] font-semibold text-white"
-                    >
-                      Buyurtma berish
-                    </a>
-                  </form>
                 </div>
               </div>
             </div>
-          </div>
+
+            <div class="">
+              <div class="max-w-[400px] md:mb-0 mb-5">
+                <h2 class="mb-[11px] leading-[30px] text-[#1B1D1F] text-[24px] font-medium">
+                  Yetkazib berish manzili
+                </h2>
+                <div>
+                  <div class="flex flex-col mb-10">
+                    <div class="floating-label-group">
+                      <input autocomplete="off" type="text" name="userName" id="name" placeholder=" " required
+                        class="mb-5 border-[1px] py-[13px] rounded-md lg:max-w-[400px] w-full px-[20px] placeholder-transparent" />
+                      <label class="text-[#55556D] text-lg" for="name">Viloyat/Shahar</label>
+                    </div>
+                    <div class="floating-label-group">
+                      <input autocomplete="off" type="text" name="userName" id="name" placeholder=" " required
+                        class="mb-5 border-[1px] py-[13px] rounded-md lg:max-w-[400px] w-full px-[20px] placeholder-transparent" />
+                      <label class="text-[#55556D] text-lg" for="name">Tuman</label>
+                    </div>
+                    <div class="lg:flex items-center gap-5">
+                      <div class="floating-label-group">
+                        <input autocomplete="off" type="text" name="userName" id="name" placeholder=" " required
+                          class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[190px] w-full px-[20px] placeholder-transparent" />
+                        <label class="text-[#55556D] text-lg" for="name">Ko’cha</label>
+                      </div>
+                      <div class="floating-label-group">
+                        <input autocomplete="off" type="text" name="userName" id="name" placeholder=" " required
+                          class="mb-5 border-[1px] py-[13px] rounded-md lg:w-[190px] w-full px-[20px] placeholder-transparent" />
+                        <label class="text-[#55556D] text-lg" for="name">Uy</label>
+                      </div>
+                    </div>
+                    <div class="floating-label-group">
+                      <input autocomplete="off" type="text" name="userName" id="name" placeholder=" " required
+                        class="mb-5 border-[1px] py-[13px] rounded-md lg:max-w-[400px] w-full px-[20px] placeholder-transparent" />
+                      <label class="text-[#55556D] text-lg" for="name">Kuryerga qo’shimcha ma’lumot</label>
+                    </div>
+                  </div>
+                  <button
+                    class="py-4 px-[41px] transition-all rounded-md hover:bg-[white] hover:text-[#FF0000] border-2 border-[#FF0000] bg-[#FF0000] text-[18px] leading-[22px] font-semibold text-white">
+                    Buyurtma berish
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <div
-          class="max-w-[300px] pb-[37px] w-full bg-[#fff] pt-[15px] mt-[54px]"
-          style="box-shadow: 0px 5px 15px 0px #0000000d"
-        >
-          <h1 class="font-medium leading-[22px] text-[18px] pl-[30px] mb-4">
-            Buyurtma
+      </div>
+      <div class="max-w-[300px] pb-[37px] w-full bg-[#fff] pt-[15px] mt-[54px]"
+        style="box-shadow: 0px 5px 15px 0px #0000000d">
+        <h1 class="font-medium leading-[22px] text-[18px] pl-[30px] mb-4">
+          Buyurtma
+        </h1>
+        <hr class="w-full h-[1px] text-[#E3E3E8]" />
+        <div class="mb-[50px]">
+          <div class="flex items-center justify-center gap-[3px]">
+            <img src="../img/buyurtma_berish/Humo.png" alt="Humo" class="" />
+            <img src="../img/buyurtma_berish//uzcard.png" alt="uzcard" class="" />
+          </div>
+          <p class="font-normal text-sm pl-[30px] leading-[18px] text-[#7A7680]">
+            To’lovlarni naqd pul va Uzcard , <br />
+            Humo to’lov tizimlari orqali <br />
+            qilishingiz mumkin.
+          </p>
+        </div>
+        <hr class="w-full h-[1px] text-[#E3E3E8]" />
+        <div class="mb-[30px]">
+          <img src="../img/buyurtma_berish/fast-delivery1.png" alt="car" class="mx-auto" />
+          <p class="font-normal text-sm pl-[30px] leading-[18px] text-[#7A7680]">
+            O’zbekiston bo’ylab tovarlarni 1 kundan 3 kungacha muddatda
+            yetkazib beramiz !
+          </p>
+        </div>
+        <hr class="w-full h-[1px] text-[#E3E3E8] mb-[9px]" />
+        <div class="text-center">
+          <h1 class="font-medium leading-[22px] text-[18px] mb-[15px]">
+            Savollaringiz bormi?
           </h1>
-          <hr class="w-full h-[1px] text-[#E3E3E8]" />
-          <div class="mb-[50px]">
-            <div class="flex items-center justify-center gap-[3px]">
-              <img src="../img/buyurtma_berish/Humo.png" alt="Humo" class="" />
-              <img
-                src="../img/buyurtma_berish//uzcard.png"
-                alt="uzcard"
-                class=""
-              />
-            </div>
-            <p
-              class="font-normal text-sm pl-[30px] leading-[18px] text-[#7A7680]"
-            >
-              To’lovlarni naqd pul va Uzcard , <br />
-              Humo to’lov tizimlari orqali <br />
-              qilishingiz mumkin.
+          <div class="flex justify-center items-center mx-auto gap-[10px]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.965 16.61L17.792 15.437C17.206 14.851 16.256 14.851 15.671 15.437L14.749 16.359C14.543 16.565 14.231 16.634 13.965 16.517C12.629 15.932 11.309 15.045 10.132 13.868C8.96002 12.696 8.07602 11.382 7.49002 10.051C7.36802 9.776 7.43902 9.453 7.65202 9.24L8.47802 8.414C9.14902 7.743 9.14902 6.794 8.56302 6.208L7.39002 5.035C6.60902 4.254 5.34302 4.254 4.56202 5.035L3.91002 5.686C3.16902 6.427 2.86002 7.496 3.06002 8.556C3.55402 11.169 5.07202 14.03 7.52102 16.479C9.97002 18.928 12.831 20.446 15.444 20.94C16.504 21.14 17.573 20.831 18.314 20.09L18.965 19.439C19.746 18.658 19.746 17.392 18.965 16.61V16.61Z"
+                stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path opacity="0.5"
+                d="M13 6.991C14.031 6.977 15.067 7.359 15.854 8.146C16.641 8.933 17.023 9.96901 17.009 11M13 2.964C15.056 2.964 17.113 3.749 18.682 5.318C20.251 6.887 21.036 8.94401 21.036 11"
+                stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="font-medium text-lg leading-[22px] text-[#1B1D1F]">
+              +998 98 700 00 21
             </p>
           </div>
-          <hr class="w-full h-[1px] text-[#E3E3E8]" />
-          <div class="mb-[30px]">
-            <img
-              src="../img/buyurtma_berish/fast-delivery1.png"
-              alt="car"
-              class="mx-auto"
-            />
-            <p
-              class="font-normal text-sm pl-[30px] leading-[18px] text-[#7A7680]"
-            >
-              O’zbekiston bo’ylab tovarlarni 1 kundan 3 kungacha muddatda
-              yetkazib beramiz !
+          <div class="flex justify-center items-center mx-auto gap-[10px]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.965 16.61L17.792 15.437C17.206 14.851 16.256 14.851 15.671 15.437L14.749 16.359C14.543 16.565 14.231 16.634 13.965 16.517C12.629 15.932 11.309 15.045 10.132 13.868C8.96002 12.696 8.07602 11.382 7.49002 10.051C7.36802 9.776 7.43902 9.453 7.65202 9.24L8.47802 8.414C9.14902 7.743 9.14902 6.794 8.56302 6.208L7.39002 5.035C6.60902 4.254 5.34302 4.254 4.56202 5.035L3.91002 5.686C3.16902 6.427 2.86002 7.496 3.06002 8.556C3.55402 11.169 5.07202 14.03 7.52102 16.479C9.97002 18.928 12.831 20.446 15.444 20.94C16.504 21.14 17.573 20.831 18.314 20.09L18.965 19.439C19.746 18.658 19.746 17.392 18.965 16.61V16.61Z"
+                stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path opacity="0.5"
+                d="M13 6.991C14.031 6.977 15.067 7.359 15.854 8.146C16.641 8.933 17.023 9.96901 17.009 11M13 2.964C15.056 2.964 17.113 3.749 18.682 5.318C20.251 6.887 21.036 8.94401 21.036 11"
+                stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="font-medium text-lg leading-[22px] text-[#1B1D1F]">
+              +998 98 700 00 21
             </p>
-          </div>
-          <hr class="w-full h-[1px] text-[#E3E3E8] mb-[9px]" />
-          <div class="text-center">
-            <h1 class="font-medium leading-[22px] text-[18px] mb-[15px]">
-              Savollaringiz bormi?
-            </h1>
-            <div class="flex justify-center items-center mx-auto gap-[10px]">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M18.965 16.61L17.792 15.437C17.206 14.851 16.256 14.851 15.671 15.437L14.749 16.359C14.543 16.565 14.231 16.634 13.965 16.517C12.629 15.932 11.309 15.045 10.132 13.868C8.96002 12.696 8.07602 11.382 7.49002 10.051C7.36802 9.776 7.43902 9.453 7.65202 9.24L8.47802 8.414C9.14902 7.743 9.14902 6.794 8.56302 6.208L7.39002 5.035C6.60902 4.254 5.34302 4.254 4.56202 5.035L3.91002 5.686C3.16902 6.427 2.86002 7.496 3.06002 8.556C3.55402 11.169 5.07202 14.03 7.52102 16.479C9.97002 18.928 12.831 20.446 15.444 20.94C16.504 21.14 17.573 20.831 18.314 20.09L18.965 19.439C19.746 18.658 19.746 17.392 18.965 16.61V16.61Z"
-                  stroke="#FF0000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  opacity="0.5"
-                  d="M13 6.991C14.031 6.977 15.067 7.359 15.854 8.146C16.641 8.933 17.023 9.96901 17.009 11M13 2.964C15.056 2.964 17.113 3.749 18.682 5.318C20.251 6.887 21.036 8.94401 21.036 11"
-                  stroke="#FF0000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <p class="font-medium text-lg leading-[22px] text-[#1B1D1F]">
-                +998 98 700 00 21
-              </p>
-            </div>
-            <div class="flex justify-center items-center mx-auto gap-[10px]">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M18.965 16.61L17.792 15.437C17.206 14.851 16.256 14.851 15.671 15.437L14.749 16.359C14.543 16.565 14.231 16.634 13.965 16.517C12.629 15.932 11.309 15.045 10.132 13.868C8.96002 12.696 8.07602 11.382 7.49002 10.051C7.36802 9.776 7.43902 9.453 7.65202 9.24L8.47802 8.414C9.14902 7.743 9.14902 6.794 8.56302 6.208L7.39002 5.035C6.60902 4.254 5.34302 4.254 4.56202 5.035L3.91002 5.686C3.16902 6.427 2.86002 7.496 3.06002 8.556C3.55402 11.169 5.07202 14.03 7.52102 16.479C9.97002 18.928 12.831 20.446 15.444 20.94C16.504 21.14 17.573 20.831 18.314 20.09L18.965 19.439C19.746 18.658 19.746 17.392 18.965 16.61V16.61Z"
-                  stroke="#FF0000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  opacity="0.5"
-                  d="M13 6.991C14.031 6.977 15.067 7.359 15.854 8.146C16.641 8.933 17.023 9.96901 17.009 11M13 2.964C15.056 2.964 17.113 3.749 18.682 5.318C20.251 6.887 21.036 8.94401 21.036 11"
-                  stroke="#FF0000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <p class="font-medium text-lg leading-[22px] text-[#1B1D1F]">
-                +998 98 700 00 21
-              </p>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="bg-[#000000] pb-[13px]">
-        <div class="max-w-[1276px] mx-auto px-3 flex justify-center">
-          <div
-            class="flex flex-col items-center border-b-[1px] w-full pb-[8px] mb-[17px] border-b-[#5f5f5f94]"
-          >
-            <a href="/">
-              <img
-                src="../img/footer/footer_logo.png"
-                alt="site rasm footer logo"
-              />
-            </a>
-            <ul class="flex gap-[37px]">
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/youtube_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/Instagram_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/telegram_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="hover:opacity-65 active:opacity-50"
-                >
-                  <img
-                    src="../img/footer/tik_tok_icon.png"
-                    alt="site icon youtube icon"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+  <footer>
+    <div class="bg-[#000000] pb-[13px]">
+      <div class="max-w-[1276px] mx-auto px-3 flex justify-center">
+        <div class="flex flex-col items-center border-b-[1px] w-full pb-[8px] mb-[17px] border-b-[#5f5f5f94]">
+          <a href="/">
+            <img src="../img/footer/footer_logo.png" alt="site rasm footer logo" />
+          </a>
+          <ul class="flex gap-[37px]">
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/youtube_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/Instagram_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/telegram_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="hover:opacity-65 active:opacity-50">
+                <img src="../img/footer/tik_tok_icon.png" alt="site icon youtube icon" />
+              </a>
+            </li>
+          </ul>
         </div>
-        <p class="text-center text-[#fff]">
-          Copyright © ООО «Prestige Tuning» 2024. All rights reserved.
-        </p>
       </div>
-    </footer>
+      <p class="text-center text-[#fff]">
+        Copyright © ООО «Prestige Tuning» 2024. All rights reserved.
+      </p>
+    </div>
+  </footer>
 
-    <script type="module">
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-      const swiper = new Swiper();
-    </script>
-    <script src="../js/delivery.js"></script>
-    <script src="../js/index.js"></script>
-  </body>
+    const swiper = new Swiper();
+  </script>
+  <script src="../js/delivery.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+
 </html>
