@@ -2,11 +2,13 @@ const plusBtn = document.querySelectorAll(".plusButton");
 const minusBtn = document.querySelectorAll(".minusButton");
 const counterNum = document.querySelectorAll(".counterNumber");
 const price = document.querySelectorAll('.narx')
+const allPrice = document.getElementById('jamiNarx')
 
 plusBtn.forEach((item, index) => {
   item.addEventListener("click", () => {
     counterNum[index].textContent = counterNum[index].textContent * 1 + 1;
     price[index].textContent = price[index].textContent*1 + 210
+    allPrice.textContent = allPrice.textContent*1 + 210
   });
 });
 minusBtn.forEach((item, index) => {
@@ -14,7 +16,7 @@ minusBtn.forEach((item, index) => {
     if (counterNum[index].textContent * 1 > 1) {
       counterNum[index].textContent = counterNum[index].textContent * 1 - 1;
     price[index].textContent = price[index].textContent*1 - 210
-
+    allPrice.textContent = allPrice.textContent*1 - 210
     }
   });
 });
@@ -49,4 +51,16 @@ catalog.addEventListener("click", () => {
     catalogDiv.classList.toggle('top-[100%]')
     catalogDiv.classList.toggle('md:top-[100%]')
 
+})
+
+
+// delete function from savatcha
+
+let btnForDeleteFun = document.querySelectorAll('.btnForDeleteFun')
+let itemForDelete = document.querySelectorAll('.itemForDelete')
+
+btnForDeleteFun.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    itemForDelete[index].remove()
+  })
 })

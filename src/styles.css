@@ -7,6 +7,14 @@ body{
     font: Onest;
 }
 
+<<<<<<< HEAD
+    button{
+        transition: all .3s;
+    }
+    button:hover{
+        opacity: 70%;
+    }
+=======
 button{
     transition: all .3s;
 }
@@ -20,6 +28,7 @@ a{
 button:hover{
     opacity: 70%;
 }
+>>>>>>> fd3dde53cc333a88521113c20f5165342e05a800
 .transition-all {
     transition: all 0.3s ease-in-out;
 }
