@@ -606,6 +606,12 @@ video {
 .top-\[50\%\] {
   top: 50%;
 }
+.bottom-\[-226px\] {
+  bottom: -226px;
+}
+.right-\[-167px\] {
+  right: -167px;
+}
 .z-0 {
   z-index: 0;
 }
@@ -904,6 +910,9 @@ video {
 .h-\[180px\] {
   height: 180px;
 }
+.h-\[390px\] {
+  height: 390px;
+}
 .max-h-0 {
   max-height: 0px;
 }
@@ -1183,6 +1192,24 @@ video {
 .max-w-\[94px\] {
   max-width: 94px;
 }
+.max-w-\[407px\] {
+  max-width: 407px;
+}
+.max-w-\[1261\] {
+  max-width: 1261;
+}
+.max-w-\[1301\] {
+  max-width: 1301;
+}
+.max-w-\[1301px\] {
+  max-width: 1301px;
+}
+.max-w-\[232px\] {
+  max-width: 232px;
+}
+.max-w-\[390px\] {
+  max-width: 390px;
+}
 .flex-grow {
   flex-grow: 1;
 }
@@ -1421,6 +1448,9 @@ video {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-\[2px\] {
+  border-radius: 2px;
+}
 .\!border {
   border-width: 1px !important;
 }
@@ -1624,6 +1654,14 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#E8ECF9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 236 249 / var(--tw-bg-opacity));
+}
+.bg-\[\#F8944B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 148 75 / var(--tw-bg-opacity));
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1831,6 +1869,14 @@ video {
 .py-\[9\.3px\] {
   padding-top: 9.3px;
   padding-bottom: 9.3px;
+}
+.py-\[9\] {
+  padding-top: 9;
+  padding-bottom: 9;
+}
+.py-\[9px\] {
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -2056,6 +2102,12 @@ video {
 }
 .pt-\[73px\] {
   padding-top: 73px;
+}
+.pb-\[96px\] {
+  padding-bottom: 96px;
+}
+.pt-\[60px\] {
+  padding-top: 60px;
 }
 .text-center {
   text-align: center;
@@ -2314,6 +2366,11 @@ video {
 }
 .outline {
   outline-style: solid;
+}
+.ring-0 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 .blur {
   --tw-blur: blur(8px);
@@ -2632,6 +2689,13 @@ button:hover{
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media not all and (min-width: 768px) {
+
+  .max-md\:hidden {
+    display: none;
+  }
 }
 
 @media not all and (min-width: 640px) {
