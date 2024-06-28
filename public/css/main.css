@@ -26,10 +26,6 @@ button:hover,
 a:hover {
   opacity: 0.6;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> a382635094aef47cf70acbbf3c513a8cf2783e27
 
 .swiper,
 .swiper_desktop,
@@ -141,7 +137,6 @@ a:hover {
     position: absolute !important;
     display: flex;
     align-items: center;
-    height: 100%;
     border-radius: 14px !important;
     overflow: hidden;
     width: 38px;
@@ -200,7 +195,7 @@ html {
     position: absolute !important;
     display: flex;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
     top: 0;
     left: 0;
     z-index: 50;
