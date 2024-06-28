@@ -246,25 +246,3 @@ html {
     width: 60px !important;
   }
 }
-
-
-::-webkit-scrollbar{
-  background: rgb(242, 236, 225);
-  width: 10px;
-}
-
-
-::-webkit-scrollbar-button{
-  background: rgb(249, 226, 229);
-}
-
-::-webkit-scrollbar-thumb{
-  background: #ff000038;
-  border-radius: 5px;
-  transition: all 0.3s !important;
-  border: 2px solid rgb(249, 226, 229);
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background: red;
-}

@@ -2,33 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     overflow-x: hidden;
     font: Onest;
 }
 
-<<<<<<< HEAD
-    button{
-        transition: all .3s;
-    }
-    button:hover{
-        opacity: 70%;
-    }
-=======
-button{
-    transition: all .3s;
-}
-a{
+button {
     transition: all .3s;
 }
 
-#header__big__menu a:hover{
-    opacity: .5;
-}
-button:hover{
+button:hover {
     opacity: 70%;
 }
->>>>>>> fd3dde53cc333a88521113c20f5165342e05a800
+
+button {
+    transition: all .3s;
+}
+
+a {
+    transition: all .3s;
+}
+
+#header__big__menu a:hover {
+    opacity: .5;
+}
+
+button:hover {
+    opacity: 70%;
+}
+
 .transition-all {
     transition: all 0.3s ease-in-out;
 }
@@ -130,3 +132,24 @@ button:hover{
 .shadow_container {
     box-shadow: 0 5px 15px -8px rgba(13, 35, 67, 0.4), 0 0 0 1px rgba(13, 35, 67, 0.07);
 }
+
+::-webkit-scrollbar{
+    background: rgb(242, 236, 225);
+    width: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-button{
+    background: rgb(249, 226, 229);
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: #ff000038;
+    border-radius: 5px;
+    transition: all 0.3s !important;
+    border: 2px solid rgb(249, 226, 229);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: red;
+  }
