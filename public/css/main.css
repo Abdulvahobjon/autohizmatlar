@@ -26,6 +26,10 @@ button:hover,
 a:hover {
   opacity: 0.6;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a382635094aef47cf70acbbf3c513a8cf2783e27
 
 .swiper,
 .swiper_desktop,
@@ -237,4 +241,26 @@ html {
     background-color: #5946d7 !important;
     width: 60px !important;
   }
+}
+
+
+::-webkit-scrollbar{
+  background: rgb(242, 236, 225);
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-button{
+  background: rgb(249, 226, 229);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ff000038;
+  border-radius: 5px;
+  transition: all 0.3s !important;
+  border: 2px solid rgb(249, 226, 229);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: red;
 }
